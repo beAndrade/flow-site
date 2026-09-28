@@ -2,7 +2,7 @@
 
 ## 1. Objetivo
 
-O Flow Site é, na sua primeira versão (V1), um site institucional e de geração de leads para a **Flow Energia Solar**. O objetivo principal é transmitir confiança, apresentar a empresa e seus serviços, e direcionar visitantes para o WhatsApp da empresa como principal canal de conversão.
+O Flow Site é, na sua primeira versão (V1), um site institucional e de geração de leads para a **Flow Energies**. O objetivo principal é transmitir confiança, apresentar a empresa e seus serviços, e direcionar visitantes para o WhatsApp da empresa como principal canal de conversão.
 
 O projeto prioriza uma experiência mobile-first, performance, SEO e acessibilidade, com uma arquitetura que permita evolução incremental sem necessidade de reconstrução quando novas funcionalidades forem definidas.
 
