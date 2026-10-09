@@ -1,0 +1,3378 @@
+{
+  "version": "2.21",
+  "children": [
+    {
+      "type": "frame",
+      "id": "BvTp2",
+      "x": -1394,
+      "y": -313,
+      "name": "Flow Energies — Home V1",
+      "clip": true,
+      "width": 1200,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "e8i7aV",
+          "name": "Hero",
+          "width": "fill_container",
+          "height": 510,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "generated-2.png",
+            "mode": "cover"
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "bWPn6",
+              "layoutPosition": "absolute",
+              "x": 0,
+              "y": 0,
+              "name": "Header",
+              "width": 1200,
+              "height": 76,
+              "fill": "#FFFFFF00",
+              "padding": [
+                0,
+                56
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RMlZ1",
+                  "name": "Flow Wordmark",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "g9BSi",
+                      "name": "Flow Mark",
+                      "fill": "#FFFFFF",
+                      "content": "FLOW",
+                      "fontFamily": "Inter",
+                      "fontSize": 26,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "A0AvK2",
+                      "name": "Energy Descriptor",
+                      "fill": "#FFFFFFCC",
+                      "content": "ENERGIES",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "v2iFb",
+                  "name": "Desktop Navigation",
+                  "gap": 28,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kxYlU",
+                      "name": "Soluções",
+                      "fill": "#FFFFFFE6",
+                      "content": "Soluções",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FriMW",
+                      "name": "Como funciona",
+                      "fill": "#FFFFFFE6",
+                      "content": "Como funciona",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Jdk87",
+                      "name": "Projetos",
+                      "fill": "#FFFFFFE6",
+                      "content": "Projetos",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qiNx7",
+                      "name": "Sobre a Flow",
+                      "fill": "#FFFFFFE6",
+                      "content": "Sobre a Flow",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vBrKn",
+                  "name": "Header WhatsApp CTA",
+                  "fill": "$brand-blue",
+                  "cornerRadius": 8,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bERbE",
+                      "name": "Header CTA",
+                      "fill": "#FFFFFF",
+                      "content": "Falar no WhatsApp",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "s7M2A",
+              "x": 0,
+              "y": 0,
+              "name": "Hero Photographic Placeholder",
+              "enabled": false,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "generated-1.png",
+                "mode": "cover"
+              },
+              "width": 1200,
+              "height": 510
+            },
+            {
+              "type": "rectangle",
+              "id": "wD8GZ",
+              "x": 0,
+              "y": 0,
+              "name": "Hero Readability Overlay",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": -90,
+                "size": {
+                  "height": 0.7418339782154294
+                },
+                "colors": [
+                  {
+                    "color": "#071D30CC",
+                    "position": 0
+                  },
+                  {
+                    "color": "#102F4A88",
+                    "position": 0.5779522505412901
+                  },
+                  {
+                    "color": "#102F4A00",
+                    "position": 1
+                  }
+                ],
+                "center": {
+                  "x": 0.3709169891077145
+                }
+              },
+              "width": 1200,
+              "height": 510
+            },
+            {
+              "type": "frame",
+              "id": "puoy2",
+              "layoutPosition": "absolute",
+              "x": 72,
+              "y": 94,
+              "name": "Hero Copy",
+              "width": 510,
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OjcLL",
+                  "name": "Hero Eyebrow",
+                  "fill": "$brand-yellow",
+                  "content": "[EYEBROW / POSICIONAMENTO]",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "C41BW",
+                  "name": "Hero Headline",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "[Headline provisória para a Flow Energies]",
+                  "fontFamily": "Inter",
+                  "fontSize": 52,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "U3aNS",
+                  "name": "Hero Support",
+                  "fill": "#FFFFFFCC",
+                  "textGrowth": "fixed-width",
+                  "width": 470,
+                  "content": "[Texto de apoio provisório para comunicar a proposta com clareza.]",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "t4T6J",
+                  "name": "Hero Actions",
+                  "gap": 14,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "O6COR",
+                      "name": "Hero Primary CTA",
+                      "fill": "$brand-yellow",
+                      "cornerRadius": 8,
+                      "padding": [
+                        14,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xRNVp",
+                          "name": "Hero CTA Label",
+                          "fill": "$brand-navy",
+                          "content": "Falar com a Flow",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "hrhVg",
+                      "name": "Hero Secondary CTA",
+                      "fill": "#FFFFFF",
+                      "content": "[CTA secundário]",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zgIx9",
+          "name": "Proof Strip",
+          "width": "fill_container",
+          "height": 132,
+          "fill": "#FFFFFF",
+          "padding": [
+            30,
+            56
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "tl3DP",
+              "name": "Proof Item",
+              "width": "fill_container",
+              "stroke": "#E5E7EB",
+              "strokeWidth": {
+                "left": 1
+              },
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                0,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xLOTg",
+                  "name": "Proof Value",
+                  "fill": "$brand-navy",
+                  "content": "[—]",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "M8jLbO",
+                  "name": "Proof Descriptor",
+                  "fill": "$muted",
+                  "content": "Prova / indicador",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xwaIo",
+              "name": "Proof Item",
+              "width": "fill_container",
+              "stroke": "#E5E7EB",
+              "strokeWidth": {
+                "left": 1
+              },
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                0,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qp8Rr",
+                  "name": "Proof Value",
+                  "fill": "$brand-navy",
+                  "content": "[—]",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "Gzx6B",
+                  "name": "Proof Descriptor",
+                  "fill": "$muted",
+                  "content": "Experiência / alcance",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kvCtp",
+              "name": "Proof Item",
+              "width": "fill_container",
+              "stroke": "#E5E7EB",
+              "strokeWidth": {
+                "left": 1
+              },
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                0,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Mz2cb",
+                  "name": "Proof Value",
+                  "fill": "$brand-navy",
+                  "content": "[—]",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "IXBJA",
+                  "name": "Proof Descriptor",
+                  "fill": "$muted",
+                  "content": "Reconhecimento / contexto",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VO5ip",
+              "name": "Proof Item",
+              "width": "fill_container",
+              "stroke": "#E5E7EB",
+              "strokeWidth": {
+                "left": 1
+              },
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                0,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "veg1V",
+                  "name": "Proof Value",
+                  "fill": "$brand-navy",
+                  "content": "[—]",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "XRigo",
+                  "name": "Proof Descriptor",
+                  "fill": "$muted",
+                  "content": "Outro sinal de confiança",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "T8zP1",
+          "name": "Solutions",
+          "width": "fill_container",
+          "fill": "$bg-subtle",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": 72,
+          "children": [
+            {
+              "type": "text",
+              "id": "gdVy8",
+              "name": "Solutions Eyebrow",
+              "fill": "$brand-blue",
+              "content": "SOLUÇÕES",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "GAWFi",
+              "name": "Solutions Title",
+              "fill": "$brand-navy",
+              "textGrowth": "fixed-width",
+              "width": 760,
+              "content": "[Arquitetura de soluções a definir]",
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "w88QbR",
+              "name": "Solutions Intro",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": 680,
+              "content": "[Introdução provisória para organizar a oferta sem antecipar claims.]",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "KHmuT",
+              "name": "Solutions Editorial Layout",
+              "width": "fill_container",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "aJ2kv",
+                  "name": "Primary Solution Area",
+                  "width": 620,
+                  "height": 250,
+                  "fill": "#FFFFFF",
+                  "stroke": "#DCE5EC",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gCMhY",
+                      "name": "Primary Solution Label",
+                      "fill": "$brand-yellow",
+                      "content": "[SOLUÇÃO PRINCIPAL]",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "u6EFcs",
+                      "name": "Primary Solution Title",
+                      "fill": "$brand-navy",
+                      "content": "[Título da solução prioritária]",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "w9Bkz",
+                      "name": "Primary Solution Body",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 500,
+                      "content": "[Descrição curta e objetiva para validação posterior.]",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ehuXD",
+                      "name": "Primary Solution Link",
+                      "fill": "$brand-blue",
+                      "content": "[Explorar solução] →",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ijjXh",
+                  "name": "Supporting Solutions",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yHlvZ",
+                      "name": "Supporting Solution",
+                      "width": "fill_container",
+                      "height": 116,
+                      "fill": "#FFFFFF",
+                      "stroke": "#DCE5EC",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "u9RMv",
+                          "name": "Supporting Label",
+                          "fill": "$brand-blue-light",
+                          "content": "[ÁREA / CATEGORIA]",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "L85sVj",
+                          "name": "Supporting Title",
+                          "fill": "$brand-navy",
+                          "content": "[Solução de apoio]",
+                          "fontFamily": "Inter",
+                          "fontSize": 19,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZaACi",
+                          "name": "Supporting Body",
+                          "fill": "$muted",
+                          "content": "[Descrição provisória]",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gx3Aj",
+                      "name": "Supporting Solution",
+                      "width": "fill_container",
+                      "height": 116,
+                      "fill": "#FFFFFF",
+                      "stroke": "#DCE5EC",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iWIoL",
+                          "name": "Supporting Label",
+                          "fill": "$brand-blue-light",
+                          "content": "[ÁREA / CATEGORIA]",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "r5YnbN",
+                          "name": "Supporting Title",
+                          "fill": "$brand-navy",
+                          "content": "[Solução complementar]",
+                          "fontFamily": "Inter",
+                          "fontSize": 19,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Xh3y3",
+                          "name": "Supporting Body",
+                          "fill": "$muted",
+                          "content": "[Descrição provisória]",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "CI5qf",
+          "name": "Why Flow",
+          "width": "fill_container",
+          "fill": "$brand-navy",
+          "gap": 80,
+          "padding": [
+            76,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "r8Xio4",
+              "name": "Why Flow Intro",
+              "width": 430,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rOpjJ",
+                  "name": "Why Eyebrow",
+                  "fill": "$brand-yellow",
+                  "content": "POR QUE A FLOW",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "obgSD",
+                  "name": "Why Title",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": 420,
+                  "content": "[Diferenciais a validar]",
+                  "fontFamily": "Inter",
+                  "fontSize": 42,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "LDfVq",
+                  "name": "Why Support",
+                  "fill": "#FFFFFFB8",
+                  "textGrowth": "fixed-width",
+                  "width": 390,
+                  "content": "[Texto introdutório provisório, sem claims definitivos.]",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xKN7Z",
+              "name": "Differentiator List",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "a1RhfA",
+                  "name": "Differentiator",
+                  "width": "fill_container",
+                  "stroke": "#FFFFFF33",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fo2eX",
+                      "name": "Differentiator Title",
+                      "fill": "#FFFFFF",
+                      "content": "Clareza técnica",
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RmLdo",
+                      "name": "Differentiator Body",
+                      "fill": "#FFFFFFA8",
+                      "content": "[Texto neutro provisório]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gWphA",
+                  "name": "Differentiator",
+                  "width": "fill_container",
+                  "stroke": "#FFFFFF33",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MPYJ9",
+                      "name": "Differentiator Title",
+                      "fill": "#FFFFFF",
+                      "content": "Experiência de atendimento",
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Jtb2p",
+                      "name": "Differentiator Body",
+                      "fill": "#FFFFFFA8",
+                      "content": "[Texto neutro provisório]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "flQyn",
+                  "name": "Differentiator",
+                  "width": "fill_container",
+                  "stroke": "#FFFFFF33",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iiTAl",
+                      "name": "Differentiator Title",
+                      "fill": "#FFFFFF",
+                      "content": "Forma de trabalhar",
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "irH5i",
+                      "name": "Differentiator Body",
+                      "fill": "#FFFFFFA8",
+                      "content": "[Texto neutro provisório]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E8mpbq",
+                  "name": "Differentiator",
+                  "width": "fill_container",
+                  "stroke": "#FFFFFF33",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NvjXp",
+                      "name": "Differentiator Title",
+                      "fill": "#FFFFFF",
+                      "content": "[Diferencial a definir]",
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SwbYT",
+                      "name": "Differentiator Body",
+                      "fill": "#FFFFFFA8",
+                      "content": "[Texto neutro provisório]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pXzns",
+          "name": "How It Works",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": 72,
+          "children": [
+            {
+              "type": "text",
+              "id": "E7r5p",
+              "name": "Process Eyebrow",
+              "fill": "$brand-blue",
+              "content": "COMO FUNCIONA",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "FjPwf",
+              "name": "Process Title",
+              "fill": "$brand-navy",
+              "textGrowth": "fixed-width",
+              "width": 760,
+              "content": "Um fluxo claro para o próximo passo",
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "AcbRT",
+              "name": "Process Intro",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": 700,
+              "content": "[Processo provisório. A sequência será revisada quando o fluxo operacional estiver definido.]",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "n6itVJ",
+              "name": "Process Flow",
+              "width": "fill_container",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BpivD",
+                  "name": "Process Step",
+                  "width": "fill_container",
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    22,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X4aTxz",
+                      "name": "Step Number",
+                      "fill": "$brand-blue-light",
+                      "content": "01",
+                      "fontFamily": "Inter",
+                      "fontSize": 34,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aJ5TW",
+                      "name": "Step Title",
+                      "fill": "$brand-navy",
+                      "content": "Contato",
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g75Ef",
+                      "name": "Step Body",
+                      "fill": "$muted",
+                      "content": "[Etapa provisória]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ST30h",
+                  "name": "Process Step",
+                  "width": "fill_container",
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    22,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HtuBQ",
+                      "name": "Step Number",
+                      "fill": "$brand-blue-light",
+                      "content": "02",
+                      "fontFamily": "Inter",
+                      "fontSize": 34,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "P9GI7",
+                      "name": "Step Title",
+                      "fill": "$brand-navy",
+                      "content": "Entendimento",
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ikXi3",
+                      "name": "Step Body",
+                      "fill": "$muted",
+                      "content": "[Etapa provisória]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "a0P7IF",
+                  "name": "Process Step",
+                  "width": "fill_container",
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    22,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "A3d0XI",
+                      "name": "Step Number",
+                      "fill": "$brand-blue-light",
+                      "content": "03",
+                      "fontFamily": "Inter",
+                      "fontSize": 34,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Y5SdS",
+                      "name": "Step Title",
+                      "fill": "$brand-navy",
+                      "content": "Solução",
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r3DgPw",
+                      "name": "Step Body",
+                      "fill": "$muted",
+                      "content": "[Etapa provisória]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nQgbT",
+                  "name": "Process Step",
+                  "width": "fill_container",
+                  "stroke": "#E5E7EB",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    22,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "riS13",
+                      "name": "Step Number",
+                      "fill": "$brand-blue-light",
+                      "content": "04",
+                      "fontFamily": "Inter",
+                      "fontSize": 34,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "a8KNCe",
+                      "name": "Step Title",
+                      "fill": "$brand-navy",
+                      "content": "Próximos passos",
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mCU4C",
+                      "name": "Step Body",
+                      "fill": "$muted",
+                      "content": "[Etapa provisória]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "JjM3d",
+          "name": "Projects",
+          "width": "fill_container",
+          "fill": "$bg-subtle",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": 72,
+          "children": [
+            {
+              "type": "text",
+              "id": "X2Xk8",
+              "name": "Projects Eyebrow",
+              "fill": "$brand-blue",
+              "content": "PROJETOS / EXPERIÊNCIA",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "acbVt",
+              "name": "Projects Title",
+              "fill": "$brand-navy",
+              "textGrowth": "fixed-width",
+              "width": 760,
+              "content": "[Portfólio real da Flow Energies]",
+              "fontFamily": "Inter",
+              "fontSize": 40,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "iRX8R",
+              "name": "Projects Intro",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": 700,
+              "content": "[Área reservada para fotografias, contexto e registros de projetos.]",
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "Dudgb",
+              "name": "Project Showcase",
+              "width": "fill_container",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gpqn1",
+                  "name": "Featured Project Placeholder",
+                  "width": 660,
+                  "height": 300,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 90,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#102F4A",
+                        "position": 0
+                      },
+                      {
+                        "color": "#4296CE",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "layout": "vertical",
+                  "padding": 28,
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "EaUJc",
+                      "name": "Featured Project Label",
+                      "fill": "$brand-yellow",
+                      "content": "IMAGEM PRINCIPAL · PLACEHOLDER",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zX9hd",
+                      "name": "Featured Project Title",
+                      "fill": "#FFFFFF",
+                      "content": "[Título do projeto]",
+                      "fontFamily": "Inter",
+                      "fontSize": 25,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YX5LK",
+                      "name": "Featured Project Meta",
+                      "fill": "#FFFFFFCC",
+                      "content": "[Local / contexto] · [Tipo de projeto]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kM4FH",
+                  "name": "Supporting Project Placeholders",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Mpjlj",
+                      "name": "Supporting Project",
+                      "width": "fill_container",
+                      "height": 141,
+                      "fill": "#DDEAF0",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 20,
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Y7mgD",
+                          "name": "Project Label",
+                          "fill": "$brand-blue",
+                          "content": "IMAGEM / PLACEHOLDER",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SbKku",
+                          "name": "Project Title",
+                          "fill": "$brand-navy",
+                          "content": "[Projeto / contexto]",
+                          "fontFamily": "Inter",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "WvhCy",
+                          "name": "Project Meta",
+                          "fill": "$muted",
+                          "content": "[Tipo de projeto]",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qrVd1",
+                      "name": "Supporting Project",
+                      "width": "fill_container",
+                      "height": 141,
+                      "fill": "#DDEAF0",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 20,
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WWxGi",
+                          "name": "Project Label",
+                          "fill": "$brand-blue",
+                          "content": "IMAGEM / PLACEHOLDER",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xEtC3",
+                          "name": "Project Title",
+                          "fill": "$brand-navy",
+                          "content": "[Projeto / contexto]",
+                          "fontFamily": "Inter",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NcLMV",
+                          "name": "Project Meta",
+                          "fill": "$muted",
+                          "content": "[Tipo de projeto]",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Y43hC",
+          "name": "About Flow",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "gap": 72,
+          "padding": [
+            80,
+            72
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZoNcU",
+              "name": "About Copy",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sYTHT",
+                  "name": "About Eyebrow",
+                  "fill": "$brand-blue",
+                  "content": "SOBRE A FLOW",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "puesR",
+                  "name": "About Title",
+                  "fill": "$brand-navy",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "[Uma apresentação institucional clara]",
+                  "fontFamily": "Inter",
+                  "fontSize": 40,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "bJX4E",
+                  "name": "About Body",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": 470,
+                  "content": "[Parágrafo provisório sobre a empresa, equipe e atuação. O conteúdo final será definido depois.]",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Lrnr2",
+                  "name": "About Note",
+                  "fill": "$brand-navy",
+                  "textGrowth": "fixed-width",
+                  "width": 450,
+                  "content": "[Princípio, visão ou contexto institucional]",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OSUiW",
+              "name": "About Image Placeholder",
+              "width": 440,
+              "height": 300,
+              "fill": "#DDEAF0",
+              "layout": "vertical",
+              "gap": 10,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KA5lh",
+                  "name": "About Image Label",
+                  "fill": "$brand-blue",
+                  "content": "IMAGE PLACEHOLDER",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "NyVm9",
+                  "name": "About Image Subject",
+                  "fill": "$brand-navy",
+                  "content": "[Equipe / campo / empresa]",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "fVhAb",
+                  "name": "About Image Note",
+                  "fill": "$muted",
+                  "content": "[Fotografia a inserir]",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "IpHFR",
+          "name": "Final CTA",
+          "width": "fill_container",
+          "fill": "$brand-blue-mid",
+          "padding": [
+            64,
+            72
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "B6K8q",
+              "name": "Final CTA Copy",
+              "width": 700,
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "M0RMb",
+                  "name": "Final CTA Eyebrow",
+                  "fill": "$brand-yellow",
+                  "content": "PRÓXIMO PASSO",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "XZZm1",
+                  "name": "Final CTA Title",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": 680,
+                  "content": "Vamos conversar sobre o próximo passo.",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "tmXoH",
+                  "name": "Final CTA Body",
+                  "fill": "#FFFFFFC7",
+                  "textGrowth": "fixed-width",
+                  "width": 600,
+                  "content": "[Texto de conversão provisório.]",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "LBjvG",
+              "name": "Final CTA Button",
+              "fill": "$brand-yellow",
+              "cornerRadius": 8,
+              "padding": [
+                15,
+                22
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vz1vo",
+                  "name": "Final CTA Label",
+                  "fill": "$brand-navy",
+                  "content": "Falar com a Flow",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rVWmo",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "$brand-navy",
+          "layout": "vertical",
+          "gap": 34,
+          "padding": [
+            52,
+            72,
+            28,
+            72
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "b1k2Od",
+              "name": "Footer Main",
+              "width": "fill_container",
+              "gap": 64,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kS7Rt",
+                  "name": "Footer Brand",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K5F4g",
+                      "name": "Footer Logo",
+                      "fill": "#FFFFFF",
+                      "content": "FLOW",
+                      "fontFamily": "Inter",
+                      "fontSize": 25,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iF8TR",
+                      "name": "Footer Descriptor",
+                      "fill": "$brand-blue-light",
+                      "content": "ENERGIES",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "opxnU",
+                      "name": "Footer Body",
+                      "fill": "#FFFFFFA8",
+                      "textGrowth": "fixed-width",
+                      "width": 280,
+                      "content": "[Descrição institucional provisória]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lPenL",
+                  "name": "Footer Column",
+                  "width": 210,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CWLw7",
+                      "name": "Footer Column Title",
+                      "fill": "#FFFFFF",
+                      "content": "Navegação",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "S5tUU",
+                      "name": "Footer Link",
+                      "fill": "#FFFFFFA8",
+                      "content": "Soluções",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "l1CZvp",
+                      "name": "Footer Link",
+                      "fill": "#FFFFFFA8",
+                      "content": "Projetos",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SIKSD",
+                      "name": "Footer Link",
+                      "fill": "#FFFFFFA8",
+                      "content": "Sobre a Flow",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nbDuR",
+                  "name": "Footer Column",
+                  "width": 210,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tuEkj",
+                      "name": "Footer Column Title",
+                      "fill": "#FFFFFF",
+                      "content": "Contato",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pvPCw",
+                      "name": "Footer Link",
+                      "fill": "#FFFFFFA8",
+                      "content": "WhatsApp: [a definir]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "T60ywu",
+                      "name": "Footer Link",
+                      "fill": "#FFFFFFA8",
+                      "content": "Localização: [a definir]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fCEFP",
+                      "name": "Footer Link",
+                      "fill": "#FFFFFFA8",
+                      "content": "Redes sociais: [a definir]",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oL9jO",
+              "name": "Footer Bottom",
+              "width": "fill_container",
+              "stroke": "#FFFFFF22",
+              "strokeWidth": {
+                "top": 1
+              },
+              "padding": [
+                18,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "K4JOfn",
+                  "name": "Footer Legal",
+                  "fill": "#FFFFFF66",
+                  "content": "© Flow Energies · [Informação legal]",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "bTvYj",
+                  "name": "Footer Privacy",
+                  "fill": "#FFFFFF66",
+                  "content": "Privacidade · Termos",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "c4yBbB",
+      "x": -1394,
+      "y": 3521,
+      "name": "Flow Energies — Home V1 · Mobile",
+      "clip": true,
+      "width": 390,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "kgrv6",
+          "name": "Mobile Header",
+          "width": "fill_container",
+          "height": 64,
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "gxh8B",
+              "name": "Mobile Wordmark",
+              "layout": "vertical",
+              "gap": 1,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eZhPk",
+                  "name": "Mobile Flow",
+                  "fill": "$brand-navy",
+                  "content": "FLOW",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "uyQCe",
+                  "name": "Mobile Descriptor",
+                  "fill": "$brand-blue-light",
+                  "content": "ENERGIES",
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "euKHS",
+              "name": "Mobile Menu Action",
+              "fill": "$brand-blue",
+              "content": "MENU ·",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "AGEZ1",
+          "name": "Mobile Hero",
+          "width": "fill_container",
+          "height": 430,
+          "fill": "#173D5C",
+          "layout": "none",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "iYu1U",
+              "x": 0,
+              "y": 0,
+              "name": "Mobile Hero Visual Placeholder",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 90,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#102F4A",
+                    "position": 0
+                  },
+                  {
+                    "color": "#4296CE",
+                    "position": 1
+                  }
+                ]
+              },
+              "width": 390,
+              "height": 430
+            },
+            {
+              "type": "rectangle",
+              "id": "VQLw2",
+              "x": 0,
+              "y": 0,
+              "name": "Mobile Hero Overlay",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 90,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#071D30DD",
+                    "position": 0
+                  },
+                  {
+                    "color": "#102F4A22",
+                    "position": 1
+                  }
+                ]
+              },
+              "width": 390,
+              "height": 430
+            },
+            {
+              "type": "frame",
+              "id": "bzm2D",
+              "layoutPosition": "absolute",
+              "x": 24,
+              "y": 64,
+              "name": "Mobile Hero Copy",
+              "width": 330,
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tzhUp",
+                  "name": "Mobile Hero Eyebrow",
+                  "fill": "$brand-yellow",
+                  "content": "[EYEBROW / POSICIONAMENTO]",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "rmPbg",
+                  "name": "Mobile Hero Headline",
+                  "fill": "#FFFFFF",
+                  "textGrowth": "fixed-width",
+                  "width": 330,
+                  "content": "[Headline provisória para a Flow Energies]",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "cnEqO",
+                  "name": "Mobile Hero Body",
+                  "fill": "#FFFFFFCC",
+                  "textGrowth": "fixed-width",
+                  "width": 320,
+                  "content": "[Texto de apoio provisório.]",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "QgLNJ",
+                  "name": "Mobile Hero CTA",
+                  "fill": "$brand-yellow",
+                  "cornerRadius": 8,
+                  "padding": [
+                    13,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "S1jc5s",
+                      "name": "Mobile CTA Label",
+                      "fill": "$brand-navy",
+                      "content": "Falar com a Flow",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zTl3P",
+          "name": "Mobile Proof",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            26,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "GlrfU",
+              "name": "Mobile Proof Item",
+              "fill": "$brand-navy",
+              "content": "[—] · Prova / indicador",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "THZbD",
+              "name": "Mobile Proof Item",
+              "fill": "$brand-navy",
+              "content": "[—] · Experiência / alcance",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "z3AQM",
+              "name": "Mobile Proof Item",
+              "fill": "$brand-navy",
+              "content": "[—] · Reconhecimento / contexto",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Z7ngf",
+          "name": "Mobile Solutions",
+          "width": "fill_container",
+          "fill": "$bg-subtle",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            48,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "T2bbs",
+              "name": "Mobile Solutions Eyebrow",
+              "fill": "$brand-blue",
+              "content": "SOLUÇÕES",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "JDoNE",
+              "name": "Mobile Solutions Title",
+              "fill": "$brand-navy",
+              "textGrowth": "fixed-width",
+              "width": 340,
+              "content": "[Arquitetura de soluções a definir]",
+              "fontFamily": "Inter",
+              "fontSize": 30,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "E4w7UL",
+              "name": "Mobile Solutions Body",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": 320,
+              "content": "[Introdução provisória.]",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "L42Dw",
+              "name": "Mobile Solution",
+              "width": "fill_container",
+              "stroke": "#DCE5EC",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                18,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fv5o7",
+                  "name": "Mobile Solution Title",
+                  "fill": "$brand-navy",
+                  "content": "[Solução principal]",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "z3xBf",
+                  "name": "Mobile Solution Body",
+                  "fill": "$muted",
+                  "content": "[Descrição provisória]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tTeJ8",
+              "name": "Mobile Solution",
+              "width": "fill_container",
+              "stroke": "#DCE5EC",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                18,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bLguD",
+                  "name": "Mobile Solution Title",
+                  "fill": "$brand-navy",
+                  "content": "[Solução de apoio]",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "vl0C1",
+                  "name": "Mobile Solution Body",
+                  "fill": "$muted",
+                  "content": "[Descrição provisória]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "kRLA4",
+              "name": "Mobile Solution",
+              "width": "fill_container",
+              "stroke": "#DCE5EC",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 6,
+              "padding": [
+                18,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PcDAp",
+                  "name": "Mobile Solution Title",
+                  "fill": "$brand-navy",
+                  "content": "[Solução complementar]",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "CD1UI",
+                  "name": "Mobile Solution Body",
+                  "fill": "$muted",
+                  "content": "[Descrição provisória]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UnqMr",
+          "name": "Mobile Why Flow",
+          "width": "fill_container",
+          "fill": "$brand-navy",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            48,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "UeVGO",
+              "name": "Mobile Why Eyebrow",
+              "fill": "$brand-yellow",
+              "content": "POR QUE A FLOW",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "sV0HS",
+              "name": "Mobile Why Title",
+              "fill": "#FFFFFF",
+              "textGrowth": "fixed-width",
+              "width": 340,
+              "content": "[Diferenciais a validar]",
+              "fontFamily": "Inter",
+              "fontSize": 30,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "MJeOE",
+              "name": "Mobile Differentiator",
+              "width": "fill_container",
+              "stroke": "#FFFFFF33",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                14,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "mR5Ki",
+                  "name": "Mobile Differentiator Title",
+                  "fill": "#FFFFFF",
+                  "content": "Clareza técnica",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "IzVmi",
+                  "name": "Mobile Differentiator Body",
+                  "fill": "#FFFFFFA8",
+                  "content": "[Texto neutro provisório]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lEoXE",
+              "name": "Mobile Differentiator",
+              "width": "fill_container",
+              "stroke": "#FFFFFF33",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                14,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KPkwQ",
+                  "name": "Mobile Differentiator Title",
+                  "fill": "#FFFFFF",
+                  "content": "Experiência de atendimento",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "EnLTF",
+                  "name": "Mobile Differentiator Body",
+                  "fill": "#FFFFFFA8",
+                  "content": "[Texto neutro provisório]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SHmM9",
+              "name": "Mobile Differentiator",
+              "width": "fill_container",
+              "stroke": "#FFFFFF33",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                14,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bmDUn",
+                  "name": "Mobile Differentiator Title",
+                  "fill": "#FFFFFF",
+                  "content": "Forma de trabalhar",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "G2vCq",
+                  "name": "Mobile Differentiator Body",
+                  "fill": "#FFFFFFA8",
+                  "content": "[Texto neutro provisório]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wjZW6",
+          "name": "Mobile Process",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            48,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "hYmvH",
+              "name": "Mobile Process Eyebrow",
+              "fill": "$brand-blue",
+              "content": "COMO FUNCIONA",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "lXzoJ",
+              "name": "Mobile Process Title",
+              "fill": "$brand-navy",
+              "textGrowth": "fixed-width",
+              "width": 340,
+              "content": "Um fluxo claro para o próximo passo",
+              "fontFamily": "Inter",
+              "fontSize": 30,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "CvEAW",
+              "name": "Mobile Process Step",
+              "width": "fill_container",
+              "stroke": "#E5E7EB",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                14,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ynw0w",
+                  "name": "Mobile Step Number",
+                  "fill": "$brand-blue-light",
+                  "content": "01",
+                  "fontFamily": "Inter",
+                  "fontSize": 25,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "WFtmN",
+                  "name": "Mobile Step Title",
+                  "fill": "$brand-navy",
+                  "content": "Contato",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "t1qPha",
+                  "name": "Mobile Step Body",
+                  "fill": "$muted",
+                  "content": "[Etapa provisória]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Q5yoz",
+              "name": "Mobile Process Step",
+              "width": "fill_container",
+              "stroke": "#E5E7EB",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                14,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sH7DY",
+                  "name": "Mobile Step Number",
+                  "fill": "$brand-blue-light",
+                  "content": "02",
+                  "fontFamily": "Inter",
+                  "fontSize": 25,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "o1thL",
+                  "name": "Mobile Step Title",
+                  "fill": "$brand-navy",
+                  "content": "Entendimento",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "jWv0S",
+                  "name": "Mobile Step Body",
+                  "fill": "$muted",
+                  "content": "[Etapa provisória]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HdxqN",
+              "name": "Mobile Process Step",
+              "width": "fill_container",
+              "stroke": "#E5E7EB",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                14,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ehoeK",
+                  "name": "Mobile Step Number",
+                  "fill": "$brand-blue-light",
+                  "content": "03",
+                  "fontFamily": "Inter",
+                  "fontSize": 25,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "NeXga",
+                  "name": "Mobile Step Title",
+                  "fill": "$brand-navy",
+                  "content": "Solução",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "eTQAK",
+                  "name": "Mobile Step Body",
+                  "fill": "$muted",
+                  "content": "[Etapa provisória]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xQ70r",
+              "name": "Mobile Process Step",
+              "width": "fill_container",
+              "stroke": "#E5E7EB",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                14,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wlQPy",
+                  "name": "Mobile Step Number",
+                  "fill": "$brand-blue-light",
+                  "content": "04",
+                  "fontFamily": "Inter",
+                  "fontSize": 25,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "AcaII",
+                  "name": "Mobile Step Title",
+                  "fill": "$brand-navy",
+                  "content": "Próximos passos",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "MInFA",
+                  "name": "Mobile Step Body",
+                  "fill": "$muted",
+                  "content": "[Etapa provisória]",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cZzC0",
+          "name": "Mobile Projects",
+          "width": "fill_container",
+          "fill": "$bg-subtle",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            48,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Q9FEtd",
+              "name": "Mobile Projects Eyebrow",
+              "fill": "$brand-blue",
+              "content": "PROJETOS / EXPERIÊNCIA",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "vDCYO",
+              "name": "Mobile Projects Title",
+              "fill": "$brand-navy",
+              "textGrowth": "fixed-width",
+              "width": 340,
+              "content": "[Portfólio real da Flow Energies]",
+              "fontFamily": "Inter",
+              "fontSize": 30,
+              "fontWeight": "800"
+            },
+            {
+              "type": "frame",
+              "id": "E8aaAA",
+              "name": "Mobile Featured Project",
+              "width": "fill_container",
+              "height": 220,
+              "fill": "#214F6B",
+              "layout": "vertical",
+              "gap": 6,
+              "padding": 20,
+              "justifyContent": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "T7qul",
+                  "name": "Mobile Project Label",
+                  "fill": "$brand-yellow",
+                  "content": "IMAGEM PRINCIPAL · PLACEHOLDER",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "twrbw",
+                  "name": "Mobile Project Title",
+                  "fill": "#FFFFFF",
+                  "content": "[Título do projeto]",
+                  "fontFamily": "Inter",
+                  "fontSize": 19,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "aJ8Za",
+                  "name": "Mobile Project Meta",
+                  "fill": "#FFFFFFCC",
+                  "content": "[Local / contexto] · [Tipo de projeto]",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "e024Dq",
+          "name": "Mobile About",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            48,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "aZCIk",
+              "name": "Mobile About Eyebrow",
+              "fill": "$brand-blue",
+              "content": "SOBRE A FLOW",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "to63H",
+              "name": "Mobile About Title",
+              "fill": "$brand-navy",
+              "textGrowth": "fixed-width",
+              "width": 340,
+              "content": "[Uma apresentação institucional clara]",
+              "fontFamily": "Inter",
+              "fontSize": 30,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "C4Xvsz",
+              "name": "Mobile About Body",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": 330,
+              "content": "[Parágrafo provisório sobre a empresa, equipe e atuação.]",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "GyZfg",
+              "name": "Mobile About Image Placeholder",
+              "width": "fill_container",
+              "height": 190,
+              "fill": "#DDEAF0",
+              "layout": "vertical",
+              "gap": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "P1tJa",
+                  "name": "Mobile About Image Label",
+                  "fill": "$brand-blue",
+                  "content": "IMAGE PLACEHOLDER",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "s8pZeC",
+                  "name": "Mobile About Image Subject",
+                  "fill": "$brand-navy",
+                  "content": "[Equipe / campo / empresa]",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vXNtw",
+          "name": "Mobile Final CTA",
+          "width": "fill_container",
+          "fill": "$brand-blue-mid",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            46,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "leHMF",
+              "name": "Mobile CTA Eyebrow",
+              "fill": "$brand-yellow",
+              "content": "PRÓXIMO PASSO",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "JnLIL",
+              "name": "Mobile CTA Title",
+              "fill": "#FFFFFF",
+              "textGrowth": "fixed-width",
+              "width": 340,
+              "content": "Vamos conversar sobre o próximo passo.",
+              "fontFamily": "Inter",
+              "fontSize": 30,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "VU4fB",
+              "name": "Mobile CTA Body",
+              "fill": "#FFFFFFC7",
+              "textGrowth": "fixed-width",
+              "width": 320,
+              "content": "[Texto de conversão provisório.]",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "rMvIA",
+              "name": "Mobile CTA Button",
+              "fill": "$brand-yellow",
+              "cornerRadius": 8,
+              "padding": [
+                14,
+                18
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "v9wai",
+                  "name": "Mobile CTA Label",
+                  "fill": "$brand-navy",
+                  "content": "Falar com a Flow",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "i5JIZ",
+          "name": "Mobile Footer",
+          "width": "fill_container",
+          "fill": "$brand-navy",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            40,
+            24,
+            24,
+            24
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "M6Ra8",
+              "name": "Mobile Footer Logo",
+              "fill": "#FFFFFF",
+              "content": "FLOW ENERGIES",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "kK1Mm",
+              "name": "Mobile Footer Links",
+              "fill": "#FFFFFFA8",
+              "content": "Soluções · Projetos · Sobre a Flow",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "V72eE",
+              "name": "Mobile Footer Contact",
+              "fill": "#FFFFFFA8",
+              "content": "Contato: [a definir]",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "themes": {
+    "Mode": [
+      "Light",
+      "Dark"
+    ]
+  },
+  "variables": {
+    "--sidebar": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E7E8E5"
+        },
+        {
+          "value": "#18181b",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#18181b"
+        },
+        {
+          "value": "#18181b",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-primary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#fafafa"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-border": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#ffffff1a",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2a2a30",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-accent-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#18181b"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-ring": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#71717a"
+        },
+        {
+          "value": "#71717a",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--background": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--card": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#1A1A1A",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--card-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--popover": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#1A1A1A",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--popover-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FF8400"
+        },
+        {
+          "value": "#FF8400",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--primary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--secondary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E7E8E5"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--secondary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--muted": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--muted-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#B8B9B6",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--accent-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#F2F3F0",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--destructive": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#D93C15"
+        },
+        {
+          "value": "#FF5C33",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--border": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--input": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--ring": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#666666",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "--black": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "--font-primary": {
+      "type": "string",
+      "value": "JetBrains Mono"
+    },
+    "--font-secondary": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "--radius-none": {
+      "type": "number",
+      "value": 0
+    },
+    "--radius-pill": {
+      "type": "number",
+      "value": 999
+    },
+    "--color-success": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#DFE6E1"
+        },
+        {
+          "value": "#222924",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-success-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#004D1A"
+        },
+        {
+          "value": "#B6FFCE",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-warning": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E9E3D8"
+        },
+        {
+          "value": "#291C0F",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-warning-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#804200"
+        },
+        {
+          "value": "#FF8400",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-error": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E5DCDA"
+        },
+        {
+          "value": "#24100B",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-error-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#8C1C00"
+        },
+        {
+          "value": "#FF5C33",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-info": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#DFDFE6"
+        },
+        {
+          "value": "#222229",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-info-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#000066"
+        },
+        {
+          "value": "#B2B2FF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--radius-m": {
+      "type": "number",
+      "value": 16
+    },
+    "brand-navy": {
+      "type": "color",
+      "value": "#102F4A"
+    },
+    "brand-blue": {
+      "type": "color",
+      "value": "#406DB3"
+    },
+    "brand-blue-light": {
+      "type": "color",
+      "value": "#4296CE"
+    },
+    "brand-yellow": {
+      "type": "color",
+      "value": "#DAB419"
+    },
+    "bg-subtle": {
+      "type": "color",
+      "value": "#F7F9FA"
+    },
+    "text": {
+      "type": "color",
+      "value": "#17212B"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#667085"
+    },
+    "border": {
+      "type": "color",
+      "value": "#E5E7EB"
+    },
+    "brand-blue-mid": {
+      "type": "color",
+      "value": "#3E59A5"
+    }
+  },
+  "fileToken": "69bfe4df-8992-43d2-bf57-9fa64b370ca0"
+}
