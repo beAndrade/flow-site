@@ -40,3 +40,19 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Other agent hosts — not versioned yet
+/.agents/
+/.claude/
+/.codex/
+/.gemini/
+/.kiro/
+/.opencode/
+
+# Impeccable local session
+/.impeccable/
+
+# Cursor skill platform binary and generated font indexes
+/.cursor/skills/impeccable/scripts/bin/
+/.cursor/skills/impeccable/scripts/data/font-index.json
+/.cursor/skills/impeccable/scripts/data/font-index-failures.json
