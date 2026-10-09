@@ -1,0 +1,42 @@
+<header class="site-header">
+  <div class="site-header__bar">
+    <a class="mark" routerLink="/" aria-label="Flow Energies, início" (click)="closeMenu()">
+      <span class="mark__flow">Flow</span>
+      <span class="mark__energies">Energies</span>
+    </a>
+
+    <nav class="site-nav site-nav--desktop" aria-label="Seções">
+      <ul>
+        @for (section of sections; track section.href) {
+          <li><a [href]="section.href">{{ section.label }}</a></li>
+        }
+      </ul>
+    </nav>
+
+    <button class="header-cta header-cta--bar" type="button">Falar no WhatsApp</button>
+
+    <button
+      class="menu-button"
+      type="button"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="site-menu"
+      (click)="toggleMenu()"
+    >
+      {{ menuOpen() ? 'Fechar' : 'MENU ·' }}
+    </button>
+  </div>
+
+  <nav
+    id="site-menu"
+    class="site-nav site-nav--mobile"
+    [class.is-open]="menuOpen()"
+    aria-label="Seções"
+  >
+    <ul>
+      @for (section of sections; track section.href) {
+        <li><a [href]="section.href" (click)="closeMenu()">{{ section.label }}</a></li>
+      }
+    </ul>
+    <button class="header-cta" type="button">Falar no WhatsApp</button>
+  </nav>
+</header>

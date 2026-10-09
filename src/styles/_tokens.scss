@@ -1,0 +1,73 @@
+:root {
+  --color-brand-navy: #102f4a;
+  --color-brand-blue-dark: #3e59a5;
+  --color-brand-blue: #406db3;
+  --color-brand-blue-light: #4296ce;
+  --color-brand-yellow: #dab419;
+
+  --color-white: #ffffff;
+  --color-background: #f7f9fa;
+  --color-border: #e5e7eb;
+  --color-text: #17212b;
+  --color-text-muted: #667085;
+
+  --color-bg: var(--color-white);
+  --color-bg-subtle: var(--color-background);
+  --color-surface: var(--color-white);
+  --color-text-primary: var(--color-text);
+  --color-text-secondary: var(--color-text-muted);
+  --color-border-default: var(--color-border);
+  --color-action-primary: var(--color-brand-blue);
+  --color-action-accent: var(--color-brand-yellow);
+  --color-action-dark: var(--color-brand-navy);
+
+  --font-family: "Inter", "Segoe UI", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --text-display: clamp(2.5rem, 6vw, 4.5rem);
+  --text-body: 1.0625rem;
+  --text-small: 0.875rem;
+  --text-label: 0.75rem;
+
+  --leading-display: 1.08;
+  --leading-body: 1.55;
+  --leading-small: 1.45;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  --container-max-width: 1200px;
+  --container-padding-mobile: 20px;
+  --container-padding-tablet: 32px;
+  --container-padding-desktop: 40px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(16, 47, 74, 0.06);
+  --shadow-md: 0 8px 24px rgba(16, 47, 74, 0.08);
+  --shadow-lg: 0 16px 40px rgba(16, 47, 74, 0.1);
+
+  --bp-tablet: 48rem;
+  --bp-desktop: 64rem;
+
+  --focus-ring: 2px solid var(--color-brand-navy);
+  --header-height: 4.75rem;
+}
