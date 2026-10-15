@@ -12,9 +12,8 @@ export class HeaderComponent {
 
   protected readonly sections = [
     { label: 'Soluções', href: '#solucoes' },
-    { label: 'Como funciona', href: '#como-funciona' },
-    { label: 'Projetos', href: '#projetos' },
-    { label: 'Sobre a Flow', href: '#sobre' },
+    { label: 'A Flow', href: '#a-flow' },
+    { label: 'Contato', href: '#contato' },
   ];
 
   protected toggleMenu(): void {

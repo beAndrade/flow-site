@@ -113,3 +113,28 @@
     font-size: 0.875rem;
   }
 }
+
+.home-section {
+  scroll-margin-top: var(--header-height);
+  width: min(100%, var(--container-max-width));
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-5);
+}
+
+.home-section h2 {
+  margin: 0;
+}
+
+.contact-action {
+  margin-top: var(--space-6);
+  min-height: 2.75rem;
+  padding: 0.75rem 1.125rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--color-brand-blue);
+  color: var(--color-white);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
