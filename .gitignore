@@ -56,3 +56,8 @@ Thumbs.db
 /.cursor/skills/impeccable/scripts/bin/
 /.cursor/skills/impeccable/scripts/data/font-index.json
 /.cursor/skills/impeccable/scripts/data/font-index-failures.json
+
+# Local temporary files — kept on disk, not versioned
+.cursor/hooks.json
+/design/generated.png
+/public/images/hero-usina.png
