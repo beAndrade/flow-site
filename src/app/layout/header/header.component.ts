@@ -8,11 +8,16 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  private readonly menuButton = viewChild<ElementRef<HTMLButtonElement>>('menuButton');
+
   protected readonly menuOpen = signal(false);
 
   protected readonly sections = [
-    { label: 'Soluções', href: '#solucoes' },
     { label: 'A Flow', href: '#a-flow' },
+    { label: 'Soluções', href: '#solucoes' },
+    { label: 'Como trabalhamos', href: '#como-trabalhamos' },
+    { label: 'Trajetória', href: '#trajetoria' },
+    { label: 'Diferenciais', href: '#diferenciais' },
     { label: 'Contato', href: '#contato' },
   ];
 
