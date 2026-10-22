@@ -1,4 +1,4 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { Component, ElementRef, HostListener, signal, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -31,6 +31,15 @@ export class HeaderComponent {
 
   @HostListener('document:keydown.escape')
   protected onEscape(): void {
+    if (!this.menuOpen()) {
+      return;
+    }
+
     this.closeMenu();
+
+    const button = this.menuButton()?.nativeElement;
+    if (button && button.getClientRects().length > 0) {
+      button.focus({ focusVisible: true } as FocusOptions);
+    }
   }
 }
