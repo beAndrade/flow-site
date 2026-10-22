@@ -25,16 +25,17 @@ O site apresenta a Flow Energies e conduz o visitante ao WhatsApp. O diferencial
 ## Operating Context
 
 - O decisor avalia a empresa no site (mobile-first) e continua o contato no WhatsApp.
-- Número, horário de atendimento, mensagem padrão e processo comercial após o contato estão em aberto.
+- A Home publica o telefone (22) 99844-9702, o e-mail e o identificador @flow_energies como texto, sem link. Número oficial de WhatsApp, mensagem padrão, o referente de “Em construção”, `mailto:` e URL do Instagram continuam em aberto.
+- Horário de atendimento, endereço além de “Rio de Janeiro • Região dos Lagos” e a linha legal do rodapé estão em aberto. No site, esses três vãos são texto provisório.
 - CTA secundário está em aberto.
-- Região atendida e localização da empresa estão em aberto.
+- A frase “Rio de Janeiro • Região dos Lagos” está publicada como texto de contato. Rua, cidade específica da Região dos Lagos e CEP continuam em aberto.
 - A documentação de produto confirmada está em português. O idioma publicado do site ainda não foi decidido à parte disso.
 
 ## Capabilities and Constraints
 
 Confirmado para a V1:
 
-- Site institucional: apresentar a empresa, serviços e diferenciais. O conteúdo desses blocos ainda não foi validado.
+- Site institucional da Home V1. A estrutura publicada é Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé. O menu aponta, nessa ordem, para `#a-flow`, `#solucoes`, `#como-trabalhamos`, `#trajetoria`, `#diferenciais` e `#contato`. O texto dessas seções veio das fontes aprovadas para o Incremento 2. O refinamento da redação comercial fica para o final do projeto. O diagnóstico e o refinamento visual da Home continuam pendentes.
 - Prova social e elementos de confiança, somente com material real. Não fabricar depoimentos, números, clientes, garantias ou serviços.
 - CTAs estratégicos. O CTA principal é o WhatsApp.
 - SEO, performance e renderização SSR/SSG.
@@ -50,9 +51,9 @@ Fora da V1 até validação do proprietário:
 - Integrações externas.
 - Analytics, até ser definido.
 
-Termos: Flow Energies (empresa); Flow Site (este site); energia solar (área de atuação — catálogo de serviços ainda vazio).
+Termos: Flow Energies (empresa); Flow Site (este site). A Home publica engenharia elétrica e energia solar fotovoltaica no mesmo catálogo, sem tratar uma como sinônimo da outra. Armazenamento de Energia não é off-grid. Consultoria Energética e Consultoria e Projetos Especiais permanecem entradas distintas. A frase de engenharia elétrica para o setor elétrico brasileiro e o compromisso com ANEEL, PRODIST e ABNT ficam em A Flow, não como serviços extras de Soluções.
 
-Decisões de produto em aberto: história e perfil institucional, catálogo de serviços, segmentos dentro de comercial/industrial, problemas que a empresa resolve, proposta de valor, concorrência, objeções, provas sociais, certificações, tom de voz e personalidade da marca.
+Decisões de produto em aberto: frase do Hero e da meta description; destino de WhatsApp, `mailto:` e Instagram; horário, endereço completo e linha legal; segmentos dentro de comercial, industrial e residencial; problemas que a empresa resolve; proposta de valor; concorrência; objeções; provas sociais; certificações; tom de voz e personalidade da marca. O refinamento dos textos já publicados fica para o final do projeto e não reabre o Incremento 2.
 
 ## Brand Commitments
 
@@ -63,9 +64,11 @@ Decisões de produto em aberto: história e perfil institucional, catálogo de s
 ## Evidence on Hand
 
 - Escopo e restrições: `docs/architecture.md`, `docs/roadmap.md`, `docs/discovery.md`.
-- O Discovery está em andamento. Quase todo o conteúdo comercial está marcado como pendente.
+- O Discovery continua em andamento. O Incremento 2 publicou a estrutura da Home e os textos de fonte já autorizados. Vários itens comerciais seguem pendentes.
+- A Home está em `src/app/features/home/`. O menu está em `src/app/layout/header/`. O rodapé está em `src/app/layout/footer/`.
+- Ao fechar o menu mobile com Escape, o foco volta ao botão de abertura quando ele está visível. O QA independente dessa correção foi `PASS`. Os três testes automatizados do projeto não cobrem esse foco.
 - Direção visual de projeto (não é prova comercial): `docs/visual-identity-flow-energies.md`, `docs/design-system.md`.
-- Não há, no repositório, depoimentos, casos, fotos de projetos, catálogo de serviços, número de WhatsApp ou materiais de marca além do que esses documentos declaram.
+- Não há, no repositório, depoimentos, casos, fotos de projetos, certificações, garantias ou métricas comerciais além do que a Home publica a partir das fontes já autorizadas. O telefone não é um link de WhatsApp.
 - Trabalho futuro não deve inventar clientes, depoimentos, números, garantias, certificações, preços ou serviços.
 
 ## Product Principles
@@ -78,4 +81,4 @@ Decisões de produto em aberto: história e perfil institucional, catálogo de s
 
 ## Accessibility & Inclusion
 
-Requisitos já estabelecidos para o site: contraste, foco visível, navegação por teclado, HTML semântico, textos alternativos, rótulos em controles, áreas de toque adequadas, informação que não dependa só de cor, e respeito à preferência de redução de movimento. A arquitetura pede boas práticas WCAG; um nível formal (A/AA/AAA) não foi definido.
+Requisitos já estabelecidos para o site: contraste, foco visível, navegação por teclado, HTML semântico, textos alternativos, rótulos em controles, áreas de toque adequadas, informação que não dependa só de cor, e respeito à preferência de redução de movimento. No menu mobile, Escape fecha o painel e devolve o foco ao botão de abertura quando esse botão está visível. O QA independente dessa correção foi `PASS`. A arquitetura pede boas práticas WCAG; um nível formal (A/AA/AAA) não foi definido.

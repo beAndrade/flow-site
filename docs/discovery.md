@@ -2,18 +2,18 @@
 
 Documento central de Discovery da Flow Energies. Serve como fonte de verdade para conteúdo, posicionamento, UX e decisões futuras do site.
 
-> **Status:** em andamento — a maioria das informações ainda depende de levantamento com o proprietário.
+> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O refinamento dessa redação fica para o final do projeto. Vários itens comerciais continuam pendentes.
 
 ---
 
 ## 1. Sobre a Flow
 
 - **Nome da empresa:** Flow Energies
-- **Área de atuação:** Energia solar (detalhes dos serviços e segmentos: Pendente de definição)
-- **História:** Pendente de definição
-- **Localização / região atendida:** Pendente de definição
-- **Perfil da empresa:** Pendente de definição
-- **Informações institucionais:** Pendente de definição
+- **Área de atuação:** A Home publica engenharia elétrica e energia solar fotovoltaica, com o solar como carro-chefe da leitura de Soluções. Segmentos de público continuam pendentes.
+- **História:** A Home publica a trajetória da apresentação comercial: 1982 As Origens no Setor Elétrico; 2012 Consultoria Especializada; 2017 Visão Estratégica; 2019 Transição para Energia Solar; 2023 Engenharia de Alta Performance. 1982 é a jornada profissional na CERJ, atual Enel RJ, e não a fundação da Flow. 2023 usa a frase da apresentação, sem métrica nova. O perfil institucional completo continua pendente.
+- **Localização / região atendida:** A Home publica “Rio de Janeiro • Região dos Lagos” como texto. Rua, cidade específica e CEP continuam pendentes e aparecem só como texto provisório.
+- **Perfil da empresa:** A seção A Flow publica o texto institucional da apresentação, inclusive o lema “Flow Energies. A energia que te move.” O perfil completo continua pendente.
+- **Informações institucionais:** A frase de engenharia elétrica para o setor elétrico brasileiro e o compromisso com ANEEL, PRODIST e ABNT ficam em A Flow. Não são serviços extras de Soluções.
 
 ---
 
@@ -42,7 +42,15 @@ Os serviços serão documentados individualmente conforme forem levantados com o
 | Diferenciais | — |
 | Informações pendentes | — |
 
-**Serviços cadastrados:** nenhum — Pendente de definição.
+**Serviços publicados na Home (Incremento 2).** União dos dois conjuntos autorizados. Os grupos só organizam a leitura. Não fundem escopos. Não há página individual por serviço. A ficha completa (para quem é, problema, benefícios) continua pendente. O refinamento da redação fica para o final do projeto.
+
+- Energia solar fotovoltaica: Projetos fotovoltaicos; Expansão e adequação; Diagnóstico e manutenção; Energia Solar Fotovoltaica (on-grid, off-grid e híbridos). “Instalação” não virou um quarto item.
+- Engenharia elétrica: Projetos Elétricos; Redes de Distribuição.
+- Consultoria: Consultoria e Projetos Especiais; Consultoria Energética. Permanecem entradas distintas.
+- Conformidade, perícia e documentação: Regularização e Conformidade; Perícia e Assistência Técnica; Documentação Técnica.
+- Infraestrutura e outras frentes: Armazenamento de Energia (backup e gestão de carga, não off-grid); Supervisão e Controle; Recarga de Veículos Elétricos.
+
+**Como trabalhamos.** A Home publica Entendimento, Projeto, Execução e Pós-venda como o processo de instalação fotovoltaica da apresentação, não como método de todos os serviços.
 
 ---
 
@@ -54,7 +62,7 @@ Pendente de definição.
 
 ## 5. Diferenciais competitivos
 
-Pendente de definição.
+A Home publica três pilares da apresentação: Projeto adequado à necessidade; Execução e acompanhamento; Atendimento próximo. A comparação com concorrentes continua pendente.
 
 ---
 
@@ -122,8 +130,8 @@ Informações confirmadas no escopo do projeto (V1):
 
 - **Principal objetivo do site:** Site institucional e geração de leads; transmitir confiança; apresentar a empresa e seus serviços.
 - **CTA principal:** Direcionar o visitante para o WhatsApp da empresa.
-- **CTA secundário:** Pendente de definição
-- **Canal de contato:** WhatsApp (número, horário de atendimento e mensagem padrão: Pendente de definição)
+- **CTA secundário:** Pendente de definição. O marcador publicado continua `[CTA secundário]`.
+- **Canal de contato:** A Home e o rodapé mostram (22) 99844-9702, washington@flowenergies.com e @flow_energies como texto, sem `wa.me`, `mailto:` nem URL de Instagram. Os botões de contato são `type="button"`, sem destino. Número oficial de WhatsApp, mensagem padrão, o referente de “Em construção”, horário e o processo após o contato continuam pendentes.
 - **Processo após o contato:** Pendente de definição
 
 **Fora do escopo da V1** (não implementar sem validação com o proprietário):
@@ -148,21 +156,21 @@ Informações confirmadas no escopo do projeto (V1):
 
 Checklist objetiva do que ainda precisa ser levantado com o proprietário:
 
-- [ ] História e informações institucionais da Flow
-- [ ] Localização e região atendida
+- [ ] História e informações institucionais da Flow — a trajetória da apresentação está na Home; o perfil completo continua pendente
+- [ ] Localização e região atendida — “Rio de Janeiro • Região dos Lagos” está publicado como texto; rua, cidade específica e CEP continuam pendentes
 - [ ] Perfil da empresa
-- [ ] Posicionamento e mensagens principais
+- [ ] Posicionamento e mensagens principais — a frase do Hero e da meta description continua pendente
 - [ ] Público-alvo (cliente principal, perfil, segmentos, necessidades, dores, motivações)
-- [ ] Catálogo de serviços (nome, descrição, público, problema, benefícios, diferenciais)
+- [ ] Catálogo de serviços — a união dos conjuntos está na Home; a ficha individual e o refinamento da redação continuam pendentes
 - [ ] Problemas que a Flow resolve
-- [ ] Diferenciais competitivos
+- [ ] Diferenciais competitivos — os três pilares da apresentação estão na Home; a comparação com concorrentes continua pendente
 - [ ] Proposta de valor
 - [ ] Concorrência (concorrentes, argumentos, pontos fortes/fracos, oportunidades)
 - [ ] Objeções dos clientes
 - [ ] Provas sociais (clientes, projetos, depoimentos, fotos, números)
 - [ ] Garantias e certificações
 - [ ] Processo comercial e processo após o contato
-- [ ] Contato e WhatsApp (número, horário, mensagem padrão)
+- [ ] Contato e WhatsApp — telefone, e-mail e @flow_energies estão como texto; número oficial, horário, mensagem padrão, `mailto:` e URL do Instagram continuam pendentes
 - [ ] CTA secundário
 - [ ] Materiais de marca e conteúdo (fotos, vídeos, logos, materiais comerciais, redes sociais)
 - [ ] Tom de voz e personalidade da marca
@@ -186,6 +194,6 @@ A Discovery só será considerada concluída quando as informações essenciais 
 | Conversão | WhatsApp (número e mensagem), processo após contato, CTAs |
 | Conteúdo | Materiais disponíveis (fotos, logos, textos) ou plano para obtê-los |
 | Marca | Tom de voz e diretrizes mínimas de percepção |
-| Estrutura do site | Seções confirmadas para Hero, Sobre, Serviços, Diferenciais, Prova social, FAQ, CTA, Footer |
+| Estrutura do site | A Home V1 publicada é Hero, A Flow `#a-flow`, Soluções `#solucoes`, Como trabalhamos `#como-trabalhamos`, Trajetória `#trajetoria`, Diferenciais `#diferenciais`, Contato `#contato` e rodapé. Projetos, prova social e FAQ não entram nesse esqueleto |
 
-Até que esses itens estejam resolvidos, a Fase 1 permanece em andamento e as fases seguintes (Design System, Estrutura do site, Implementação V1) não devem assumir conteúdo não validado.
+A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte. O refinamento dos textos publicados fica para o final do projeto.
