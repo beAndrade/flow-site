@@ -82,9 +82,20 @@ Implementado. O QA independente do incremento foi `PASS WITH ISSUES` por uma que
 - Botões de contato sem destino. Telefone, e-mail e @flow_energies como texto.
 - Três textos provisórios: horário, endereço além da região e linha legal do rodapé.
 - Escape devolve o foco ao botão do menu mobile quando esse botão está visível. O QA independente dessa correção foi `PASS`.
-- `header.component.scss` não foi alterado. A checagem de overflow em 390 px, 1024 px e 1280 px não mostrou estouro da barra.
+- `header.component.scss` não foi alterado neste incremento. A checagem de overflow em 390 px, 1024 px e 1280 px não mostrou estouro da barra. O refinamento visual posterior alterou o SCSS do header.
 
-O diagnóstico e o refinamento visual da Home continuam pendentes. A estrutura foi implementada; esse acabamento não foi feito.
+O acabamento visual da Home V1 já implementada foi fechado. Não é o Incremento 3 nem o Incremento 4. O QA independente desse refinamento foi `PASS`. Textos comerciais não foram reescritos. Botões continuam sem destino. Os seis destinos do menu foram preservados. O refinamento da redação comercial continua para o final do projeto e não é reaberto.
+
+- A imagem do Hero ocupa a largura útil da viewport. A coluna de leitura permanece limitada e alinhada às seções. A foto continua o asset atual (`/images/Solar Farm at Sunset.png`).
+- O header permanece absoluto sobre o Hero, não fixo. `--header-height` não aumentou (`4.75rem`). O contraste do título branco, do eyebrow amarelo e do apoio branco sobre o scrim escuro foi visto nas capturas. Não houve auditoria formal da razão de contraste.
+- O menu compacto usa o literal medido `56rem`. A navegação horizontal aparece a partir desse corte. Não se usa `var()` dentro de `@media`. `64rem` continua o patamar de padding e tipo desktop, não o corte do menu.
+- O painel mobile aberto tem fundo branco opaco e links navy.
+- Foram verificados Tab, um passo de Shift+Tab, Escape, o skip link visível e acionável em 390 e 1440, e a gestão de foco ao alargar e encolher a viewport. Ao alargar, o foco vai para o link visível “A Flow”. Ao encolher, o painel permanece fechado e o foco volta ao botão MENU visível. A volta completa com Shift+Tab não foi feita.
+- Os grupos de Soluções estão em invólucros próprios (`.solution-group` dentro de `.solution-groups`). Duas colunas a partir de `48rem`, quando há espaço. Na validação, 768 e larguras maiores ficaram em duas colunas sem estouro de título; 390 e 430 em uma coluna.
+- A hierarquia de h2 é local à Home (`.home-section h2`, `1.75rem`). Não é token global. `_typography.scss` não mudou.
+- Limitações do relatório: sem auditoria formal da razão de contraste; Shift+Tab foi um passo reverso, não a varredura de todos os controles. O contorno de foco navy sobre o scrim escuro foi medido como presente; a razão desse contorno contra o fundo não foi amostrada.
+- Matriz medida: 390, 430, 768, 1024, 1280 e 1440 px. Sem overflow horizontal. Folgas da barra em 1024 (80 px) e em 1280 e 1440 (176 px).
+- `npx ng test --watch=false --browsers=ChromeHeadless`: exit 0, 3 SUCCESS. `npm run build`: exit 0, uma rota prerenderizada. Os três testes não cobrem o refinamento visual nem o foco.
 
 Não fazem parte do Incremento 2:
 
@@ -92,7 +103,7 @@ Não fazem parte do Incremento 2:
 - **Incremento 4.** Ligar WhatsApp, e-mail e Instagram só depois de confirmar o número oficial, a mensagem padrão, o referente de “Em construção”, o uso de `mailto:` e a URL do Instagram.
 - A referência `docs/visual-identity.md` em `docs/design-system.md` continua fora deste fechamento. O arquivo existente é `docs/visual-identity-flow-energies.md`.
 
-O Incremento 2 não está em commit. Este registro documenta o estado local autorizado para revisão do diff.
+O Incremento 2 está em commit. O refinamento visual está no diff local e não está em commit.
 
 ## Fase 5 — Deploy
 

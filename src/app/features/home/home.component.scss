@@ -3,20 +3,28 @@
 }
 
 .hero {
+  --content-pad: var(--container-padding-mobile);
   display: flex;
   align-items: flex-start;
+  width: 100%;
   min-height: 430px;
-  padding: 64px 24px 32px;
+  padding: var(--header-height) 0 32px;
   background:
-    linear-gradient(180deg, rgb(7 29 48 / 87%), rgb(16 47 74 / 13%)),
-    linear-gradient(180deg, #102f4a, #4296ce);
+    linear-gradient(180deg, rgb(7 29 48 / 88%) 0%, rgb(7 29 48 / 55%) 22%, rgb(16 47 74 / 8%) 70%),
+    linear-gradient(90deg, rgb(7 29 48 / 82%) 0%, rgb(16 47 74 / 48%) 52%, rgb(16 47 74 / 0%) 100%),
+    url('/images/Solar%20Farm%20at%20Sunset.png') center / cover no-repeat;
   color: var(--color-white);
 }
 
 .hero__copy {
   display: grid;
   gap: 14px;
-  width: min(100%, 330px);
+  width: min(32rem, calc(100% - (var(--content-pad) * 2)));
+  margin-right: var(--content-pad);
+  margin-left: max(
+    var(--content-pad),
+    calc((100% - var(--container-max-width)) / 2 + var(--content-pad))
+  );
 }
 
 .hero__eyebrow {
@@ -77,20 +85,20 @@
   font-weight: var(--font-weight-semibold);
 }
 
+@media (min-width: 48rem) {
+  .hero {
+    --content-pad: var(--container-padding-tablet);
+  }
+}
+
 @media (min-width: 64rem) {
   .hero {
-    align-items: flex-start;
-    width: min(100%, 1200px);
+    --content-pad: var(--container-padding-desktop);
     min-height: 510px;
-    margin: 0 auto;
-    padding: 94px 72px 48px;
-    background:
-      linear-gradient(90deg, rgb(7 29 48 / 80%) 0%, rgb(16 47 74 / 53%) 58%, rgb(16 47 74 / 0%) 100%),
-      url('/images/Solar%20Farm%20at%20Sunset.png') center / cover no-repeat;
+    padding-bottom: 48px;
   }
 
   .hero__copy {
-    width: min(100%, 510px);
     gap: 18px;
   }
 
@@ -118,11 +126,14 @@
   scroll-margin-top: var(--header-height);
   width: min(100%, var(--container-max-width));
   margin: 0 auto;
-  padding: var(--space-16) var(--space-5);
+  padding-block: var(--space-16);
+  padding-inline: var(--container-padding-mobile);
 }
 
 .home-section h2 {
   margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.2;
 }
 
 .home-section h3,
@@ -135,6 +146,39 @@
   margin: var(--space-10) 0 var(--space-3);
   font-size: 1.25rem;
   line-height: 1.3;
+}
+
+@media (min-width: 48rem) {
+  .home-section {
+    padding-inline: var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 64rem) {
+  .home-section {
+    padding-inline: var(--container-padding-desktop);
+  }
+}
+
+.solution-groups {
+  display: grid;
+  gap: var(--space-10);
+  margin-top: var(--space-10);
+}
+
+.solution-group {
+  min-width: 0;
+}
+
+.solution-group h3 {
+  margin-top: 0;
+}
+
+@media (min-width: 48rem) {
+  .solution-groups {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
 }
 
 .home-section h4 {

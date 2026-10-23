@@ -35,7 +35,7 @@ O site apresenta a Flow Energies e conduz o visitante ao WhatsApp. O diferencial
 
 Confirmado para a V1:
 
-- Site institucional da Home V1. A estrutura publicada é Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé. O menu aponta, nessa ordem, para `#a-flow`, `#solucoes`, `#como-trabalhamos`, `#trajetoria`, `#diferenciais` e `#contato`. O texto dessas seções veio das fontes aprovadas para o Incremento 2. O refinamento da redação comercial fica para o final do projeto. O diagnóstico e o refinamento visual da Home continuam pendentes.
+- Site institucional da Home V1. A estrutura publicada é Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé. O menu aponta, nessa ordem, para `#a-flow`, `#solucoes`, `#como-trabalhamos`, `#trajetoria`, `#diferenciais` e `#contato`. O texto dessas seções veio das fontes aprovadas para o Incremento 2. O refinamento da redação comercial fica para o final do projeto. O acabamento visual dessa Home já implementada foi fechado. O QA independente desse refinamento foi `PASS`. Esse fechamento não é o Incremento 3 nem o Incremento 4.
 - Prova social e elementos de confiança, somente com material real. Não fabricar depoimentos, números, clientes, garantias ou serviços.
 - CTAs estratégicos. O CTA principal é o WhatsApp.
 - SEO, performance e renderização SSR/SSG.
@@ -67,6 +67,7 @@ Decisões de produto em aberto: frase do Hero e da meta description; destino de 
 - O Discovery continua em andamento. O Incremento 2 publicou a estrutura da Home e os textos de fonte já autorizados. Vários itens comerciais seguem pendentes.
 - A Home está em `src/app/features/home/`. O menu está em `src/app/layout/header/`. O rodapé está em `src/app/layout/footer/`.
 - Ao fechar o menu mobile com Escape, o foco volta ao botão de abertura quando ele está visível. O QA independente dessa correção foi `PASS`. Os três testes automatizados do projeto não cobrem esse foco.
+- O acabamento visual da Home V1 está no diff local e não está em commit. O QA independente foi `PASS`. Não houve auditoria formal da razão de contraste. O Shift+Tab verificado foi um passo reverso, não a varredura de todos os controles. O contorno de foco navy sobre o scrim escuro foi medido como presente; a razão desse contorno contra o fundo não foi amostrada. Os três testes automatizados não cobrem o refinamento visual nem o foco.
 - Direção visual de projeto (não é prova comercial): `docs/visual-identity-flow-energies.md`, `docs/design-system.md`.
 - Não há, no repositório, depoimentos, casos, fotos de projetos, certificações, garantias ou métricas comerciais além do que a Home publica a partir das fontes já autorizadas. O telefone não é um link de WhatsApp.
 - Trabalho futuro não deve inventar clientes, depoimentos, números, garantias, certificações, preços ou serviços.
