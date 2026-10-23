@@ -2,7 +2,7 @@
 
 Documento central de Discovery da Flow Energies. Serve como fonte de verdade para conteúdo, posicionamento, UX e decisões futuras do site.
 
-> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O refinamento dessa redação fica para o final do projeto. Vários itens comerciais continuam pendentes.
+> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O Incremento 3 publicou no Hero e na meta description a hipótese da seção 6. Isso não encerra a Discovery. O refinamento dessa redação fica para o final do projeto. Vários itens comerciais continuam pendentes.
 
 ---
 
@@ -79,6 +79,8 @@ Hipótese de trabalho aprovada pelo proprietário do projeto para orientar o des
 - Hero, título: “Engenharia e soluções energéticas para um desempenho confiável.”
 - Hero, apoio: “Soluções energéticas pensadas para atender às necessidades de cada operação.”
 - Meta description: “Conheça a Flow Energies, empresa de engenharia e soluções energéticas com foco em confiabilidade e desempenho.”
+
+O Incremento 3 publicou o título do Hero, o apoio e a meta description acima. O QA independente foi `PASS`. A publicação não valida a hipótese perante o proprietário da Flow Energies e não encerra esta seção.
 
 ---
 
@@ -166,7 +168,7 @@ Checklist objetiva do que ainda precisa ser levantado com o proprietário:
 - [ ] História e informações institucionais da Flow — a trajetória da apresentação está na Home; o perfil completo continua pendente
 - [ ] Localização e região atendida — “Rio de Janeiro • Região dos Lagos” está publicado como texto; rua, cidade específica e CEP continuam pendentes
 - [ ] Perfil da empresa
-- [ ] Posicionamento e mensagens principais — existe hipótese de trabalho na seção 6; o item continua aberto. A frase do Hero e a meta description ainda não foram validadas pelo proprietário da empresa.
+- [ ] Posicionamento e mensagens principais — existe hipótese de trabalho na seção 6, já publicada no Hero e na meta description pelo Incremento 3; o item continua aberto. A frase do Hero, o apoio e a meta description ainda não foram validados pelo proprietário da empresa.
 - [ ] Público-alvo (cliente principal, perfil, segmentos, necessidades, dores, motivações)
 - [ ] Catálogo de serviços — a união dos conjuntos está na Home; a ficha individual e o refinamento da redação continuam pendentes
 - [ ] Problemas que a Flow resolve
@@ -203,4 +205,4 @@ A Discovery só será considerada concluída quando as informações essenciais 
 | Marca | Tom de voz e diretrizes mínimas de percepção |
 | Estrutura do site | A Home V1 publicada é Hero, A Flow `#a-flow`, Soluções `#solucoes`, Como trabalhamos `#como-trabalhamos`, Trajetória `#trajetoria`, Diferenciais `#diferenciais`, Contato `#contato` e rodapé. Projetos, prova social e FAQ não entram nesse esqueleto |
 
-A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte. O refinamento dos textos publicados fica para o final do projeto.
+A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte. O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description, sem validação do proprietário da Flow Energies e sem fechar o posicionamento. O refinamento dos textos publicados fica para o final do projeto.

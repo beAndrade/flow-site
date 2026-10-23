@@ -35,7 +35,8 @@ O site apresenta a Flow Energies e conduz o visitante ao WhatsApp. Há uma hipó
 
 Confirmado para a V1:
 
-- Site institucional da Home V1. A estrutura publicada é Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé. O menu aponta, nessa ordem, para `#a-flow`, `#solucoes`, `#como-trabalhamos`, `#trajetoria`, `#diferenciais` e `#contato`. O texto dessas seções veio das fontes aprovadas para o Incremento 2. O refinamento da redação comercial fica para o final do projeto. O acabamento visual dessa Home já implementada foi fechado. O QA independente desse refinamento foi `PASS`. Esse fechamento não é o Incremento 3 nem o Incremento 4.
+- Site institucional da Home V1. A estrutura publicada é Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé. O menu aponta, nessa ordem, para `#a-flow`, `#solucoes`, `#como-trabalhamos`, `#trajetoria`, `#diferenciais` e `#contato`. O texto dessas seções veio das fontes aprovadas para o Incremento 2. O refinamento da redação comercial fica para o final do projeto. O acabamento visual dessa Home já implementada foi fechado. O QA independente desse refinamento foi `PASS`. Esse fechamento visual não é o Incremento 3 nem o Incremento 4.
+- Incremento 3. O título do Hero, o apoio e a meta description publicam a hipótese de `docs/discovery.md`, seção 6. O QA independente foi `PASS`. As três frases foram conferidas no fonte e no HTML prerenderizado. `npx ng test --watch=false --browsers=ChromeHeadless`: 3 SUCCESS, exit 0. `npm run build`: exit 0, uma rota prerenderizada. Os três testes não cobrem diretamente as três frases. Navegador, responsividade, teclado e contraste não foram retestados nesta etapa. As mensagens continuam sujeitas à validação comercial com o proprietário da Flow Energies. Esse registro não inicia o Incremento 4.
 - Prova social e elementos de confiança, somente com material real. Não fabricar depoimentos, números, clientes, garantias ou serviços.
 - CTAs estratégicos. O CTA principal é o WhatsApp.
 - SEO, performance e renderização SSR/SSG.
@@ -53,7 +54,7 @@ Fora da V1 até validação do proprietário:
 
 Termos: Flow Energies (empresa); Flow Site (este site). A Home publica engenharia elétrica e energia solar fotovoltaica no mesmo catálogo, sem tratar uma como sinônimo da outra. Armazenamento de Energia não é off-grid. Consultoria Energética e Consultoria e Projetos Especiais permanecem entradas distintas. A frase de engenharia elétrica para o setor elétrico brasileiro e o compromisso com ANEEL, PRODIST e ABNT ficam em A Flow, não como serviços extras de Soluções.
 
-Decisões de produto em aberto: frase do Hero e meta description, como hipótese provisória ainda sem validação da empresa; destino de WhatsApp, `mailto:` e Instagram; horário, endereço completo e linha legal; segmentos dentro de comercial, industrial e residencial; problemas que a empresa resolve; proposta de valor; concorrência; objeções; provas sociais; certificações; tom de voz e personalidade da marca. O refinamento dos textos já publicados fica para o final do projeto e não reabre o Incremento 2.
+Decisões de produto em aberto: frase do Hero, apoio e meta description, publicados como hipótese provisória ainda sem validação da empresa; destino de WhatsApp, `mailto:` e Instagram; horário, endereço completo e linha legal; segmentos dentro de comercial, industrial e residencial; problemas que a empresa resolve; proposta de valor; concorrência; objeções; provas sociais; certificações; tom de voz e personalidade da marca. O refinamento dos textos já publicados fica para o final do projeto e não reabre o Incremento 2.
 
 ## Brand Commitments
 
@@ -64,7 +65,8 @@ Decisões de produto em aberto: frase do Hero e meta description, como hipótese
 ## Evidence on Hand
 
 - Escopo e restrições: `docs/architecture.md`, `docs/roadmap.md`, `docs/discovery.md`.
-- O Discovery continua em andamento. O Incremento 2 publicou a estrutura da Home e os textos de fonte já autorizados. Vários itens comerciais seguem pendentes.
+- O Discovery continua em andamento. O Incremento 2 publicou a estrutura da Home e os textos de fonte já autorizados. O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description, sem encerrar a Discovery. Vários itens comerciais seguem pendentes.
+- O QA independente do Incremento 3 foi `PASS`. As três frases foram conferidas no fonte e no HTML prerenderizado. `npx ng test --watch=false --browsers=ChromeHeadless`: 3 SUCCESS, exit 0. `npm run build`: exit 0, uma rota prerenderizada. Os três testes não cobrem diretamente as três frases. Navegador, responsividade, teclado e contraste não foram retestados nesta etapa. As mensagens continuam sujeitas à validação comercial com o proprietário da Flow Energies.
 - A Home está em `src/app/features/home/`. O menu está em `src/app/layout/header/`. O rodapé está em `src/app/layout/footer/`.
 - Ao fechar o menu mobile com Escape, o foco volta ao botão de abertura quando ele está visível. O QA independente dessa correção foi `PASS`. Os três testes automatizados do projeto não cobrem esse foco.
 - O acabamento visual da Home V1 está commitado em `08fca3f`. A alteração de `tsconfig.json` está separada em `03fff82`. O QA independente foi `PASS`. Não houve auditoria formal da razão de contraste. O Shift+Tab verificado foi um passo reverso, não a varredura de todos os controles. O contorno de foco navy sobre o scrim escuro foi medido como presente; a razão desse contorno contra o fundo não foi amostrada. Os três testes automatizados não cobrem o refinamento visual nem o foco.

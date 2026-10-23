@@ -99,7 +99,7 @@ O acabamento visual da Home V1 já implementada foi fechado. Não é o Increment
 
 Não fazem parte do Incremento 2:
 
-- **Incremento 3.** Especificado abaixo. Não faz parte do Incremento 2. A implementação não está autorizada.
+- **Incremento 3.** Implementado e com QA independente `PASS`. Não faz parte do Incremento 2. O registro está na seção abaixo.
 - **Incremento 4.** Ligar WhatsApp, e-mail e Instagram só depois de confirmar o número oficial, a mensagem padrão, o referente de “Em construção”, o uso de `mailto:` e a URL do Instagram.
 - A referência `docs/visual-identity.md` em `docs/design-system.md` continua fora deste fechamento. O arquivo existente é `docs/visual-identity-flow-energies.md`.
 
@@ -107,27 +107,21 @@ O Incremento 2 está em commit. O refinamento visual está commitado em `08fca3f
 
 ### Incremento 3 — Frase do Hero, apoio e meta description
 
-Especificação. Não autoriza implementação. As formulações são hipótese de trabalho: aprovadas pelo proprietário do projeto para orientar o desenvolvimento, não validadas pelo proprietário da Flow Energies, e sujeitas à validação comercial final. O texto canônico está em `docs/discovery.md`, seção 6. O apoio entra porque a autorização desta especificação o incluiu. O registro anterior citava só a frase e a meta.
+Implementado. O QA independente foi `PASS`. As formulações continuam hipótese de trabalho: aprovadas pelo proprietário do projeto para orientar o desenvolvimento, não validadas pelo proprietário da Flow Energies, e sujeitas à validação comercial final. O texto canônico permanece em `docs/discovery.md`, seção 6. Este registro não encerra a Discovery nem fecha o item de posicionamento da seção 14.
 
-Escopo, quando a implementação for autorizada:
+O que foi publicado:
 
-- Trocar somente o `h1#home-title` em `src/app/features/home/home.component.html`.
-- Trocar somente o parágrafo `.hero__support` no mesmo arquivo.
-- Trocar somente o `content` de `meta name="description"` em `src/index.html`.
-- Não trocar `<title>Flow Energies</title>` nem `title` em `src/app/app.component.ts`. O teste existente espera esse título de componente.
+- `h1#home-title` em `src/app/features/home/home.component.html`: “Engenharia e soluções energéticas para um desempenho confiável.”
+- Parágrafo `.hero__support` no mesmo arquivo: “Soluções energéticas pensadas para atender às necessidades de cada operação.”
+- `meta name="description"` em `src/index.html`: “Conheça a Flow Energies, empresa de engenharia e soluções energéticas com foco em confiabilidade e desempenho.”
 
-Fora do escopo: eyebrow, botões, `[CTA secundário]`, seções A Flow em diante, rodapé, menu, foto `/images/Solar Farm at Sunset.png`, SCSS, header, tokens e o acabamento visual de `08fca3f`. O Incremento 4 não começa com este.
+O `<title>` do documento e o `title` em `src/app/app.component.ts` continuam “Flow Energies”. Eyebrow, botões, `[CTA secundário]`, seções A Flow em diante, rodapé, menu, foto `/images/Solar Farm at Sunset.png`, SCSS, header, tokens e o acabamento visual de `08fca3f` não mudaram. A interface não ganhou selo de “provisório”. O Incremento 4 não começa com este.
 
-Critérios de aceite:
+Evidência: as três frases estão no fonte e no HTML prerenderizado `dist/flow-site/browser/index.html`. O diff troca somente essas três frases.
 
-- O `h1` visível é exatamente “Engenharia e soluções energéticas para um desempenho confiável.”
-- O apoio visível é exatamente “Soluções energéticas pensadas para atender às necessidades de cada operação.”
-- A meta description é exatamente “Conheça a Flow Energies, empresa de engenharia e soluções energéticas com foco em confiabilidade e desempenho.”
-- O `<title>` do documento e o título do componente continuam “Flow Energies”.
-- Eyebrow, CTAs, demais seções, seis destinos do menu e a fotografia permanecem.
-- Nenhum arquivo de estilo muda.
-- A natureza provisória permanece na Discovery e no `PRODUCT.md`. A implementação não adiciona selo de “provisório” na interface.
-- `npx ng test --watch=false --browsers=ChromeHeadless` e `npm run build` seguem como regressão de compilação. Não cobrem a frase.
+- `npx ng test --watch=false --browsers=ChromeHeadless`: 3 SUCCESS, exit 0.
+- `npm run build`: exit 0, uma rota prerenderizada.
+- Limitações: os três testes não cobrem diretamente as três frases. Navegador, responsividade, teclado e contraste não foram retestados nesta etapa.
 
 ## Fase 5 — Deploy
 
