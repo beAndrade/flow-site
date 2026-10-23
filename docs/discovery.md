@@ -73,6 +73,13 @@ A Home publica três pilares da apresentação: Projeto adequado à necessidade;
 - **O que a empresa não quer transmitir:** Pendente de definição
 - **Principais mensagens:** Pendente de definição
 
+Hipótese de trabalho aprovada pelo proprietário do projeto para orientar o desenvolvimento. Não foi validada pelo proprietário da Flow Energies. Será revista na validação comercial final. Não encerra a Discovery nem fecha percepção, representação, o que a empresa não quer transmitir, nem as demais mensagens.
+
+- Posicionamento provisório: “Empresa de engenharia e soluções energéticas com foco em confiabilidade e desempenho.”
+- Hero, título: “Engenharia e soluções energéticas para um desempenho confiável.”
+- Hero, apoio: “Soluções energéticas pensadas para atender às necessidades de cada operação.”
+- Meta description: “Conheça a Flow Energies, empresa de engenharia e soluções energéticas com foco em confiabilidade e desempenho.”
+
 ---
 
 ## 7. Concorrência
@@ -159,7 +166,7 @@ Checklist objetiva do que ainda precisa ser levantado com o proprietário:
 - [ ] História e informações institucionais da Flow — a trajetória da apresentação está na Home; o perfil completo continua pendente
 - [ ] Localização e região atendida — “Rio de Janeiro • Região dos Lagos” está publicado como texto; rua, cidade específica e CEP continuam pendentes
 - [ ] Perfil da empresa
-- [ ] Posicionamento e mensagens principais — a frase do Hero e da meta description continua pendente
+- [ ] Posicionamento e mensagens principais — existe hipótese de trabalho na seção 6; o item continua aberto. A frase do Hero e a meta description ainda não foram validadas pelo proprietário da empresa.
 - [ ] Público-alvo (cliente principal, perfil, segmentos, necessidades, dores, motivações)
 - [ ] Catálogo de serviços — a união dos conjuntos está na Home; a ficha individual e o refinamento da redação continuam pendentes
 - [ ] Problemas que a Flow resolve

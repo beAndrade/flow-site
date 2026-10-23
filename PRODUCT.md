@@ -20,7 +20,7 @@ Sucesso, na V1, é o visitante compreender a empresa o suficiente para começar 
 
 ## Positioning
 
-O site apresenta a Flow Energies e conduz o visitante ao WhatsApp. O diferencial comercial da empresa — o que um concorrente de energia solar não poderia copiar com verdade — permanece em aberto, pendente do Discovery com o proprietário.
+O site apresenta a Flow Energies e conduz o visitante ao WhatsApp. Há uma hipótese de trabalho de posicionamento, aprovada pelo proprietário do projeto para orientar o desenvolvimento, registrada em `docs/discovery.md`, seção 6. Não foi validada pelo proprietário da Flow Energies e será revista na validação comercial final. O diferencial comercial da empresa — o que um concorrente de energia solar não poderia copiar com verdade — permanece em aberto.
 
 ## Operating Context
 
@@ -53,7 +53,7 @@ Fora da V1 até validação do proprietário:
 
 Termos: Flow Energies (empresa); Flow Site (este site). A Home publica engenharia elétrica e energia solar fotovoltaica no mesmo catálogo, sem tratar uma como sinônimo da outra. Armazenamento de Energia não é off-grid. Consultoria Energética e Consultoria e Projetos Especiais permanecem entradas distintas. A frase de engenharia elétrica para o setor elétrico brasileiro e o compromisso com ANEEL, PRODIST e ABNT ficam em A Flow, não como serviços extras de Soluções.
 
-Decisões de produto em aberto: frase do Hero e da meta description; destino de WhatsApp, `mailto:` e Instagram; horário, endereço completo e linha legal; segmentos dentro de comercial, industrial e residencial; problemas que a empresa resolve; proposta de valor; concorrência; objeções; provas sociais; certificações; tom de voz e personalidade da marca. O refinamento dos textos já publicados fica para o final do projeto e não reabre o Incremento 2.
+Decisões de produto em aberto: frase do Hero e meta description, como hipótese provisória ainda sem validação da empresa; destino de WhatsApp, `mailto:` e Instagram; horário, endereço completo e linha legal; segmentos dentro de comercial, industrial e residencial; problemas que a empresa resolve; proposta de valor; concorrência; objeções; provas sociais; certificações; tom de voz e personalidade da marca. O refinamento dos textos já publicados fica para o final do projeto e não reabre o Incremento 2.
 
 ## Brand Commitments
 

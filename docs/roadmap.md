@@ -99,11 +99,35 @@ O acabamento visual da Home V1 já implementada foi fechado. Não é o Increment
 
 Não fazem parte do Incremento 2:
 
-- **Incremento 3.** Frase institucional do Hero e da meta description. A foto atual permanece. A meta publicada continua “Flow Energies. Energia solar para empresas comerciais e industriais.”
+- **Incremento 3.** Especificado abaixo. Não faz parte do Incremento 2. A implementação não está autorizada.
 - **Incremento 4.** Ligar WhatsApp, e-mail e Instagram só depois de confirmar o número oficial, a mensagem padrão, o referente de “Em construção”, o uso de `mailto:` e a URL do Instagram.
 - A referência `docs/visual-identity.md` em `docs/design-system.md` continua fora deste fechamento. O arquivo existente é `docs/visual-identity-flow-energies.md`.
 
 O Incremento 2 está em commit. O refinamento visual está commitado em `08fca3f`. A alteração de `tsconfig.json` está separada em `03fff82`.
+
+### Incremento 3 — Frase do Hero, apoio e meta description
+
+Especificação. Não autoriza implementação. As formulações são hipótese de trabalho: aprovadas pelo proprietário do projeto para orientar o desenvolvimento, não validadas pelo proprietário da Flow Energies, e sujeitas à validação comercial final. O texto canônico está em `docs/discovery.md`, seção 6. O apoio entra porque a autorização desta especificação o incluiu. O registro anterior citava só a frase e a meta.
+
+Escopo, quando a implementação for autorizada:
+
+- Trocar somente o `h1#home-title` em `src/app/features/home/home.component.html`.
+- Trocar somente o parágrafo `.hero__support` no mesmo arquivo.
+- Trocar somente o `content` de `meta name="description"` em `src/index.html`.
+- Não trocar `<title>Flow Energies</title>` nem `title` em `src/app/app.component.ts`. O teste existente espera esse título de componente.
+
+Fora do escopo: eyebrow, botões, `[CTA secundário]`, seções A Flow em diante, rodapé, menu, foto `/images/Solar Farm at Sunset.png`, SCSS, header, tokens e o acabamento visual de `08fca3f`. O Incremento 4 não começa com este.
+
+Critérios de aceite:
+
+- O `h1` visível é exatamente “Engenharia e soluções energéticas para um desempenho confiável.”
+- O apoio visível é exatamente “Soluções energéticas pensadas para atender às necessidades de cada operação.”
+- A meta description é exatamente “Conheça a Flow Energies, empresa de engenharia e soluções energéticas com foco em confiabilidade e desempenho.”
+- O `<title>` do documento e o título do componente continuam “Flow Energies”.
+- Eyebrow, CTAs, demais seções, seis destinos do menu e a fotografia permanecem.
+- Nenhum arquivo de estilo muda.
+- A natureza provisória permanece na Discovery e no `PRODUCT.md`. A implementação não adiciona selo de “provisório” na interface.
+- `npx ng test --watch=false --browsers=ChromeHeadless` e `npm run build` seguem como regressão de compilação. Não cobrem a frase.
 
 ## Fase 5 — Deploy
 
