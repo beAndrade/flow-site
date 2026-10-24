@@ -23,8 +23,8 @@ Itens que dependem de levantamento com o proprietário. O Incremento 2 não ence
 - provas sociais
 - garantias
 - processo comercial
-- informações de contato — telefone, e-mail e @flow_energies estão como texto, sem link
-- WhatsApp — destino, mensagem padrão e o referente de “Em construção” continuam abertos
+- informações de contato — telefone, e-mail e @flow_energies continuam como texto, sem link. Número, mensagem padrão, `mailto:` e URL do Instagram estão confirmados na especificação do Incremento 4. Horário continua aberto.
+- WhatsApp — número e mensagem padrão estão confirmados nessa especificação. O referente de “Em construção” continua aberto. A implementação não está autorizada.
 - possíveis simuladores/orçamentos
 - requisitos futuros de checkout
 
@@ -100,7 +100,7 @@ O acabamento visual da Home V1 já implementada foi fechado. Não é o Increment
 Não fazem parte do Incremento 2:
 
 - **Incremento 3.** Implementado e com QA independente `PASS`. Não faz parte do Incremento 2. O registro está na seção abaixo.
-- **Incremento 4.** Ligar WhatsApp, e-mail e Instagram só depois de confirmar o número oficial, a mensagem padrão, o referente de “Em construção”, o uso de `mailto:` e a URL do Instagram.
+- **Incremento 4.** Especificado abaixo. Não faz parte do Incremento 2. A implementação não está autorizada.
 - A referência `docs/visual-identity.md` em `docs/design-system.md` continua fora deste fechamento. O arquivo existente é `docs/visual-identity-flow-energies.md`.
 
 O Incremento 2 está em commit. O refinamento visual está commitado em `08fca3f`. A alteração de `tsconfig.json` está separada em `03fff82`.
@@ -122,6 +122,49 @@ Evidência: as três frases estão no fonte e no HTML prerenderizado `dist/flow-
 - `npx ng test --watch=false --browsers=ChromeHeadless`: 3 SUCCESS, exit 0.
 - `npm run build`: exit 0, uma rota prerenderizada.
 - Limitações: os três testes não cobrem diretamente as três frases. Navegador, responsividade, teclado e contraste não foram retestados nesta etapa.
+
+### Incremento 4 — WhatsApp, e-mail e Instagram
+
+Especificação. Não autoriza implementação. O número oficial, a mensagem padrão, o `mailto:` e a URL do Instagram estão confirmados. O referente de “Em construção” continua pendente. Não há controle com esse nome na interface; a especificação não inventa destino, rótulo nem clique. `[CTA secundário]` continua um parágrafo sem interação. Este registro não encerra a Discovery nem marca o item de contato da seção 14.
+
+Destinos estáticos, sem JavaScript que monte a URL e sem `target="_blank"`:
+
+- WhatsApp: `https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.` O número visível continua `(22) 99844-9702`. A mensagem é exatamente “Olá! Conheci a Flow Energies pelo site e gostaria de conhecer melhor a empresa e entender como vocês podem me ajudar.”
+- E-mail: `mailto:washington@flowenergies.com`, somente o destinatário, sem assunto nem corpo.
+- Instagram: `https://www.instagram.com/flow_energies/`. O texto visível continua `@flow_energies`.
+
+Mapeamento, quando a implementação for autorizada:
+
+- Os dois botões “Falar no WhatsApp” em `src/app/layout/header/header.component.html` (`.header-cta--bar` e `.header-cta` em `#site-menu`), o botão “Falar com a Flow” (`.hero__cta`) e o botão “Falar com a Flow no WhatsApp” (`.contact-action`) em `src/app/features/home/home.component.html` apontam para o `wa.me`. O rótulo do Hero não muda.
+- Os parágrafos do telefone em Contato e no rodapé envolvem `(22) 99844-9702` nesse mesmo `wa.me`.
+- Os parágrafos do e-mail em Contato e no rodapé envolvem o endereço no `mailto:`. Não se cria botão de e-mail.
+- Os parágrafos `@flow_energies` em Contato e no rodapé envolvem o identificador na URL do Instagram. Não se cria botão de Instagram.
+- Nos templates, `@` continua `&#64;`.
+- A região “Rio de Janeiro • Região dos Lagos” continua texto.
+
+Aparência: os botões permanecem com a aparência aprovada. A troca para `<a>` pode exigir só o ajuste que impeça sublinhado e cor de link do navegador nesses botões. Os três fatos em texto ganham sublinhado. A classe `.header-cta--bar` fica no próprio link, para o handoff de foco continuar a comparar esse elemento. `src/app/layout/header/header.component.ts` só entra se essa comparação deixar de valer.
+
+Segurança e acessibilidade:
+
+- URLs literais e fixas. Nada vem de entrada do visitante.
+- Só `https://wa.me`, `https://www.instagram.com` e `mailto:` para o endereço confirmado. Sem `javascript:` e sem `window.open`.
+- Sem parâmetros de campanha, assunto, corpo de e-mail ou analytics.
+- O nome acessível é o texto já visível. O foco usa o anel existente em `:focus-visible`.
+- A área de toque dos botões permanece a atual, no mínimo 2.75rem de altura.
+
+Fora deste incremento: textos dos Incrementos 2 e 3, menu, foto, tokens, horário, endereço completo, linha legal, processo após o contato e placeholders. Não altera `docs/architecture.md` nem `docs/design-system.md`. A divergência em que a arquitetura lista prova social como escopo atual da V1 permanece sem correção.
+
+Critérios de aceite, para quando a implementação for autorizada:
+
+- Cada botão “Falar no WhatsApp”, “Falar com a Flow no WhatsApp” e “Falar com a Flow” tem o `wa.me` exato, uma única vez por controle.
+- Telefone de Contato e do rodapé usa o mesmo `wa.me`; o texto visível permanece `(22) 99844-9702`.
+- E-mail de Contato e do rodapé usa somente `mailto:washington@flowenergies.com`; o texto visível permanece o endereço.
+- Instagram de Contato e do rodapé usa exatamente `https://www.instagram.com/flow_energies/`; o texto visível permanece `@flow_energies`.
+- `[CTA secundário]`, placeholders, horário, endereço completo, linha legal, textos dos Incrementos 2 e 3, menu, foto e tokens permanecem.
+- Nenhum controle recebe destino ou clique atribuído a “Em construção”.
+- `npx ng test --watch=false --browsers=ChromeHeadless` e `npm run build` seguem como regressão de compilação. A prova dos links é o fonte, o HTML prerenderizado e o acionamento real na QA.
+
+Arquivos previstos, ainda sem autorização para editá-los: `src/app/layout/header/header.component.html`, `src/app/features/home/home.component.html`, `src/app/layout/footer/footer.component.html`, o SCSS desses três componentes só para a aparência do link, e `header.component.ts` somente se o foco do CTA desktop quebrar.
 
 ## Fase 5 — Deploy
 

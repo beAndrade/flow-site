@@ -25,7 +25,7 @@ O site apresenta a Flow Energies e conduz o visitante ao WhatsApp. Há uma hipó
 ## Operating Context
 
 - O decisor avalia a empresa no site (mobile-first) e continua o contato no WhatsApp.
-- A Home publica o telefone (22) 99844-9702, o e-mail e o identificador @flow_energies como texto, sem link. Número oficial de WhatsApp, mensagem padrão, o referente de “Em construção”, `mailto:` e URL do Instagram continuam em aberto.
+- A Home publica o telefone (22) 99844-9702, o e-mail washington@flowenergies.com e o identificador @flow_energies como texto, sem link. Para o Incremento 4, ainda sem implementação autorizada, ficam confirmados o WhatsApp nesse número, a mensagem “Olá! Conheci a Flow Energies pelo site e gostaria de conhecer melhor a empresa e entender como vocês podem me ajudar.”, o `mailto:washington@flowenergies.com` sem assunto nem corpo, e o Instagram `https://www.instagram.com/flow_energies/`. O referente de “Em construção” continua em aberto.
 - Horário de atendimento, endereço além de “Rio de Janeiro • Região dos Lagos” e a linha legal do rodapé estão em aberto. No site, esses três vãos são texto provisório.
 - CTA secundário está em aberto.
 - A frase “Rio de Janeiro • Região dos Lagos” está publicada como texto de contato. Rua, cidade específica da Região dos Lagos e CEP continuam em aberto.
@@ -37,6 +37,7 @@ Confirmado para a V1:
 
 - Site institucional da Home V1. A estrutura publicada é Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé. O menu aponta, nessa ordem, para `#a-flow`, `#solucoes`, `#como-trabalhamos`, `#trajetoria`, `#diferenciais` e `#contato`. O texto dessas seções veio das fontes aprovadas para o Incremento 2. O refinamento da redação comercial fica para o final do projeto. O acabamento visual dessa Home já implementada foi fechado. O QA independente desse refinamento foi `PASS`. Esse fechamento visual não é o Incremento 3 nem o Incremento 4.
 - Incremento 3. O título do Hero, o apoio e a meta description publicam a hipótese de `docs/discovery.md`, seção 6. O QA independente foi `PASS`. As três frases foram conferidas no fonte e no HTML prerenderizado. `npx ng test --watch=false --browsers=ChromeHeadless`: 3 SUCCESS, exit 0. `npm run build`: exit 0, uma rota prerenderizada. Os três testes não cobrem diretamente as três frases. Navegador, responsividade, teclado e contraste não foram retestados nesta etapa. As mensagens continuam sujeitas à validação comercial com o proprietário da Flow Energies. Esse registro não inicia o Incremento 4.
+- Incremento 4. Especificado em `docs/roadmap.md`. Confirma o destino de WhatsApp, a mensagem padrão, o `mailto:` e a URL do Instagram. A implementação não está autorizada. “Em construção” e `[CTA secundário]` continuam sem destino.
 - Prova social e elementos de confiança, somente com material real. Não fabricar depoimentos, números, clientes, garantias ou serviços.
 - CTAs estratégicos. O CTA principal é o WhatsApp.
 - SEO, performance e renderização SSR/SSG.
@@ -54,7 +55,7 @@ Fora da V1 até validação do proprietário:
 
 Termos: Flow Energies (empresa); Flow Site (este site). A Home publica engenharia elétrica e energia solar fotovoltaica no mesmo catálogo, sem tratar uma como sinônimo da outra. Armazenamento de Energia não é off-grid. Consultoria Energética e Consultoria e Projetos Especiais permanecem entradas distintas. A frase de engenharia elétrica para o setor elétrico brasileiro e o compromisso com ANEEL, PRODIST e ABNT ficam em A Flow, não como serviços extras de Soluções.
 
-Decisões de produto em aberto: frase do Hero, apoio e meta description, publicados como hipótese provisória ainda sem validação da empresa; destino de WhatsApp, `mailto:` e Instagram; horário, endereço completo e linha legal; segmentos dentro de comercial, industrial e residencial; problemas que a empresa resolve; proposta de valor; concorrência; objeções; provas sociais; certificações; tom de voz e personalidade da marca. O refinamento dos textos já publicados fica para o final do projeto e não reabre o Incremento 2.
+Decisões de produto em aberto: frase do Hero, apoio e meta description, publicados como hipótese provisória ainda sem validação da empresa; referente de “Em construção”; horário, endereço completo e linha legal; segmentos dentro de comercial, industrial e residencial; problemas que a empresa resolve; proposta de valor; concorrência; objeções; provas sociais; certificações; tom de voz e personalidade da marca. O refinamento dos textos já publicados fica para o final do projeto e não reabre o Incremento 2.
 
 ## Brand Commitments
 
@@ -65,7 +66,7 @@ Decisões de produto em aberto: frase do Hero, apoio e meta description, publica
 ## Evidence on Hand
 
 - Escopo e restrições: `docs/architecture.md`, `docs/roadmap.md`, `docs/discovery.md`.
-- O Discovery continua em andamento. O Incremento 2 publicou a estrutura da Home e os textos de fonte já autorizados. O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description, sem encerrar a Discovery. Vários itens comerciais seguem pendentes.
+- O Discovery continua em andamento. O Incremento 2 publicou a estrutura da Home e os textos de fonte já autorizados. O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description, sem encerrar a Discovery. O Incremento 4 está especificado e não tem implementação autorizada. Vários itens comerciais seguem pendentes.
 - O QA independente do Incremento 3 foi `PASS`. As três frases foram conferidas no fonte e no HTML prerenderizado. `npx ng test --watch=false --browsers=ChromeHeadless`: 3 SUCCESS, exit 0. `npm run build`: exit 0, uma rota prerenderizada. Os três testes não cobrem diretamente as três frases. Navegador, responsividade, teclado e contraste não foram retestados nesta etapa. As mensagens continuam sujeitas à validação comercial com o proprietário da Flow Energies.
 - A Home está em `src/app/features/home/`. O menu está em `src/app/layout/header/`. O rodapé está em `src/app/layout/footer/`.
 - Ao fechar o menu mobile com Escape, o foco volta ao botão de abertura quando ele está visível. O QA independente dessa correção foi `PASS`. Os três testes automatizados do projeto não cobrem esse foco.
