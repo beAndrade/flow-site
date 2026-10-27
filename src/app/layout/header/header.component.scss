@@ -71,6 +71,8 @@
 }
 
 .header-cta {
+  display: inline-flex;
+  align-items: center;
   min-height: 2.75rem;
   padding: 0.75rem 1.125rem;
   border: 0;
@@ -80,7 +82,16 @@
   font: inherit;
   font-size: 0.8125rem;
   font-weight: var(--font-weight-bold);
+  text-decoration: none;
   cursor: pointer;
+}
+
+.site-nav a.header-cta,
+.site-nav a.header-cta:hover {
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
 }
 
 .header-cta--bar {

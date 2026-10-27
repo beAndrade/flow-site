@@ -23,8 +23,8 @@ Itens que dependem de levantamento com o proprietário. O Incremento 2 não ence
 - provas sociais
 - garantias
 - processo comercial
-- informações de contato — telefone, e-mail e @flow_energies continuam como texto, sem link. Número, mensagem padrão, `mailto:` e URL do Instagram estão confirmados na especificação do Incremento 4. Horário continua aberto.
-- WhatsApp — número e mensagem padrão estão confirmados nessa especificação. O referente de “Em construção” continua aberto. A implementação não está autorizada.
+- informações de contato — telefone, e-mail e @flow_energies estão publicados como links no Incremento 4. Horário continua aberto.
+- WhatsApp — número e mensagem padrão estão publicados nessa especificação. O referente de “Em construção” continua aberto.
 - possíveis simuladores/orçamentos
 - requisitos futuros de checkout
 
@@ -100,7 +100,7 @@ O acabamento visual da Home V1 já implementada foi fechado. Não é o Increment
 Não fazem parte do Incremento 2:
 
 - **Incremento 3.** Implementado e com QA independente `PASS`. Não faz parte do Incremento 2. O registro está na seção abaixo.
-- **Incremento 4.** Especificado abaixo. Não faz parte do Incremento 2. A implementação não está autorizada.
+- **Incremento 4.** Implementado. Não faz parte do Incremento 2. O registro está na seção abaixo. A verificação desta etapa não substitui o QA independente.
 - A referência `docs/visual-identity.md` em `docs/design-system.md` continua fora deste fechamento. O arquivo existente é `docs/visual-identity-flow-energies.md`.
 
 O Incremento 2 está em commit. O refinamento visual está commitado em `08fca3f`. A alteração de `tsconfig.json` está separada em `03fff82`.
@@ -125,7 +125,7 @@ Evidência: as três frases estão no fonte e no HTML prerenderizado `dist/flow-
 
 ### Incremento 4 — WhatsApp, e-mail e Instagram
 
-Especificação. Não autoriza implementação. O número oficial, a mensagem padrão, o `mailto:` e a URL do Instagram estão confirmados. O referente de “Em construção” continua pendente. Não há controle com esse nome na interface; a especificação não inventa destino, rótulo nem clique. `[CTA secundário]` continua um parágrafo sem interação. Este registro não encerra a Discovery nem marca o item de contato da seção 14.
+Implementado. O número oficial, a mensagem padrão, o `mailto:` e a URL do Instagram estão publicados. O referente de “Em construção” continua pendente. Não há controle com esse nome na interface; nenhum destino, rótulo ou clique foi inventado para ele. `[CTA secundário]` continua um parágrafo sem interação. Este registro não encerra a Discovery nem marca o item de contato da seção 14. A verificação abaixo foi feita na implementação; não é o QA independente.
 
 Destinos estáticos, sem JavaScript que monte a URL e sem `target="_blank"`:
 
@@ -133,7 +133,7 @@ Destinos estáticos, sem JavaScript que monte a URL e sem `target="_blank"`:
 - E-mail: `mailto:washington@flowenergies.com`, somente o destinatário, sem assunto nem corpo.
 - Instagram: `https://www.instagram.com/flow_energies/`. O texto visível continua `@flow_energies`.
 
-Mapeamento, quando a implementação for autorizada:
+O que foi publicado:
 
 - Os dois botões “Falar no WhatsApp” em `src/app/layout/header/header.component.html` (`.header-cta--bar` e `.header-cta` em `#site-menu`), o botão “Falar com a Flow” (`.hero__cta`) e o botão “Falar com a Flow no WhatsApp” (`.contact-action`) em `src/app/features/home/home.component.html` apontam para o `wa.me`. O rótulo do Hero não muda.
 - Os parágrafos do telefone em Contato e no rodapé envolvem `(22) 99844-9702` nesse mesmo `wa.me`.
@@ -154,7 +154,7 @@ Segurança e acessibilidade:
 
 Fora deste incremento: textos dos Incrementos 2 e 3, menu, foto, tokens, horário, endereço completo, linha legal, processo após o contato e placeholders. Não altera `docs/architecture.md` nem `docs/design-system.md`. A divergência em que a arquitetura lista prova social como escopo atual da V1 permanece sem correção.
 
-Critérios de aceite, para quando a implementação for autorizada:
+Critérios de aceite conferidos no fonte, no HTML prerenderizado e na página em `http://127.0.0.1:4201/`:
 
 - Cada botão “Falar no WhatsApp”, “Falar com a Flow no WhatsApp” e “Falar com a Flow” tem o `wa.me` exato, uma única vez por controle.
 - Telefone de Contato e do rodapé usa o mesmo `wa.me`; o texto visível permanece `(22) 99844-9702`.
@@ -162,9 +162,11 @@ Critérios de aceite, para quando a implementação for autorizada:
 - Instagram de Contato e do rodapé usa exatamente `https://www.instagram.com/flow_energies/`; o texto visível permanece `@flow_energies`.
 - `[CTA secundário]`, placeholders, horário, endereço completo, linha legal, textos dos Incrementos 2 e 3, menu, foto e tokens permanecem.
 - Nenhum controle recebe destino ou clique atribuído a “Em construção”.
-- `npx ng test --watch=false --browsers=ChromeHeadless` e `npm run build` seguem como regressão de compilação. A prova dos links é o fonte, o HTML prerenderizado e o acionamento real na QA.
-
-Arquivos previstos, ainda sem autorização para editá-los: `src/app/layout/header/header.component.html`, `src/app/features/home/home.component.html`, `src/app/layout/footer/footer.component.html`, o SCSS desses três componentes só para a aparência do link, e `header.component.ts` somente se o foco do CTA desktop quebrar.
+- `npx ng test --watch=false --browsers=ChromeHeadless`: 3 SUCCESS, exit 0. `npm run build`: exit 0, uma rota prerenderizada. Os três testes não cobrem os links.
+- No prerender `dist/flow-site/browser/index.html`: a URL `wa.me` aparece 6 vezes, o `mailto:` 2 vezes e o Instagram 2 vezes. Não há `target="_blank"` nem `subject=`.
+- Na página, os mesmos destinos estão nos controles previstos. O menu abre e Escape o fecha, devolvendo o foco ao botão MENU. Em 390 px não houve overflow horizontal; o botão MENU está visível e o WhatsApp da barra está oculto. Em 1440 px de largura interna o WhatsApp da barra mede 44 px de altura e o botão MENU está oculto. Tab levou o foco a “Falar com a Flow”.
+- Limitação: o anel `:focus-visible` não foi medido. O Tab deste navegador de verificação focou o link, mas `:focus-visible` permaneceu falso e o contorno computado ficou com estilo `none`. A regra global de foco não foi alterada. Não houve clique que saísse do site para o WhatsApp, o aplicativo de e-mail ou o Instagram.
+- `header.component.ts` não mudou. O CTA da barra continua sendo o elemento `.header-cta--bar`.
 
 ## Fase 5 — Deploy
 

@@ -2,7 +2,7 @@
 
 Documento central de Discovery da Flow Energies. Serve como fonte de verdade para conteúdo, posicionamento, UX e decisões futuras do site.
 
-> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O Incremento 3 publicou no Hero e na meta description a hipótese da seção 6. O Incremento 4 está especificado e não tem implementação autorizada. Isso não encerra a Discovery. O refinamento dessa redação fica para o final do projeto. Vários itens comerciais continuam pendentes.
+> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O Incremento 3 publicou no Hero e na meta description a hipótese da seção 6. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. Isso não encerra a Discovery. O refinamento dessa redação fica para o final do projeto. Vários itens comerciais continuam pendentes.
 
 ---
 
@@ -140,7 +140,7 @@ Informações confirmadas no escopo do projeto (V1):
 - **Principal objetivo do site:** Site institucional e geração de leads; transmitir confiança; apresentar a empresa e seus serviços.
 - **CTA principal:** Direcionar o visitante para o WhatsApp da empresa.
 - **CTA secundário:** Pendente de definição. O marcador publicado continua `[CTA secundário]`.
-- **Canal de contato:** Número oficial de WhatsApp: (22) 99844-9702. Mensagem padrão: “Olá! Conheci a Flow Energies pelo site e gostaria de conhecer melhor a empresa e entender como vocês podem me ajudar.” E-mail: `mailto:washington@flowenergies.com`, sem assunto nem corpo. Instagram: `https://www.instagram.com/flow_energies/`. O destino de WhatsApp previsto é `https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.` A Home e o rodapé ainda mostram telefone, e-mail e @flow_energies como texto. Os botões de contato ainda são `type="button"`, sem destino. O Incremento 4 especifica esses destinos e não autoriza implementação. O referente de “Em construção”, horário e o processo após o contato continuam pendentes. Não há controle chamado “Em construção”; `[CTA secundário]` continua sem interação.
+- **Canal de contato:** Número oficial de WhatsApp: (22) 99844-9702. Mensagem padrão: “Olá! Conheci a Flow Energies pelo site e gostaria de conhecer melhor a empresa e entender como vocês podem me ajudar.” E-mail: `mailto:washington@flowenergies.com`, sem assunto nem corpo. Instagram: `https://www.instagram.com/flow_energies/`. O destino de WhatsApp previsto é `https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.` A Home e o rodapé publicam telefone, e-mail e @flow_energies como esses links. Os botões “Falar no WhatsApp”, “Falar com a Flow” e “Falar com a Flow no WhatsApp” apontam para o mesmo `wa.me`. O referente de “Em construção”, horário e o processo após o contato continuam pendentes. Não há controle chamado “Em construção”; `[CTA secundário]` continua sem interação.
 - **Processo após o contato:** Pendente de definição
 
 **Fora do escopo da V1** (não implementar sem validação com o proprietário):
@@ -179,7 +179,7 @@ Checklist objetiva do que ainda precisa ser levantado com o proprietário:
 - [ ] Provas sociais (clientes, projetos, depoimentos, fotos, números)
 - [ ] Garantias e certificações
 - [ ] Processo comercial e processo após o contato
-- [ ] Contato e WhatsApp — número oficial, mensagem padrão, `mailto:` e URL do Instagram estão confirmados para o Incremento 4, ainda sem implementação. Horário, processo após o contato e o referente de “Em construção” continuam pendentes. O item permanece aberto.
+- [ ] Contato e WhatsApp — número oficial, mensagem padrão, `mailto:` e URL do Instagram estão publicados no Incremento 4. Horário, processo após o contato e o referente de “Em construção” continuam pendentes. O item permanece aberto.
 - [ ] CTA secundário
 - [ ] Materiais de marca e conteúdo (fotos, vídeos, logos, materiais comerciais, redes sociais)
 - [ ] Tom de voz e personalidade da marca
@@ -205,4 +205,4 @@ A Discovery só será considerada concluída quando as informações essenciais 
 | Marca | Tom de voz e diretrizes mínimas de percepção |
 | Estrutura do site | A Home V1 publicada é Hero, A Flow `#a-flow`, Soluções `#solucoes`, Como trabalhamos `#como-trabalhamos`, Trajetória `#trajetoria`, Diferenciais `#diferenciais`, Contato `#contato` e rodapé. Projetos, prova social e FAQ não entram nesse esqueleto |
 
-A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte. O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description, sem validação do proprietário da Flow Energies e sem fechar o posicionamento. O Incremento 4 está especificado e não tem implementação autorizada. O refinamento dos textos publicados fica para o final do projeto.
+A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte. O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description, sem validação do proprietário da Flow Energies e sem fechar o posicionamento. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram, sem fechar horário, processo após o contato nem “Em construção”. O refinamento dos textos publicados fica para o final do projeto.
