@@ -1,0 +1,26 @@
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-body);
+  color: var(--color-text-primary);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--text-display);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--leading-display);
+  color: var(--color-brand-navy);
+}
+
+p {
+  text-wrap: pretty;
+}

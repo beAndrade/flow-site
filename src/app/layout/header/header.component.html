@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="site-header__bar">
+    <a class="mark" routerLink="/" aria-label="Flow Energies, início" (click)="closeMenu()">
+      <span class="mark__flow">Flow</span>
+      <span class="mark__energies">Energies</span>
+    </a>
+
+    <nav class="site-nav site-nav--desktop" aria-label="Seções">
+      <ul>
+        @for (section of sections; track section.href) {
+          <li><a [href]="section.href">{{ section.label }}</a></li>
+        }
+      </ul>
+    </nav>
+
+    <a class="header-cta header-cta--bar" href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar no WhatsApp</a>
+
+    <button
+      #menuButton
+      class="menu-button"
+      type="button"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="site-menu"
+      (click)="toggleMenu()"
+    >
+      {{ menuOpen() ? 'Fechar' : 'MENU ·' }}
+    </button>
+  </div>
+
+  <nav
+    id="site-menu"
+    class="site-nav site-nav--mobile"
+    [class.is-open]="menuOpen()"
+    aria-label="Seções"
+  >
+    <ul>
+      @for (section of sections; track section.href) {
+        <li><a [href]="section.href" (click)="closeMenu()">{{ section.label }}</a></li>
+      }
+    </ul>
+    <a class="header-cta" href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar no WhatsApp</a>
+  </nav>
+</header>

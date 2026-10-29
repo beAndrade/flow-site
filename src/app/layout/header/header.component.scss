@@ -1,0 +1,182 @@
+:host {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: transparent;
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  width: min(100%, var(--container-max-width));
+  min-height: 4rem;
+  margin-inline: auto;
+  padding-inline: var(--container-padding-mobile);
+}
+
+.mark {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.mark__flow,
+.mark__energies {
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.mark__flow {
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: -0.03em;
+}
+
+.mark__energies {
+  color: rgb(255 255 255 / 80%);
+  font-size: 0.5rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.16em;
+}
+
+.site-nav--desktop {
+  display: none;
+}
+
+.site-nav ul {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  color: var(--color-brand-navy);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.75rem 1.125rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--color-brand-blue);
+  color: var(--color-white);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-nav a.header-cta,
+.site-nav a.header-cta:hover {
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.header-cta--bar {
+  display: none;
+}
+
+.menu-button {
+  min-height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-white);
+  font: inherit;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+
+.site-nav--mobile {
+  display: none;
+  padding: 0 var(--container-padding-mobile) var(--space-5);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.site-nav--mobile.is-open {
+  display: grid;
+  gap: var(--space-5);
+  background: var(--color-white);
+}
+
+.site-nav--mobile a {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.site-nav--mobile .header-cta {
+  justify-self: start;
+}
+
+@media (min-width: 48rem) {
+  .site-header__bar,
+  .site-nav--mobile {
+    padding-inline: var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 56rem) {
+  .site-nav--desktop {
+    display: block;
+  }
+
+  .site-nav--desktop ul {
+    display: flex;
+    gap: 28px;
+  }
+
+  .site-nav--desktop a {
+    color: rgb(255 255 255 / 90%);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .header-cta--bar {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .menu-button,
+  .site-nav--mobile,
+  .site-nav--mobile.is-open {
+    display: none;
+  }
+}
+
+@media (min-width: 64rem) {
+  .site-header__bar {
+    min-height: 4.75rem;
+    padding-inline: var(--container-padding-desktop);
+  }
+
+  .mark__energies {
+    font-size: 0.5625rem;
+  }
+
+  .mark__flow {
+    font-size: 1.625rem;
+  }
+}

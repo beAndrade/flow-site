@@ -1,0 +1,7 @@
+# Flow Energies — indexação básica
+# Sitemap absoluto e URL canônica aguardam o domínio público definitivo.
+# Quando a URL for definida, publique sitemap.xml com loc absolutas e
+# adicione aqui: Sitemap: https://<dominio-publico>/sitemap.xml
+
+User-agent: *
+Allow: /
