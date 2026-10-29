@@ -1,0 +1,194 @@
+{
+  "title": "Mundo visual da home",
+  "question": "A rolagem entregou a prancha. Fique com ela, escolha outra carta, ou rode de novo.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Prancha de engenharia",
+      "kicker": "THE ROLL",
+      "lineage": "folha de desenho técnico com bloco de título e carimbo",
+      "thesis": "A home é uma prancha: o que está confirmado sai em traço forte, e o WhatsApp é um campo de cor, não um botão genérico.",
+      "palette": ["#F3F0E6", "#16181A", "#102F4A", "#DAB419"],
+      "materials": ["papel de prancha", "nanquim", "carimbo chapado"],
+      "viewport": "Uma prancha em pé na primeira tela: bloco de título com Flow Energies e o carimbo de empresas, e a faixa amarela do WhatsApp ocupando a base da folha.",
+      "risk": "Vira um PDF técnico se a frase de empresas e a ação do WhatsApp não ocuparem a primeira tela em tamanho de título.",
+      "raised": [
+        {
+          "from": "Instrução",
+          "raise": "Cada seção é um passo numerado na malha; o que o Discovery não confirmou entra como peça fantasma, sem texto inventado."
+        },
+        {
+          "from": "Cartaz",
+          "raise": "O carimbo de empresas e a faixa do WhatsApp são campos de cor chapada que ocupam uma região da folha. O motivo de raios fica de fora."
+        },
+        {
+          "from": "Ateliê",
+          "raise": "A home é uma sequência de pranchas, uma seção por folha; a próxima folha aparece na borda de baixo."
+        },
+        {
+          "from": "Evento",
+          "raise": "O peso da tinta marca a certeza: só a frase confirmada é traço forte."
+        },
+        {
+          "from": "Sala",
+          "raise": "Em qualquer largura a prancha continua um objeto inteiro, com borda, carimbo e bloco de título."
+        }
+      ],
+      "wireframe": {
+        "cols": 12,
+        "rows": 16,
+        "regions": [
+          {"label": "bloco de título", "x": 0, "y": 0, "w": 12, "h": 4, "accent": true},
+          {"label": "frase confirmada", "x": 1, "y": 5, "w": 10, "h": 3},
+          {"label": "passos fantasma", "x": 1, "y": 9, "w": 10, "h": 3},
+          {"label": "faixa WhatsApp", "x": 0, "y": 13, "w": 12, "h": 3, "accent": true}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/assigned.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "Proposta técnica",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "proposta comercial encadernada, com capa, índice e abas",
+      "thesis": "A home é a capa e o índice da proposta que um decisor já sabe ler antes de falar com um fornecedor.",
+      "palette": ["#E7E1D6", "#102F4A", "#DAB419", "#1C1915"],
+      "materials": ["capa dura", "aba de seção", "lombada"],
+      "viewport": "A capa aberta no índice: a primeira aba já diz energia solar para empresas, e o WhatsApp é a aba de contato, não um botão solto.",
+      "risk": "É o lugar familiar onde a maioria dos sites B2B industriais pousa quando fogem da foto de painéis.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 16,
+        "regions": [
+          {"label": "lombada", "x": 0, "y": 0, "w": 2, "h": 16, "accent": true},
+          {"label": "capa", "x": 2, "y": 0, "w": 10, "h": 6},
+          {"label": "índice", "x": 2, "y": 7, "w": 8, "h": 8},
+          {"label": "aba WhatsApp", "x": 10, "y": 7, "w": 2, "h": 8, "accent": true}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/model-pick.webp"
+    },
+    {
+      "id": "challenger-glazier",
+      "label": "Parede de vidro",
+      "verdict": "competitive",
+      "lineage": "divisória de caixilho preto e vidro colorido de uma vidraçaria",
+      "thesis": "A home é uma parede de vidro: cada seção é um painel, e só o painel do WhatsApp acende.",
+      "palette": ["#1A1A1A", "#E7E4DC", "#1F4B8F", "#C47B2B"],
+      "materials": ["barra de caixilho", "vidro martelado", "painel aceso"],
+      "viewport": "A elevação da parede na primeira tela: um painel grande com a frase de empresas e o painel âmbar do WhatsApp já aceso.",
+      "case": "Segura a clareza: um painel, uma frase, cor igual à ação. Perde na identificação: o comprador industrial reconhece a prancha da compra mais do que a divisória do escritório.",
+      "risk": "Vira escritório genérico se os painéis ficarem todos do mesmo tamanho.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 16,
+        "regions": [
+          {"label": "painel da frase", "x": 0, "y": 0, "w": 12, "h": 8},
+          {"label": "painel WhatsApp", "x": 0, "y": 8, "w": 12, "h": 4, "accent": true},
+          {"label": "painéis seguintes", "x": 0, "y": 12, "w": 12, "h": 4}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/challenger-glazier.webp",
+      "hero": "https://impeccable.style/worlds/cards/craft-making-glazier-colorfield-partition-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/craft-making-glazier-colorfield-partition.webp"
+    },
+    {
+      "id": "challenger-instrucao",
+      "label": "Manual de montar",
+      "verdict": "declined",
+      "lineage": "livreto de instrução com passos numerados e grade de encaixe",
+      "thesis": "A home seria um manual: o caminho até o WhatsApp, um passo por vez.",
+      "palette": ["#A9D4F5", "#16181A", "#C83C2E", "#F5D64C"],
+      "materials": ["página azul", "passo numerado", "peça fantasma"],
+      "viewport": "O passo 1 ocupa a tela, com a seta apontando para o WhatsApp.",
+      "risk": "O decisor industrial não se reconhece num manual de brinquedo, e a Flow deixa de parecer fornecedor.",
+      "case": "Perde identificação e clareza: a sequência é legível, mas o tom de brinquedo apaga a confiança que a página precisa criar.",
+      "kept": "Um passo de cada vez, na malha; o que falta fica fantasma.",
+      "hero": "https://impeccable.style/worlds/cards/games-toys-physics-play-brick-build-instructions-hero.webp"
+    },
+    {
+      "id": "challenger-cartaz",
+      "label": "Cartaz de troupe",
+      "verdict": "declined",
+      "lineage": "cartaz serigrafado de teatro underground, sem o motivo de raios",
+      "thesis": "A home seria um cartaz chapado, com a borda cheia de dados.",
+      "palette": ["#E23B2F", "#1F7A4D", "#F0C400", "#F7F4EE"],
+      "materials": ["tinta chapada", "borda de dados", "letra desenhada"],
+      "viewport": "Um cartaz sangrado, a frase no centro e o WhatsApp numa célula da borda.",
+      "risk": "O comprador não confia num cartaz de espetáculo, e não há datas nem preços reais para encher a borda.",
+      "case": "Perde os dois eixos. A cor chapada fica; o burst de raios não entra.",
+      "kept": "Cor chapada ocupa a região inteira. O motivo de raios fica de fora.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-angura-theatre-poster-hero.webp"
+    },
+    {
+      "id": "challenger-atelie",
+      "label": "Lookbook de ateliê",
+      "verdict": "declined",
+      "lineage": "lookbook de alta-costura em escala de miniatura",
+      "thesis": "A home seria uma sequência de pranchas iluminadas, uma seção de cada vez.",
+      "palette": ["#F3EDE4", "#E7C8C0", "#16181A", "#8C2F2F"],
+      "materials": ["papel marfim", "tecido", "número de prancha"],
+      "viewport": "Uma prancha central em luz, as outras só em contorno.",
+      "risk": "Marfim, blush e letra de script destroem a leitura de fornecedor industrial.",
+      "case": "Perde identificação e clareza de produto. A disciplina de uma folha por seção permanece.",
+      "kept": "Uma seção, uma prancha; a próxima já aparece na borda.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-couture-doll-atelier-hero.webp"
+    },
+    {
+      "id": "challenger-evento",
+      "label": "Display de colisão",
+      "verdict": "declined",
+      "lineage": "tela de evento de um detector de partículas",
+      "thesis": "A home seria um evento congelado: um traço forte no centro, o resto apagado.",
+      "palette": ["#0C0E12", "#3E5166", "#E2C15A", "#D24A3A"],
+      "materials": ["vácuo escuro", "anéis", "traço de sinal"],
+      "viewport": "Anéis concêntricos, a frase no centro e o WhatsApp num traço isolado.",
+      "risk": "Cai no oposto previsível do setor: energia escura, brilho e gráfico que parece ciência sem ser a compra.",
+      "case": "Perde os dois eixos. O comprador não opera esse instrumento, e os traços virariam números que não existem.",
+      "kept": "A espessura do traço diz o que é fato.",
+      "hero": "https://impeccable.style/worlds/cards/scientific-notation-particle-detector-event-display-hero.webp"
+    },
+    {
+      "id": "challenger-sala",
+      "label": "Sala em miniatura",
+      "verdict": "declined",
+      "lineage": "quarto decorável com livro de visitas",
+      "thesis": "A home seria um cômodo que se decora, e a identidade seria o que está dentro dele.",
+      "palette": ["#F6D7E2", "#D7E6F6", "#F7F1D8", "#3A3A3A"],
+      "materials": ["papel de parede", "piso isométrico", "adesivo"],
+      "viewport": "Uma sala em isometria, com o nome da Flow na parede e o WhatsApp como um objeto no chão.",
+      "risk": "Parece rede social, e um contador de visitas seria um número inventado.",
+      "case": "Perde os dois eixos. Não há perfil para decorar, e a oferta comercial não cabe num cômodo pastel.",
+      "kept": "O objeto principal permanece inteiro em qualquer largura.",
+      "hero": "https://impeccable.style/worlds/cards/cyworld-minihompy-room-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "steer": true,
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "O padrão da categoria",
+    "thesis": "O site de energia solar que o mercado já entrega, executado com capricho.",
+    "palette": ["#FFFFFF", "#16324F", "#F5C518", "#5C6770"],
+    "materials": ["foto aérea de painéis", "três cards iguais", "botão amarelo"],
+    "viewport": "Foto de usina, título central, três benefícios e o botão de WhatsApp.",
+    "risk": "Indistinguível dos concorrentes, de propósito.",
+    "wireframe": {
+      "cols": 12,
+      "rows": 16,
+      "regions": [
+        {"label": "foto", "x": 0, "y": 0, "w": 12, "h": 7},
+        {"label": "título", "x": 1, "y": 7, "w": 10, "h": 3},
+        {"label": "cards", "x": 0, "y": 10, "w": 12, "h": 3},
+        {"label": "botão", "x": 3, "y": 14, "w": 6, "h": 2, "accent": true}
+      ]
+    },
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  }
+}

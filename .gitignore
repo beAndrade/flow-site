@@ -40,3 +40,13 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Impeccable agent
+
+.kiro/skills/impeccable/scripts/bin/windows-x64/impeccable.exe
+.agents/skills/impeccable/scripts/bin/windows-x64/impeccable.exe
+.cursor/skills/impeccable/scripts/bin/windows-x64/impeccable.exe
+.claude/skills/impeccable/scripts/bin/windows-x64/impeccable.exe
+.opencode/skills/impeccable/scripts/bin/windows-x64/impeccable.exe
+.gemini/skills/impeccable/scripts/bin/windows-x64/impeccable.exe
+
