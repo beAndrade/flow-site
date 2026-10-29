@@ -2,7 +2,7 @@
 
 Documento central de Discovery da Flow Energies. Serve como fonte de verdade para conteúdo, posicionamento, UX e decisões futuras do site.
 
-> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O Incremento 3 publicou no Hero e na meta description a hipótese da seção 6; os responsáveis da Flow Energies validaram comercialmente essas frases, sem alteração de texto. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. A decisão comercial do CTA secundário está definida (texto “Conhecer nossas soluções”, destino `#solucoes`); a publicação desse CTA na interface fica fora desta etapa documental — a Home ainda exibe o marcador `[CTA secundário]`. A Discovery foi enriquecida com a apresentação comercial da Flow Energies (PDF de 8 páginas) e com a imagem da lista de sete áreas de serviços. A organização oficial do catálogo na Home permanece a união já publicada. Isso não encerra a Discovery. O que continua sem resposta permanece pendente. O refinamento da redação fica para o final do projeto.
+> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O Incremento 3 publicou no Hero e na meta description a hipótese da seção 6; os responsáveis da Flow Energies validaram comercialmente essas frases, sem alteração de texto. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. A decisão comercial do CTA secundário está definida (texto “Conhecer nossas soluções”, destino `#solucoes`); a publicação desse CTA na interface fica fora desta etapa documental — a Home ainda exibe o marcador `[CTA secundário]`. A Discovery foi enriquecida com a apresentação comercial da Flow Energies (PDF de 8 páginas) e com a imagem da lista de sete áreas de serviços. Há rascunho de trabalho do conteúdo-base das sete áreas (seção 3), ainda não aprovado para publicação; a revisão editorial final fica para o encerramento do projeto, junto ao proprietário. A organização oficial do catálogo na Home permanece a união já publicada. As listas da imagem e do PDF continuam distintas. Isso não encerra a Discovery. O que continua sem resposta permanece pendente. O refinamento da redação fica para o final do projeto.
 
 ---
 
@@ -42,17 +42,19 @@ Os serviços serão documentados individualmente conforme forem levantados com o
 | Diferenciais | — |
 | Informações pendentes | — |
 
-As fontes comerciais fornecidas não são equivalentes. A imagem lista sete áreas. A apresentação em PDF organiza “Nossa atuação”, soluções fotovoltaicas e outros itens em outra estrutura. **Decisão comercial:** manter na Home a união já publicada (Incremento 2). As duas fontes de catálogo permanecem registradas abaixo. A hierarquia visível no site é a composição atual dessa união; não se inventa classificação adicional. Os grupos da Home só organizam a leitura e não fundem escopos. Não há página individual por serviço. A ficha completa (para quem é, problema, benefícios) continua pendente. O refinamento da redação fica para o final do projeto. Conteúdo abaixo = o que os materiais trazem; não foi verificado por fonte externa.
+As fontes comerciais fornecidas não são equivalentes. A imagem lista sete áreas. A apresentação em PDF organiza “Nossa atuação”, soluções fotovoltaicas e outros itens em outra estrutura. **Decisão comercial:** manter na Home a união já publicada (Incremento 2). As duas fontes de catálogo permanecem registradas abaixo e continuam **distintas** — não se fundem. A hierarquia visível no site é a composição atual dessa união; não se inventa classificação adicional. Os grupos da Home só organizam a leitura e não fundem escopos. Não há página individual por serviço. A ficha completa (para quem é, problema, benefícios) continua pendente. O refinamento da redação fica para o final do projeto. Conteúdo abaixo = o que os materiais trazem ou o rascunho de trabalho registrado; não foi verificado por fonte externa, salvo indicação explícita.
 
-**Lista de sete áreas (imagem fornecida):**
+**Lista de sete áreas (imagem fornecida) — rascunho de trabalho, ainda não aprovado para publicação:**
 
-1. Energia Solar Fotovoltaica — sistemas on-grid, off-grid e híbridos; projeto, dimensionamento, instalação e viabilidade.
-2. Projetos Elétricos — subestações, aumento de carga, quadros de distribuição, condutores e proteções, aterramento e SPDA.
-3. Regularização e Conformidade — ART no CREA-RJ, NR-10, laudos de conformidade e exigências da concessionária.
-4. Perícia e Assistência Técnica — laudos periciais, vistorias, análise de sinistros e pareceres.
-5. Consultoria Energética — faturamento, fator de potência, enquadramento tarifário e eficiência energética.
-6. Recarga de Veículos Elétricos — projeto de pontos de recarga e plano de negócios para investidores.
-7. Documentação Técnica — memoriais, relatórios, pareceres e suporte a defesas jurídicas.
+Estado de validação: rascunho interno de conteúdo-base consolidado a partir da imagem das sete áreas. **Não aprovado para publicação** no site. A revisão editorial final fica para o encerramento do projeto, junto ao proprietário da Flow Energies. Não inventar serviços, resultados, métricas, garantias ou certificações além do escopo listado abaixo. A Home continua a publicar a união já autorizada do Incremento 2; este rascunho não altera o conteúdo visível.
+
+1. **Energia Solar Fotovoltaica:** projetos, dimensionamento e instalação de sistemas on-grid, off-grid e híbridos; estudos de viabilidade; expansão e adequação de sistemas existentes; diagnóstico e manutenção.
+2. **Projetos Elétricos:** subestações, aumento de carga, quadros de distribuição, condutores, proteções, aterramento e SPDA.
+3. **Regularização e Conformidade:** apoio à regularização de instalações, documentação técnica, ART, laudos de conformidade e exigências aplicáveis das concessionárias.
+4. **Perícia e Assistência Técnica:** vistorias, análise técnica de instalações e ocorrências elétricas, laudos periciais e pareceres.
+5. **Consultoria Energética:** análise de faturamento, fator de potência, enquadramento tarifário e oportunidades de eficiência energética.
+6. **Recarga de Veículos Elétricos:** projetos de pontos de recarga e planos de negócios para investidores.
+7. **Documentação Técnica:** memoriais, relatórios, pareceres técnicos e suporte documental para defesas jurídicas relacionadas a questões técnicas.
 
 **Apresentação comercial (PDF, 8 páginas):**
 
@@ -191,7 +193,7 @@ Checklist objetiva do que ainda precisa ser levantado com o proprietário:
 - [ ] Perfil da empresa — o texto institucional e o lema da apresentação estão registrados; o perfil completo continua pendente
 - [x] Frases do Hero, apoio e meta description (seção 6) — validadas comercialmente pelos responsáveis da Flow Energies, com os textos exatos já publicados. Percepção, representação, o que a empresa não quer transmitir e mensagens principais além dessas frases continuam pendentes nesta seção.
 - [ ] Público-alvo (cliente principal, perfil, segmentos, necessidades, dores, motivações) — não deduzir só a partir da lista de serviços
-- [ ] Catálogo de serviços — organização oficial: manter a união já publicada na Home; as duas fontes (imagem e PDF) permanecem registradas. A ficha individual de cada serviço continua pendente. O refinamento da redação fica para o final do projeto
+- [ ] Catálogo de serviços — organização oficial: manter a união já publicada na Home; as duas fontes (imagem e PDF) permanecem registradas e distintas. Há rascunho de trabalho do conteúdo-base das sete áreas (seção 3), ainda não aprovado para publicação; a revisão editorial final e a aprovação para publicação ficam para o encerramento do projeto, junto ao proprietário. A ficha individual de cada serviço continua pendente.
 - [ ] Problemas que a Flow resolve
 - [ ] Diferenciais competitivos — os três pilares da apresentação estão registrados e na Home; a comparação com concorrentes e a comprovação dos diferenciais continuam pendentes
 - [ ] Proposta de valor
@@ -226,4 +228,4 @@ A Discovery só será considerada concluída quando as informações essenciais 
 | Marca | Tom de voz e diretrizes mínimas de percepção |
 | Estrutura do site | A Home V1 publicada é Hero, A Flow `#a-flow`, Soluções `#solucoes`, Como trabalhamos `#como-trabalhamos`, Trajetória `#trajetoria`, Diferenciais `#diferenciais`, Contato `#contato` e rodapé. Projetos, prova social e FAQ não entram nesse esqueleto |
 
-A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte. O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description; os responsáveis da Flow Energies validaram comercialmente essas frases, sem reescrevê-las. A organização do catálogo na Home permanece a união publicada. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. A decisão comercial do CTA secundário (“Conhecer nossas soluções” → `#solucoes`) está definida; a publicação na interface ainda não foi feita nesta etapa documental. Horário provisório e linha legal do rodapé continuam pendentes. Provas sociais e credenciais serão obtidas posteriormente, sem marcar N/A. O refinamento dos textos publicados fica para o final do projeto.
+A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte. O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description; os responsáveis da Flow Energies validaram comercialmente essas frases, sem reescrevê-las. A organização do catálogo na Home permanece a união publicada. Há rascunho de trabalho do conteúdo-base das sete áreas, ainda não aprovado para publicação. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. A decisão comercial do CTA secundário (“Conhecer nossas soluções” → `#solucoes`) está definida; a publicação na interface ainda não foi feita nesta etapa documental. Horário provisório e linha legal do rodapé continuam pendentes. Provas sociais e credenciais serão obtidas posteriormente, sem marcar N/A. O refinamento dos textos publicados fica para o final do projeto.
