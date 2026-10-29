@@ -207,6 +207,8 @@ Checklist objetiva do que ainda precisa ser levantado com o proprietário:
 - [ ] Materiais de marca e conteúdo — apresentação PDF (8 páginas) e imagem da lista de sete áreas recebidas; fotos, vídeos, logos e demais materiais comerciais continuam pendentes
 - [ ] Tom de voz e personalidade da marca
 - [ ] Analytics (definir se e quando aplicável)
+- [ ] URL pública definitiva do site — necessária para `og:url`, `link rel="canonical"`, diretiva `Sitemap:` em `robots.txt` e `sitemap.xml` com URLs absolutas. Enquanto pendente, não publicar domínio inventado nem localhost. `robots.txt` já permite indexação (`Allow: /`) sem `Sitemap:`.
+- [ ] Imagem de compartilhamento (`og:image` / Twitter) — asset e URL absolutas ainda não definidos; cards usam `twitter:card=summary` sem imagem até decisão.
 - [ ] Requisitos futuros — simulador/orçamento, checkout, captura estruturada de leads (validar ou marcar como não aplicável)
 
 ---
