@@ -24,7 +24,7 @@ Itens que dependem de levantamento com o proprietário. O Incremento 2 não ence
 - garantias
 - processo comercial
 - informações de contato — telefone, e-mail e @flow_energies estão publicados como links no Incremento 4. Horário continua aberto.
-- WhatsApp — número e mensagem padrão estão publicados nessa especificação. O referente de “Em construção” continua aberto.
+- WhatsApp — número e mensagem padrão estão publicados nessa especificação.
 - possíveis simuladores/orçamentos
 - requisitos futuros de checkout
 
@@ -125,7 +125,7 @@ Evidência: as três frases estão no fonte e no HTML prerenderizado `dist/flow-
 
 ### Incremento 4 — WhatsApp, e-mail e Instagram
 
-Implementado. O número oficial, a mensagem padrão, o `mailto:` e a URL do Instagram estão publicados. O referente de “Em construção” continua pendente. Não há controle com esse nome na interface; nenhum destino, rótulo ou clique foi inventado para ele. `[CTA secundário]` continua um parágrafo sem interação. Este registro não encerra a Discovery nem marca o item de contato da seção 14. A verificação abaixo foi feita na implementação; não é o QA independente.
+Implementado. O número oficial, a mensagem padrão, o `mailto:` e a URL do Instagram estão publicados. `[CTA secundário]` continua um parágrafo sem interação. Este registro não encerra a Discovery nem marca o item de contato da seção 14. A verificação abaixo foi feita na implementação; não é o QA independente.
 
 Destinos estáticos, sem JavaScript que monte a URL e sem `target="_blank"`:
 
@@ -161,7 +161,6 @@ Critérios de aceite conferidos no fonte, no HTML prerenderizado e na página em
 - E-mail de Contato e do rodapé usa somente `mailto:washington@flowenergies.com`; o texto visível permanece o endereço.
 - Instagram de Contato e do rodapé usa exatamente `https://www.instagram.com/flow_energies/`; o texto visível permanece `@flow_energies`.
 - `[CTA secundário]`, placeholders, horário, endereço completo, linha legal, textos dos Incrementos 2 e 3, menu, foto e tokens permanecem.
-- Nenhum controle recebe destino ou clique atribuído a “Em construção”.
 - `npx ng test --watch=false --browsers=ChromeHeadless`: 3 SUCCESS, exit 0. `npm run build`: exit 0, uma rota prerenderizada. Os três testes não cobrem os links.
 - No prerender `dist/flow-site/browser/index.html`: a URL `wa.me` aparece 6 vezes, o `mailto:` 2 vezes e o Instagram 2 vezes. Não há `target="_blank"` nem `subject=`.
 - Na página, os mesmos destinos estão nos controles previstos. O menu abre e Escape o fecha, devolvendo o foco ao botão MENU. Em 390 px não houve overflow horizontal; o botão MENU está visível e o WhatsApp da barra está oculto. Em 1440 px de largura interna o WhatsApp da barra mede 44 px de altura e o botão MENU está oculto. Tab levou o foco a “Falar com a Flow”.
