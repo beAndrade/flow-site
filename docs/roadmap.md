@@ -23,7 +23,7 @@ Itens que dependem de levantamento com o proprietário. O Incremento 2 não ence
 - provas sociais
 - garantias
 - processo comercial
-- informações de contato — telefone, e-mail e @flow_energies estão publicados como links no Incremento 4. Horário continua aberto.
+- informações de contato — telefone, e-mail e @flow_energies estão publicados como links na seção Contato (Incrementos 4–5). Horário não é exibido. Linha legal do rodapé publicada no Incremento 5. Endereço completo continua aberto.
 - WhatsApp — número e mensagem padrão estão publicados nessa especificação.
 - possíveis simuladores/orçamentos
 - requisitos futuros de checkout
@@ -101,6 +101,7 @@ Não fazem parte do Incremento 2:
 
 - **Incremento 3.** Implementado e com QA independente `PASS`. Não faz parte do Incremento 2. O registro está na seção abaixo.
 - **Incremento 4.** Implementado. Não faz parte do Incremento 2. O registro está na seção abaixo. A verificação desta etapa não substitui o QA independente.
+- **Incremento 5.** Implementado nesta etapa. Não faz parte do Incremento 2. O registro está na seção abaixo. O QA independente permanece pendente.
 - A referência `docs/visual-identity.md` em `docs/design-system.md` continua fora deste fechamento. O arquivo existente é `docs/visual-identity-flow-energies.md`.
 
 O Incremento 2 está em commit. O refinamento visual está commitado em `08fca3f`. A alteração de `tsconfig.json` está separada em `03fff82`.
@@ -166,6 +167,39 @@ Critérios de aceite conferidos no fonte, no HTML prerenderizado e na página em
 - Na página, os mesmos destinos estão nos controles previstos. O menu abre e Escape o fecha, devolvendo o foco ao botão MENU. Em 390 px não houve overflow horizontal; o botão MENU está visível e o WhatsApp da barra está oculto. Em 1440 px de largura interna o WhatsApp da barra mede 44 px de altura e o botão MENU está oculto. Tab levou o foco a “Falar com a Flow”.
 - Limitação: o anel `:focus-visible` não foi medido. O Tab deste navegador de verificação focou o link, mas `:focus-visible` permaneceu falso e o contorno computado ficou com estilo `none`. A regra global de foco não foi alterada. Não houve clique que saísse do site para o WhatsApp, o aplicativo de e-mail ou o Instagram.
 - `header.component.ts` não mudou. O CTA da barra continua sendo o elemento `.header-cta--bar`.
+
+### Incremento 5 — Atualização Home V1 (CTA Contato, Contato, Rodapé)
+
+Implementado nesta etapa. O QA independente permanece pendente. Não reabre os Incrementos 2–4. A união do catálogo Soluções permanece inalterada. Este registro não encerra a Discovery.
+
+O que foi publicado:
+
+- Hero CTA secundário em `src/app/features/home/home.component.html`: texto “Entre em contato”, `href="#contato"`. O CTA principal “Falar com a Flow” e o `wa.me` do Incremento 4 permanecem. Título do Hero, apoio e meta description do Incremento 3 não mudaram.
+- Seção `#contato` em composição de duas colunas (≥ `48rem`): painel navy (`--color-brand-navy`) à esquerda com eyebrow “Projetos e infraestrutura elétrica”, título “Vamos falar sobre o seu próximo projeto.”, apoio “Soluções de engenharia elétrica e energia para atender às necessidades de cada projeto.”, botões “Falar no WhatsApp” (`wa.me` Inc. 4) e “Enviar e-mail” (`mailto:washington@flowenergies.com`); à direita, quatro cartões — Endereço (Rio de Janeiro • Região dos Lagos, sem link), E-mail, WhatsApp `(22) 99844-9702`, Instagram `@flow_energies` — com destinos do Incremento 4. Sem horário. Sem endereço inventado. Mobile em uma coluna (painel, depois cartões).
+- Rodapé compacto em `src/app/layout/footer/`: marca tipográfica Flow / Energies (navy em fundo claro, link para `/`); linha legal exata “© 2026 Flow Energies. Todos os direitos reservados. Soluções de infraestrutura elétrica.”; “Voltar ao topo” com botão circular apontando para `#conteudo`. Sem telefone, e-mail, WhatsApp, Instagram ou região no rodapé.
+- `html { scroll-behavior: smooth }` em `src/styles/_globals.scss`. O bloco `@media (prefers-reduced-motion: reduce)` existente, que força `scroll-behavior: auto !important`, não foi alterado.
+
+Fora deste incremento: união Soluções; textos Hero/meta dos Incrementos 2–3; destinos `wa.me` / `mailto:` / Instagram do Incremento 4; menu; tokens do design system; endereço completo; processo após o contato; publicação do rascunho das sete áreas.
+
+A verificação desta etapa (grep, `ng test`, `npm run build`, `git diff --check`) não substitui o QA independente.
+
+### Incremento 6 — IA e conversão (ordem Home, A Flow, micro-CTA, lead FV, 1982)
+
+Implementado nesta etapa. O QA independente permanece pendente. Não reabre os Incrementos 2–5. Não publica o catálogo das sete áreas (Incremento 7). Este registro não encerra a Discovery.
+
+O que foi publicado:
+
+- Ordem DOM em `home.component.html`: Hero → `#a-flow` → `#diferenciais` → `#solucoes` → `#como-trabalhamos` → `#trajetoria` → `#contato`. Footer permanece no shell (`app.component.html`).
+- Menu em `header.component.ts` `sections[]`: A Flow, Diferenciais, Soluções, Como trabalhamos, Trajetória, Contato (mesmos hrefs).
+- A Flow: removidos o `h3` “Nossa atuação” e os seis itens de oferta (incl. Engenharia elétrica). Preservados lead, Sobre a Flow (3 parágrafos) e lema. Compromisso técnico e regulatório realocado como `h3` + parágrafo verbatim (ANEEL, PRODIST, ABNT). A frase de engenharia elétrica não figura mais em A Flow.
+- Micro-CTA ao final de `#solucoes` (`div.solutions-cta`, sem novo id de menu): “Falar no WhatsApp” (`hero__cta`, URL `wa.me` do Incremento 4) e “Entre em contato” (`solutions-cta__secondary`, `href="#contato"`). Catálogo união intacto.
+- Como trabalhamos: lead “Conheça as etapas do nosso processo de instalação fotovoltaica. Este fluxo se refere exclusivamente a esse tipo de projeto.”; quatro etapas intactas.
+- Trajetória 1982: título “As Origens no Setor Elétrico”; corpo ajustado para jornada profissional no setor (CERJ), sem fundação da Flow e sem fatos novos. Demais marcos intactos.
+- Documentação: `PRODUCT.md`, `docs/discovery.md`, `docs/roadmap.md` alinhados à ordem Home/menu, fim de “Nossa atuação” na Home, lead FV e sete áreas = Incremento 7.
+
+Fora deste incremento: catálogo das sete áreas (Incremento 7); formulários; novas rotas; elevar budgets; redesign de tokens/Hero/Contato.
+
+A verificação desta etapa (`ng test`, `npm run build`, checklist responsivo/âncoras) não substitui o QA independente.
 
 ## Fase 5 — Deploy
 
