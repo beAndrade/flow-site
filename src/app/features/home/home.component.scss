@@ -190,6 +190,27 @@
   }
 }
 
+.solutions-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+.solutions-cta__secondary {
+  margin: 0;
+  color: var(--color-brand-navy);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.solutions-cta__secondary:hover {
+  color: var(--color-brand-blue);
+}
+
 .home-section h4 {
   margin: 0 0 var(--space-2);
   font-size: 1rem;

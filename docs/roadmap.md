@@ -57,7 +57,7 @@ Itens que dependem de levantamento com o proprietário. O Incremento 2 não ence
 - CTA
 - Footer
 
-A lista acima é o mapa antigo da fase. A Home V1 implementada no Incremento 2 usa outra ordem: Header, Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé. Projetos, prova social e FAQ não fazem parte desse esqueleto.
+A lista acima é o mapa antigo da fase. A Home V1 do Incremento 2 usava: Header, Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé. O Incremento 6 reordenou para: Header, Hero, A Flow, Diferenciais, Soluções, Como trabalhamos, Trajetória, Contato e rodapé. Projetos, prova social e FAQ não fazem parte desse esqueleto.
 
 ## Fase 4 — Implementação V1
 

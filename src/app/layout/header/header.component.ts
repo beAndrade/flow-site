@@ -31,10 +31,10 @@ export class HeaderComponent {
 
   protected readonly sections = [
     { label: 'A Flow', href: '#a-flow' },
+    { label: 'Diferenciais', href: '#diferenciais' },
     { label: 'Soluções', href: '#solucoes' },
     { label: 'Como trabalhamos', href: '#como-trabalhamos' },
     { label: 'Trajetória', href: '#trajetoria' },
-    { label: 'Diferenciais', href: '#diferenciais' },
     { label: 'Contato', href: '#contato' },
   ];
 
