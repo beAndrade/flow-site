@@ -16,7 +16,7 @@
 Itens que dependem de levantamento com o proprietário. O Incremento 2 não encerra esta fase:
 
 - posicionamento da Flow
-- serviços oferecidos — a união do catálogo está publicada na Home; a ficha de cada serviço continua aberta
+- serviços oferecidos — o catálogo oficial da Home são as sete áreas (Incremento 7); a união do Incremento 2 é histórico; a ficha de cada serviço continua aberta
 - público-alvo
 - diferenciais — os três pilares da apresentação estão na Home; a comparação com concorrentes continua aberta
 - regiões atendidas — “Rio de Janeiro • Região dos Lagos” está publicado como texto; o endereço completo continua aberto
@@ -200,6 +200,23 @@ O que foi publicado:
 Fora deste incremento: catálogo das sete áreas (Incremento 7); formulários; novas rotas; elevar budgets; redesign de tokens/Hero/Contato.
 
 A verificação desta etapa (`ng test`, `npm run build`, checklist responsivo/âncoras) não substitui o QA independente.
+
+### Incremento 7 — Catálogo de Soluções (sete áreas)
+
+Implementado nesta etapa. O QA independente permanece pendente. Não reabre os Incrementos 2–6. Este registro não encerra a Discovery.
+
+O que foi publicado:
+
+- Em `#solucoes` (`home.component.html`): a união histórica do Incremento 2 (cinco grupos com `h4`/`ul`) foi substituída por sete blocos `.solution-group` declarativos (`h3` + `p`), nesta ordem: Energia Solar Fotovoltaica; Projetos Elétricos; Regularização e Conformidade; Perícia e Assistência Técnica; Consultoria Energética; Recarga de Veículos Elétricos; Documentação Técnica. Textos canônicos da PD do Incremento 7.
+- Micro-CTA `.solutions-cta` intacto (textos, classes, `wa.me` do Incremento 4, `#contato`).
+- SCSS: remoção de regras `.home-section h4` órfãs; `.solution-groups` (grid 1 col / 2 cols ≥ `48rem`) e `.solutions-cta*` sem alteração. Sem CSS novo; `angular.json` budgets não elevados.
+- Documentação: `PRODUCT.md`, `docs/discovery.md`, `docs/roadmap.md` — catálogo oficial Home = sete áreas; união Inc. 2 = histórico; PDF ≠ sete áreas.
+
+Itens excluídos da Home (não publicados): Redes de Distribuição; Consultoria e Projetos Especiais; Armazenamento de Energia; Supervisão e Controle; subitens FV; agrupadores da união.
+
+Fora deste incremento: fichas individuais por serviço; formulários; novas rotas; elevar budgets; redesign de tokens/Hero/Contato/outras seções; header/footer.
+
+A verificação desta etapa (`ng test`, `npm run build`, checklist responsivo/âncoras/micro-CTA) não substitui o QA independente.
 
 ## Fase 5 — Deploy
 

@@ -2,7 +2,7 @@
 
 Documento central de Discovery da Flow Energies. Serve como fonte de verdade para conteúdo, posicionamento, UX e decisões futuras do site.
 
-> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O Incremento 3 publicou no Hero e na meta description a hipótese da seção 6; os responsáveis da Flow Energies validaram comercialmente essas frases, sem alteração de texto. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. O Incremento 5 atualizou o CTA secundário (“Entre em contato” → `#contato`), a seção Contato (duas colunas) e o rodapé compacto com linha legal. O Incremento 6 reordenou a Home/menu (Hero → A Flow → Diferenciais → Soluções → Como trabalhamos → Trajetória → Contato → rodapé), removeu o bloco “Nossa atuação” de A Flow, acrescentou micro-CTA pós-Soluções e clarificou o lead de Como trabalhamos (exclusivo a instalação fotovoltaica) e o marco 1982; a união do catálogo Soluções permanece até o Incremento 7. A Discovery foi enriquecida com a apresentação comercial da Flow Energies (PDF de 8 páginas) e com a imagem da lista de sete áreas de serviços. Há rascunho de trabalho do conteúdo-base das sete áreas (seção 3), ainda não aprovado para publicação — a publicação das sete áreas é o Incremento 7; a revisão editorial final fica para o encerramento do projeto, junto ao proprietário. A organização oficial do catálogo na Home permanece a união já publicada até o Incremento 7. As listas da imagem e do PDF continuam distintas. Isso não encerra a Discovery. O que continua sem resposta permanece pendente. O refinamento da redação fica para o final do projeto.
+> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O Incremento 3 publicou no Hero e na meta description a hipótese da seção 6; os responsáveis da Flow Energies validaram comercialmente essas frases, sem alteração de texto. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. O Incremento 5 atualizou o CTA secundário (“Entre em contato” → `#contato`), a seção Contato (duas colunas) e o rodapé compacto com linha legal. O Incremento 6 reordenou a Home/menu (Hero → A Flow → Diferenciais → Soluções → Como trabalhamos → Trajetória → Contato → rodapé), removeu o bloco “Nossa atuação” de A Flow, acrescentou micro-CTA pós-Soluções e clarificou o lead de Como trabalhamos (exclusivo a instalação fotovoltaica) e o marco 1982. O Incremento 7 publicou o catálogo oficial das sete áreas na Home; a união do Incremento 2 é histórico. A Discovery foi enriquecida com a apresentação comercial da Flow Energies (PDF de 8 páginas) e com a imagem da lista de sete áreas de serviços. PDF e imagem continuam fontes distintas e **não equivalentes** às sete áreas publicadas. A revisão editorial final fica para o encerramento do projeto, junto ao proprietário. Isso não encerra a Discovery. O que continua sem resposta permanece pendente. O refinamento da redação fica para o final do projeto.
 
 ---
 
@@ -42,19 +42,19 @@ Os serviços serão documentados individualmente conforme forem levantados com o
 | Diferenciais | — |
 | Informações pendentes | — |
 
-As fontes comerciais fornecidas não são equivalentes. A imagem lista sete áreas. A apresentação em PDF organiza “Nossa atuação”, soluções fotovoltaicas e outros itens em outra estrutura. **Decisão comercial:** manter na Home a união já publicada (Incremento 2). As duas fontes de catálogo permanecem registradas abaixo e continuam **distintas** — não se fundem. A hierarquia visível no site é a composição atual dessa união; não se inventa classificação adicional. Os grupos da Home só organizam a leitura e não fundem escopos. Não há página individual por serviço. A ficha completa (para quem é, problema, benefícios) continua pendente. O refinamento da redação fica para o final do projeto. Conteúdo abaixo = o que os materiais trazem ou o rascunho de trabalho registrado; não foi verificado por fonte externa, salvo indicação explícita.
+As fontes comerciais fornecidas não são equivalentes. A imagem lista sete áreas. A apresentação em PDF organiza “Nossa atuação”, soluções fotovoltaicas e outros itens em outra estrutura. **Decisão comercial (Incremento 7):** o catálogo oficial da Home são as sete áreas abaixo. A união do Incremento 2 é **histórico**. PDF e imagem continuam **distintas** entre si e **não equivalentes** às sete áreas publicadas — não se fundem. Não se inventa classificação adicional. Não há página individual por serviço. A ficha completa (para quem é, problema, benefícios) continua pendente. O refinamento da redação fica para o final do projeto. Conteúdo abaixo = o que os materiais trazem ou o catálogo publicado; não foi verificado por fonte externa, salvo indicação explícita.
 
-**Lista de sete áreas (imagem fornecida) — rascunho de trabalho, ainda não aprovado para publicação:**
+**Catálogo oficial da Home — sete áreas (Incremento 7):**
 
-Estado de validação: rascunho interno de conteúdo-base consolidado a partir da imagem das sete áreas. **Não aprovado para publicação** no site. A publicação das sete áreas na Home é o **Incremento 7**. A revisão editorial final fica para o encerramento do projeto, junto ao proprietário da Flow Energies. Não inventar serviços, resultados, métricas, garantias ou certificações além do escopo listado abaixo. A Home continua a publicar a união já autorizada do Incremento 2 até o Incremento 7; este rascunho não altera o conteúdo visível no Incremento 6.
+Estado de validação: publicado na Home no Incremento 7. Textos canônicos aprovados para esta etapa. A revisão editorial final fica para o encerramento do projeto, junto ao proprietário da Flow Energies. Não inventar serviços, resultados, métricas, garantias ou certificações além do escopo listado abaixo.
 
-1. **Energia Solar Fotovoltaica:** projetos, dimensionamento e instalação de sistemas on-grid, off-grid e híbridos; estudos de viabilidade; expansão e adequação de sistemas existentes; diagnóstico e manutenção.
-2. **Projetos Elétricos:** subestações, aumento de carga, quadros de distribuição, condutores, proteções, aterramento e SPDA.
-3. **Regularização e Conformidade:** apoio à regularização de instalações, documentação técnica, ART, laudos de conformidade e exigências aplicáveis das concessionárias.
-4. **Perícia e Assistência Técnica:** vistorias, análise técnica de instalações e ocorrências elétricas, laudos periciais e pareceres.
-5. **Consultoria Energética:** análise de faturamento, fator de potência, enquadramento tarifário e oportunidades de eficiência energética.
-6. **Recarga de Veículos Elétricos:** projetos de pontos de recarga e planos de negócios para investidores.
-7. **Documentação Técnica:** memoriais, relatórios, pareceres técnicos e suporte documental para defesas jurídicas relacionadas a questões técnicas.
+1. **Energia Solar Fotovoltaica:** Projetos e dimensionamento de sistemas fotovoltaicos on-grid, off-grid e híbridos, incluindo instalação, estudos de viabilidade, expansão, adequação, diagnóstico e manutenção.
+2. **Projetos Elétricos:** Projetos envolvendo subestações, aumento de carga, quadros de distribuição, condutores, proteções, aterramento e SPDA.
+3. **Regularização e Conformidade:** Apoio à regularização de instalações, documentação técnica, ART, laudos de conformidade e exigências aplicáveis das concessionárias.
+4. **Perícia e Assistência Técnica:** Vistorias, análise técnica de instalações e ocorrências elétricas, laudos periciais e pareceres.
+5. **Consultoria Energética:** Análise de faturamento, fator de potência, enquadramento tarifário e oportunidades de eficiência energética.
+6. **Recarga de Veículos Elétricos:** Projetos de pontos de recarga e planos de negócios para investidores.
+7. **Documentação Técnica:** Memoriais, relatórios, pareceres técnicos e suporte documental para defesas jurídicas relacionadas a questões técnicas.
 
 **Apresentação comercial (PDF, 8 páginas):**
 
@@ -63,7 +63,7 @@ Estado de validação: rascunho interno de conteúdo-base consolidado a partir d
 - **Como trabalhamos:** entendimento, projeto, execução e pós-venda — processo de instalação fotovoltaica da apresentação, não método de todos os serviços. A Home (Incremento 6) publica o lead “Conheça as etapas do nosso processo de instalação fotovoltaica. Este fluxo se refere exclusivamente a esse tipo de projeto.” e as quatro etapas intactas.
 - A apresentação também cita engenharia elétrica para o setor elétrico brasileiro e o compromisso técnico e regulatório (ANEEL, PRODIST, ABNT) no bloco institucional, não como itens extras do catálogo de Soluções. Na Home, após o Incremento 6, permanece em A Flow apenas o compromisso regulatório; a frase de engenharia e o mini-catálogo “Nossa atuação” não são publicados em A Flow.
 
-**União publicada na Home (Incremento 2), para referência:**
+**União do Incremento 2 (histórico — não publicada na Home após o Incremento 7):**
 
 - Energia solar fotovoltaica: Projetos fotovoltaicos; Expansão e adequação; Diagnóstico e manutenção; Energia Solar Fotovoltaica (on-grid, off-grid e híbridos). “Instalação” não virou um quarto item de grupo.
 - Engenharia elétrica: Projetos Elétricos; Redes de Distribuição.
@@ -71,7 +71,7 @@ Estado de validação: rascunho interno de conteúdo-base consolidado a partir d
 - Conformidade, perícia e documentação: Regularização e Conformidade; Perícia e Assistência Técnica; Documentação Técnica.
 - Infraestrutura e outras frentes: Armazenamento de Energia (backup e gestão de carga, não off-grid); Supervisão e Controle; Recarga de Veículos Elétricos.
 
-**Fontes e união:** a imagem traz sete áreas; o PDF traz “Nossa atuação” e soluções fotovoltaicas em outra organização. A decisão comercial é manter a união já publicada na Home, sem forçar equivalência entre as fontes nem inventar uma hierarquia além da composição atual.
+**Fontes e catálogo:** a imagem traz sete áreas; o PDF traz “Nossa atuação” e soluções fotovoltaicas em outra organização. O catálogo oficial da Home (Incremento 7) são as sete áreas; a união do Incremento 2 é histórico; PDF ≠ sete áreas — sem forçar equivalência entre as fontes.
 
 ---
 
@@ -193,7 +193,7 @@ Checklist objetiva do que ainda precisa ser levantado com o proprietário:
 - [ ] Perfil da empresa — o texto institucional e o lema da apresentação estão registrados; o perfil completo continua pendente
 - [x] Frases do Hero, apoio e meta description (seção 6) — validadas comercialmente pelos responsáveis da Flow Energies, com os textos exatos já publicados. Percepção, representação, o que a empresa não quer transmitir e mensagens principais além dessas frases continuam pendentes nesta seção.
 - [ ] Público-alvo (cliente principal, perfil, segmentos, necessidades, dores, motivações) — não deduzir só a partir da lista de serviços
-- [ ] Catálogo de serviços — organização oficial: manter a união já publicada na Home; as duas fontes (imagem e PDF) permanecem registradas e distintas. Há rascunho de trabalho do conteúdo-base das sete áreas (seção 3), ainda não aprovado para publicação; a revisão editorial final e a aprovação para publicação ficam para o encerramento do projeto, junto ao proprietário. A ficha individual de cada serviço continua pendente.
+- [x] Catálogo de serviços — organização oficial da Home: sete áreas (Incremento 7). União do Incremento 2 = histórico. Imagem e PDF permanecem registradas e distintas; PDF ≠ sete áreas. A revisão editorial final fica para o encerramento do projeto, junto ao proprietário. A ficha individual de cada serviço continua pendente.
 - [ ] Problemas que a Flow resolve
 - [ ] Diferenciais competitivos — os três pilares da apresentação estão registrados e na Home; a comparação com concorrentes e a comprovação dos diferenciais continuam pendentes
 - [ ] Proposta de valor
@@ -228,6 +228,6 @@ A Discovery só será considerada concluída quando as informações essenciais 
 | Conversão | WhatsApp (número e mensagem), processo após contato, CTAs |
 | Conteúdo | Materiais disponíveis (fotos, logos, textos) ou plano para obtê-los |
 | Marca | Tom de voz e diretrizes mínimas de percepção |
-| Estrutura do site | A Home V1 publicada (Incremento 6) é Hero, A Flow `#a-flow`, Diferenciais `#diferenciais`, Soluções `#solucoes` (união + micro-CTA), Como trabalhamos `#como-trabalhamos`, Trajetória `#trajetoria`, Contato `#contato` e rodapé. Projetos, prova social e FAQ não entram nesse esqueleto |
+| Estrutura do site | A Home V1 publicada (Incrementos 6–7) é Hero, A Flow `#a-flow`, Diferenciais `#diferenciais`, Soluções `#solucoes` (sete áreas + micro-CTA), Como trabalhamos `#como-trabalhamos`, Trajetória `#trajetoria`, Contato `#contato` e rodapé. Projetos, prova social e FAQ não entram nesse esqueleto |
 
-A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte. O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description; os responsáveis da Flow Energies validaram comercialmente essas frases, sem reescrevê-las. A organização do catálogo na Home permanece a união publicada até o Incremento 7. Há rascunho de trabalho do conteúdo-base das sete áreas, ainda não aprovado para publicação — sete áreas = Incremento 7. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. O Incremento 5 atualizou o CTA secundário (“Entre em contato” → `#contato`), a composição de Contato e o rodapé com linha legal; horário não é exibido. O Incremento 6 reordenou a Home/menu, encerrou “Nossa atuação” na Home, clarificou Como trabalhamos (FV) e o marco 1982, e acrescentou micro-CTA pós-Soluções; a união Soluções permanece inalterada. Provas sociais e credenciais serão obtidas posteriormente, sem marcar N/A. O refinamento dos textos publicados fica para o final do projeto.
+A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte (incluindo a união histórica do catálogo). O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description; os responsáveis da Flow Energies validaram comercialmente essas frases, sem reescrevê-las. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. O Incremento 5 atualizou o CTA secundário (“Entre em contato” → `#contato`), a composição de Contato e o rodapé com linha legal; horário não é exibido. O Incremento 6 reordenou a Home/menu, encerrou “Nossa atuação” na Home, clarificou Como trabalhamos (FV) e o marco 1982, e acrescentou micro-CTA pós-Soluções. O Incremento 7 publicou o catálogo oficial das sete áreas; a união do Incremento 2 é histórico; PDF ≠ sete áreas. Provas sociais e credenciais serão obtidas posteriormente, sem marcar N/A. O refinamento dos textos publicados fica para o final do projeto.

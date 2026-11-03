@@ -146,7 +146,6 @@
 }
 
 .home-section h3,
-.home-section h4,
 .home-section p {
   max-width: 42rem;
 }
@@ -209,12 +208,6 @@
 
 .solutions-cta__secondary:hover {
   color: var(--color-brand-blue);
-}
-
-.home-section h4 {
-  margin: 0 0 var(--space-2);
-  font-size: 1rem;
-  line-height: 1.35;
 }
 
 .home-section p {
