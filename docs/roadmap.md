@@ -218,6 +218,21 @@ Fora deste incremento: fichas individuais por serviço; formulários; novas rota
 
 A verificação desta etapa (`ng test`, `npm run build`, checklist responsivo/âncoras/micro-CTA) não substitui o QA independente.
 
+### Incremento 8 — Editorial FV / Trajetória (corpo 2023)
+
+Implementado nesta etapa. O QA independente permanece pendente. Não reabre os Incrementos 2–7. Este registro não encerra a Discovery.
+
+O que foi publicado:
+
+- Em `#trajetoria` (`home.component.html`): exclusivamente o parágrafo do marco 2023. Ano `2023` e título “Engenharia de Alta Performance” preservados. Texto publicado: “Com a consolidação do Marco Legal, a Flow Energies atua em soluções fotovoltaicas de alta eficiência técnica e tecnológica.”
+- Como trabalhamos (título, lead FV e quatro etapas) e Diferenciais (três pilares): inalterados.
+- Marcos 1982, 2012, 2017 e 2019: inalterados.
+- Documentação: `PRODUCT.md`, `docs/discovery.md`, `docs/roadmap.md` alinhados ao texto publicado na Home; validação factual da Trajetória continua pendente na Discovery.
+
+Fora deste incremento: demais seções da Home; SCSS; menu; Hero; Soluções; Contato; Footer; tokens; rotas; elevar budgets; novos fatos ou claims.
+
+A verificação desta etapa (`ng test`, `npm run build`, inspeção de diff) não substitui o QA independente.
+
 ## Fase 5 — Deploy
 
 Definir posteriormente a estratégia de hospedagem/deploy.
