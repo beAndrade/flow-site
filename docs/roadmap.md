@@ -233,9 +233,26 @@ Fora deste incremento: demais seções da Home; SCSS; menu; Hero; Soluções; Co
 
 A verificação desta etapa (`ng test`, `npm run build`, inspeção de diff) não substitui o QA independente.
 
+### Incremento 9 — Publicação SEO (domínio, OG, sitemap, robots)
+
+Implementado nesta etapa. O QA independente permanece pendente. Não reabre os Incrementos 2–8. Este registro não encerra a Discovery nem substitui o deploy em produção.
+
+O que foi publicado no repositório:
+
+- Domínio canônico: `https://flowenergiesbr.com.br/` (apex, HTTPS) em `link rel="canonical"` e `og:url` em `src/index.html`.
+- Título e meta description do Incremento 3 preservados; `og:type`, `og:locale`, `og:site_name=Flow Energies`; `twitter:card=summary_large_image`.
+- Imagem de compartilhamento: `public/images/Flow og.png` (arquivo aprovado; sem edição). Metas `og:image` / `twitter:image` = `https://flowenergiesbr.com.br/images/Flow%20og.png`; `og:image:type=image/png`; `og:image:width=1119`; `og:image:height=630` (medidos do arquivo).
+- `public/sitemap.xml`: somente a Home canônica.
+- `public/robots.txt`: `Allow: /` e `Sitemap: https://flowenergiesbr.com.br/sitemap.xml`.
+- Documentação: `PRODUCT.md`, `docs/discovery.md`, `docs/roadmap.md` — URL e imagem de compartilhamento deixam de constar como indefinidas no repo; DNS/SSL/deploy permanecem externos.
+
+Fora deste incremento: conteúdo da Home; identidade/tokens; elevar budgets; novas rotas; Analytics; configuração de DNS, certificado SSL, hospedagem e redirects www/HTTP→HTTPS (hospedagem).
+
+A verificação desta etapa (`ng test`, `npm run build`, presença dos artefatos no dist) não substitui o QA independente nem o go-live.
+
 ## Fase 5 — Deploy
 
-Definir posteriormente a estratégia de hospedagem/deploy.
+Definir posteriormente a estratégia de hospedagem/deploy. O Incremento 9 prepara metadados e arquivos estáticos para o domínio `https://flowenergiesbr.com.br/`; apontar DNS, emitir SSL e publicar o build no host permanece nesta fase.
 
 ## Fase 6 — Evolução
 
