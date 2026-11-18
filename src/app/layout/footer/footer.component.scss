@@ -77,7 +77,7 @@
   width: 2.75rem;
   height: 2.75rem;
   border: 1px solid var(--color-border-default);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   background: var(--color-surface);
   color: var(--color-brand-navy);
 }

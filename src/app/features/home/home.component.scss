@@ -91,7 +91,7 @@
   width: fit-content;
   max-width: 100%;
   margin: 0;
-  padding: 8px 16px;
+  padding: var(--space-2) var(--space-4);
   border: 1px solid #fafdfb;
   border-radius: var(--radius-sm);
   color: var(--color-brand-yellow);
@@ -136,7 +136,7 @@
   box-sizing: border-box;
   height: 48px;
   min-height: 48px;
-  padding: 0 24px;
+  padding: 0 var(--space-6);
   border: 0;
   border-radius: var(--radius-sm);
   background: #eab308;
@@ -167,7 +167,7 @@
   height: 48px;
   min-height: 48px;
   margin: 0;
-  padding: 0 24px;
+  padding: 0 var(--space-6);
   border: 1px solid #fafdfb;
   border-radius: var(--radius-sm);
   background: transparent;
@@ -313,7 +313,7 @@
   display: grid;
   gap: var(--space-3);
   min-width: 0;
-  padding: 24px;
+  padding: var(--space-6);
   border: 1px solid rgb(15 23 42 / 8%);
   border-radius: 12px;
   background: var(--color-white);
