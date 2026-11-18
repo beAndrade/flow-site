@@ -1,10 +1,10 @@
 # Flow Energies — Design System
 
-> **Status:** V1 — Foundation
+> **Status:** V1 — Escalas consolidadas (pós Fases A–E)
 >
-> Este documento traduz as diretrizes definidas em `docs/visual-identity.md` para um sistema visual técnico aplicável ao `flow-site`.
+> Este documento traduz as diretrizes definidas em `docs/visual-identity-flow-energies.md` para um sistema visual técnico aplicável ao `flow-site`.
 >
-> O documento deve orientar Figma, Angular, SCSS e futuras evoluções da interface. Valores marcados como referência podem ser refinados durante a validação visual sem alterar os princípios da identidade.
+> **Fonte de verdade técnica:** o código commitado em `src/styles/` (`_tokens.scss`, `_typography.scss`, `_breakpoints.scss`, `_globals.scss`, `_utilities.scss`) e o entry `src/styles.scss`. Este documento descreve o estado implementado; não inventa tokens, classes ou comportamentos ausentes do código.
 
 ---
 
@@ -25,7 +25,8 @@ O Design System estabelece regras reutilizáveis para:
 - estados;
 - responsividade;
 - acessibilidade;
-- linguagem visual.
+- linguagem visual;
+- motion.
 
 O objetivo é evitar decisões visuais isoladas durante a implementação.
 
@@ -82,35 +83,39 @@ Efeitos visuais, imagens, fontes e componentes devem ser utilizados considerando
 
 Os tokens são a camada de abstração entre a identidade visual e a implementação.
 
-A implementação em SCSS deve concentrar os valores fundamentais em um único local.
+Valores fundamentais ficam em `src/styles/_tokens.scss` (`:root`), consumidos via CSS Custom Properties.
 
 ### 3.1 — Brand Colors
 
 | Token | Valor | Função |
 |---|---|---|
-| `--color-brand-navy` | `#102F4A` | Estrutura, fundos escuros e contraste |
-| `--color-brand-blue-dark` | `#3E59A5` | Azul de marca |
-| `--color-brand-blue` | `#406DB3` | Azul principal |
-| `--color-brand-blue-light` | `#4296CE` | Destaques e variações |
-| `--color-brand-yellow` | `#DAB419` | Accent, energia e CTAs estratégicos |
+| `--color-brand-navy` | `#102f4a` | Estrutura, fundos escuros e contraste |
+| `--color-brand-blue-dark` | `#3e59a5` | Azul de marca |
+| `--color-brand-blue` | `#406db3` | Azul principal |
+| `--color-brand-blue-light` | `#4296ce` | Destaques e variações |
+| `--color-brand-yellow` | `#dab419` | Accent, energia e CTAs estratégicos |
+| `--color-cta-yellow` | `#eab308` | Amarelo de CTA (Hero / ações) |
+| `--color-cta-yellow-hover` | `#f0bc1a` | Hover do amarelo de CTA |
 
 > Os valores de azul e amarelo são referências digitais derivadas do logo atual. Devem ser refinados caso sejam disponibilizados valores oficiais da marca.
+>
+> Nota de consumo: o Hero ainda aplica literais `#eab308` / `#f0bc1a` alinhados a esses tokens CTA (migração de cor literal → `var()` não fez parte das Fases C–E).
 
 ### 3.2 — Neutral Colors
 
 | Token | Valor | Função |
 |---|---|---|
-| `--color-white` | `#FFFFFF` | Fundo e contraste |
-| `--color-background` | `#F7F9FA` | Fundo alternativo |
-| `--color-border` | `#E5E7EB` | Bordas e divisores |
-| `--color-text` | `#17212B` | Texto principal |
+| `--color-white` | `#ffffff` | Fundo e contraste |
+| `--color-background` | `#f4fcfc` | Fundo do site (`body`) |
+| `--color-border` | `#e5e7eb` | Bordas e divisores |
+| `--color-text` | `#17212b` | Texto principal |
 | `--color-text-muted` | `#667085` | Texto secundário |
 
 ### 3.3 — Semantic Colors
 
 A camada semântica permite alterar a implementação sem alterar os componentes.
 
-Referência inicial:
+Valores commitados:
 
 ```scss
 --color-bg: var(--color-white);
@@ -127,14 +132,7 @@ Referência inicial:
 --color-action-dark: var(--color-brand-navy);
 ```
 
-Estados adicionais devem ser definidos quando os fluxos reais do produto exigirem:
-
-- success;
-- warning;
-- error;
-- info.
-
-Não criar uma paleta semântica extensa antecipadamente.
+Estados adicionais (success, warning, error, info) só devem ser definidos quando os fluxos reais do produto exigirem. Não criar uma paleta semântica extensa antecipadamente.
 
 ---
 
@@ -142,99 +140,102 @@ Não criar uma paleta semântica extensa antecipadamente.
 
 ### 4.1 — Fonte
 
-A fonte principal é **Inter**.
+A família tipográfica global é **Segoe UI**, com stack de sistema:
 
-Aplicação:
+```scss
+--font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+```
 
-- headings;
-- body;
-- navigation;
-- buttons;
-- labels;
-- informações institucionais;
-- componentes.
+Aplicação: headings, body, navigation, buttons, labels, informações institucionais e componentes.
 
-### 4.2 — Pesos
+A tipografia de interface é independente do lettering do logo (ver `docs/visual-identity-flow-energies.md`).
 
-Utilizar inicialmente:
+### 4.2 — Pesos (EGP)
 
-| Peso | Uso |
-|---|---|
-| 400 | Regular / body |
-| 500 | Medium / labels |
-| 600 | Semibold / destaque |
-| 700 | Bold / headings |
-| 800 | ExtraBold / display |
+| Token | Valor | Uso |
+|---|---|---|
+| `--font-weight-normal` / `--font-weight-regular` | `400` | Body / regular |
+| `--font-weight-medium` | `500` | Medium / labels — Segoe UI não tem face nativa 500; fallback aproximado ~400 (aprovado) |
+| `--font-weight-semibold` | `600` | Semibold / destaque |
+| `--font-weight-bold` | `700` | Bold / headings |
+| `--font-weight-black` / `--font-weight-extrabold` | `900` | Display / ênfase máxima |
 
 Evitar utilizar todos os pesos dentro de uma mesma seção sem necessidade.
 
-### 4.3 — Hierarquia
+### 4.3 — Escala EGP (primitivos)
 
-A escala definitiva deve ser refinada durante a composição da Home.
+Primitivos imutáveis de tamanho e leading pareado (`_tokens.scss`):
 
-Referência inicial:
+| Size token | Valor | Leading token | Valor |
+|---|---|---|---|
+| `--text-xs` | `0.75rem` | `--leading-xs` | `calc(1 / 0.75)` |
+| `--text-sm` | `0.875rem` | `--leading-sm` | `calc(1.25 / 0.875)` |
+| `--text-base` | `1rem` | `--leading-base` | `1.5` |
+| `--text-lg` | `1.125rem` | `--leading-lg` | `calc(1.75 / 1.125)` |
+| `--text-xl` | `1.25rem` | `--leading-xl` | `calc(1.75 / 1.25)` |
+| `--text-2xl` | `1.5rem` | `--leading-2xl` | `calc(2 / 1.5)` |
+| `--text-3xl` | `1.875rem` | `--leading-3xl` | `1.2` |
+| `--text-4xl` | `2.25rem` | `--leading-4xl` | `calc(2.5 / 2.25)` |
+| `--text-5xl` | `3rem` | `--leading-5xl` | `1` |
+| `--text-6xl` | `3.75rem` | `--leading-6xl` | `1` |
+| `--text-7xl` | `4.5rem` | `--leading-7xl` | `1` |
 
-```text
-Display
-H1
-H2
-H3
-Body Large
-Body
-Body Small
-Label
-Caption
+### 4.4 — Aliases semânticos
+
+```scss
+--text-body: var(--text-base);
+--text-body-sm: var(--text-sm);
+--text-small: var(--text-sm);
+--text-body-lg: var(--text-lg);
+--text-label: var(--text-xs);
+--text-eyebrow: var(--text-xs);
+--text-h3: var(--text-xl);
+--text-h2: var(--text-3xl);
+--text-cta: var(--text-sm);
+--text-nav: var(--text-sm);
 ```
 
-A hierarquia deve ser definida semanticamente, não apenas pelo tamanho.
+A hierarquia deve ser definida semanticamente (`h1` / `h2` / `h3` / `p`), não apenas pelo tamanho. Evitar utilizar `<div>` ou `<span>` apenas para simular títulos.
 
-Exemplo:
+### 4.5 — Display / Hero (stepped)
 
-```html
-<h1>...</h1>
-<h2>...</h2>
-<h3>...</h3>
-<p>...</p>
-```
+Contrato em `_typography.scss` — **sem `clamp`**:
 
-Evitar utilizar `<div>` ou `<span>` apenas para simular títulos.
+| Faixa | `--text-display` | `--leading-display` |
+|---|---|---|
+| default | `var(--text-4xl)` | `var(--leading-4xl)` |
+| `bp-up(sm)` | `var(--text-6xl)` | `var(--leading-6xl)` |
+| `bp-up(lg)` | `var(--text-7xl)` | `var(--leading-7xl)` |
 
-### 4.4 — Line-height
+`h1` usa `--text-display` / `--leading-display` com `--font-weight-black`.
 
-Como referência:
+### 4.6 — Exceção de marca (lockup)
 
-```text
-Display / H1    1.05 — 1.15
-H2 / H3         1.10 — 1.25
-Body            1.50 — 1.65
-Small           1.40 — 1.55
-```
-
-Os valores finais devem ser ajustados de acordo com a largura de linha e o comportamento mobile.
+O lockup tipográfico FLOW / ENERGIES no header e no footer usa tamanhos fora da escala de leitura (ex.: `1.375rem`, `0.5rem`, `1.625rem` / `0.5625rem` em `bp-up(lg)`). Não criar tokens EGP para esses valores de marca.
 
 ---
 
 ## 05 — Espaçamento
 
-A escala deve utilizar múltiplos de 4px.
+Escala commitada (múltiplos de 4px), tokens `--space-*`:
 
-Referência:
+| Token | Valor |
+|---|---|
+| `--space-1` | `4px` |
+| `--space-2` | `8px` |
+| `--space-3` | `12px` |
+| `--space-4` | `16px` |
+| `--space-5` | `20px` |
+| `--space-6` | `24px` |
+| `--space-8` | `32px` |
+| `--space-10` | `40px` |
+| `--space-12` | `48px` |
+| `--space-16` | `64px` |
+| `--space-20` | `80px` |
+| `--space-24` | `96px` |
+| `--space-30` | `120px` |
 
-```text
-4
-8
-12
-16
-20
-24
-32
-40
-48
-64
-80
-96
-120
-```
+Não existe step `28px` no token set. Não criar `--space-*` para `28px` — ver exceções intencionais (§36).
 
 ### Uso conceitual
 
@@ -260,16 +261,22 @@ O conteúdo deve permanecer legível e controlado em telas grandes.
 
 ### 6.2 — Container
 
-Referência inicial:
+Valores commitados:
 
 ```scss
---container-max-width: 1200px;
+--container-max-width: 1280px;
 --container-padding-mobile: 20px;
 --container-padding-tablet: 32px;
---container-padding-desktop: 40px;
+--container-padding-desktop: 32px;
 ```
 
-Os valores podem ser ajustados após a primeira composição visual.
+Shell global (`.site-shell` em `_globals.scss`):
+
+- `width: min(100%, var(--container-max-width))`;
+- `margin-inline: auto`;
+- padding-inline mobile → tablet em `bp-up(md)` → desktop em `bp-up(lg)`.
+
+Acima de 1280px o conteúdo deixa de expandir além do teto.
 
 ### 6.3 — Grid
 
@@ -289,13 +296,14 @@ Composição assimétrica pode ser utilizada quando melhorar hierarquia e narrat
 
 ## 07 — Border Radius
 
-Referência:
+Valores commitados:
 
 ```scss
 --radius-sm: 6px;
 --radius-md: 10px;
 --radius-lg: 16px;
 --radius-xl: 24px;
+--radius-full: 999px;
 --radius-pill: 999px;
 ```
 
@@ -305,9 +313,12 @@ Direção:
 - inputs e botões → `md`;
 - cards → `lg`;
 - blocos especiais → `xl`;
+- círculos / controles circulares → `full`;
 - badges → `pill`.
 
-Evitar utilizar `pill` indiscriminadamente.
+Utilities globais em `_utilities.scss`: `.radius-sm`, `.radius-md`, `.radius-lg`, `.radius-xl`, `.radius-full`.
+
+Evitar utilizar `pill` / `full` indiscriminadamente. Exceções de radius literal pós-D: ver §36.
 
 ---
 
@@ -322,15 +333,13 @@ A interface deve depender principalmente de:
 
 Sombras devem ser discretas.
 
-Referência:
+Valores commitados:
 
 ```scss
 --shadow-sm: 0 1px 2px rgba(16, 47, 74, 0.06);
 --shadow-md: 0 8px 24px rgba(16, 47, 74, 0.08);
---shadow-lg: 0 16px 40px rgba(16, 47, 74, 0.10);
+--shadow-lg: 0 16px 40px rgba(16, 47, 74, 0.1);
 ```
-
-> As sombras são tokens técnicos e podem ser refinadas durante a validação visual.
 
 Evitar:
 
@@ -362,6 +371,8 @@ Características:
 - estado hover/focus/active definido.
 
 A cor pode variar entre azul e amarelo conforme o fundo e o contexto.
+
+Tokens de apoio: `--touch-target: 2.75rem`, `--control-height: 48px` (existem em `_tokens.scss`; o consumo via `var()` ainda não é universal — ver §36).
 
 ### 9.2 — Secondary
 
@@ -429,6 +440,8 @@ Disabled (quando aplicável)
 ```
 
 O estado `focus` nunca deve ser removido sem substituição acessível.
+
+Foco global (`:focus-visible` em `_globals.scss`): anel dual com `--focus-ring`, `--focus-ring-offset` e `--focus-ring-halo` (outline branco + halo navy).
 
 ---
 
@@ -585,9 +598,38 @@ Evitar:
 
 ---
 
-## 18 — Responsividade
+## 18 — Responsividade e breakpoints
 
-A implementação deve partir do mobile.
+A implementação parte do mobile.
+
+### 18.1 — Escala Sass (fonte de verdade em `@media`)
+
+Arquivo: `src/styles/_breakpoints.scss`.
+
+| Nome | Sass | rem | Uso típico |
+|---|---|---|---|
+| `sm` | `$bp-sm` | `40rem` | Tipografia display stepped |
+| `md` | `$bp-md` | `48rem` | Layout tablet / grids 2 col |
+| `nav` | `$bp-nav` | `56rem` | Corte do menu desktop |
+| `lg` | `$bp-lg` | `64rem` | Desktop (padding, display, grids) |
+
+Mixin:
+
+```scss
+@include bp-up($name) { /* min-width */ }
+```
+
+Regras:
+
+1. Mobile-first (`min-width` via `bp-up`).
+2. Um propósito por corte.
+3. **Proibido** usar `var(--bp-*)` dentro de `@media`.
+4. `$bp-nav` deve permanecer alinhado a `BP_NAV = '56rem'` em `header.component.ts` (`matchMedia`).
+5. Espelhos CSS em `_tokens.scss` (`--bp-sm`, `--bp-nav`, `--bp-tablet`, `--bp-desktop`) existem para docs/JS — não para `@media`.
+
+`angular.json` define `stylePreprocessorOptions.includePaths: ["src/styles"]`, permitindo `@use "breakpoints" as *` nos SCSS de componentes.
+
+### 18.2 — Comportamento por faixa
 
 ### Mobile
 
@@ -644,6 +686,18 @@ Requisitos mínimos:
 
 Movimento deve comunicar hierarquia e interação.
 
+Tokens commitados:
+
+```scss
+--duration-fast: 200ms;
+--duration-mid: 220ms;
+--duration-slow: 350ms;
+--duration-header: 400ms;
+--easing-standard: ease;
+```
+
+Consumo observado (Fase E): transições do header (scroll/background), hovers de CTA/secondary e cards na Home usam esses tokens.
+
 Pode ser utilizado em:
 
 - hover;
@@ -660,7 +714,7 @@ Evitar:
 - animações que prejudiquem performance;
 - efeitos necessários para compreender o conteúdo.
 
-A preferência do usuário por `prefers-reduced-motion` deve ser respeitada.
+`prefers-reduced-motion: reduce` é respeitado globalmente em `_globals.scss` (força `scroll-behavior: auto` e durações de transition/animation próximas de zero).
 
 ---
 
@@ -675,15 +729,17 @@ O Header deve priorizar:
 
 No mobile, a navegação deve ser simplificada.
 
-No desktop, o Header pode apresentar maior estrutura sem perder simplicidade.
+No desktop (`bp-up(nav)` / `BP_NAV`), o Header apresenta navegação horizontal.
 
-O logo deve permanecer visualmente dominante em relação aos elementos secundários.
+O logo / lockup tipográfico deve permanecer visualmente dominante em relação aos elementos secundários.
+
+Token de apoio: `--header-height: 5rem` (valor atual em `_tokens.scss`).
 
 ---
 
 ## 22 — Hero
 
-O Hero será uma das áreas mais importantes da V1.
+O Hero é uma das áreas mais importantes da V1 e já está implementado na Home.
 
 Objetivos:
 
@@ -697,7 +753,7 @@ Estrutura conceitual:
 ```text
 Eyebrow / contexto
         ↓
-Headline
+Headline (h1 / --text-display stepped)
         ↓
 Supporting text
         ↓
@@ -706,9 +762,7 @@ Primary CTA
 Secondary context / proof
 ```
 
-A composição final deve ser definida visualmente antes da implementação definitiva.
-
-Evitar Hero puramente decorativo.
+Evitar Hero puramente decorativo. Substituição da imagem temporária do Hero exige autorização explícita.
 
 ---
 
@@ -747,84 +801,91 @@ O Footer deve concentrar:
 - redes sociais quando aplicável;
 - informações legais necessárias.
 
-A linguagem visual pode utilizar o `Deep Navy` como base.
+A linguagem visual pode utilizar o `Deep Navy` como base. O rodapé atual da Home V1 é compacto (marca tipográfica, linha legal, voltar ao topo) conforme o Incremento 5 — esta seção descreve a orientação do sistema, não obriga a reintrodução de contatos no footer.
 
 ---
 
 ## 25 — Arquitetura SCSS
 
-A implementação inicial pode seguir:
+Estado real (HEAD):
 
 ```text
 src/
-└── styles/
-    ├── _tokens.scss
-    ├── _typography.scss
-    ├── _mixins.scss
-    ├── _utilities.scss
-    └── styles.scss
+├── styles/
+│   ├── _tokens.scss        # CSS custom properties (:root)
+│   ├── _typography.scss    # body/h1–h3 + display stepped
+│   ├── _breakpoints.scss   # $bp-* map + mixin bp-up (Sass)
+│   ├── _globals.scss       # reset, shell, trust-bar, contact, reduced-motion
+│   └── _utilities.scss     # .radius-*
+└── styles.scss             # entry: @use tokens → typography → globals → utilities
 ```
+
+Entry (`src/styles.scss`):
+
+```scss
+@use "styles/tokens";
+@use "styles/typography";
+@use "styles/globals";
+@use "styles/utilities";
+```
+
+`_breakpoints.scss` **não** é importado no entry; consumers usam `@use "breakpoints" as *` (via `includePaths: ["src/styles"]`).
 
 ### Responsabilidades
 
 `_tokens.scss`
-- cores;
-- spacing;
-- radius;
-- shadows;
-- containers;
-- outros valores globais.
+- cores, tipografia (primitivos/aliases), spacing, radius, shadows, containers, breakpoints espelhados, motion, focus, header-height, touch/control.
 
 `_typography.scss`
-- famílias;
-- pesos;
-- escala tipográfica;
-- classes tipográficas quando necessárias.
+- base tipográfica do `body` / headings;
+- contrato stepped de `--text-display`.
 
-`_mixins.scss`
-- breakpoints;
-- utilidades realmente reutilizáveis.
+`_breakpoints.scss`
+- escala Sass e mixin `bp-up`.
+
+`_globals.scss`
+- estilos base globais e seções compartilhadas (ex.: `.site-shell`, trust bar, contato).
 
 `_utilities.scss`
-- utilidades globais pequenas e justificadas.
+- apenas utilities `.radius-*` justificadas.
 
 `styles.scss`
-- entry point global;
-- imports;
-- estilos base.
+- entry point global.
 
-Evitar criar um arquivo SCSS global para cada componente sem necessidade.
+Evitar criar um arquivo SCSS global para cada componente sem necessidade. Não introduzir Cascade Layers, Tailwind ou framework utilitário amplo nesta V1.
 
 ---
 
 ## 26 — CSS Custom Properties
 
-Valores que possam precisar de alteração em runtime ou que representem tokens do sistema devem preferencialmente utilizar CSS Custom Properties.
+Valores do sistema utilizam CSS Custom Properties em `:root` (`_tokens.scss`).
 
-Exemplo:
+Os componentes devem consumir os tokens em vez de repetir valores diretamente, salvo exceções intencionais documentadas (§36).
+
+Exemplo (trecho representativo — lista completa no código):
 
 ```scss
 :root {
   --color-brand-navy: #102f4a;
   --color-brand-blue: #406db3;
   --color-brand-yellow: #dab419;
+  --color-background: #f4fcfc;
 
-  --color-bg: #ffffff;
-  --color-bg-subtle: #f7f9fa;
+  --font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --color-text-primary: #17212b;
-  --color-text-secondary: #667085;
-  --color-border-default: #e5e7eb;
+  --container-max-width: 1280px;
 
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-xl: 24px;
+  --radius-full: 999px;
   --radius-pill: 999px;
+
+  --duration-fast: 200ms;
+  --easing-standard: ease;
 }
 ```
-
-Os componentes devem consumir os tokens em vez de repetir valores diretamente.
 
 ---
 
@@ -970,42 +1031,38 @@ Implementação Angular
 
 ---
 
-## 32 — O que ainda não está fechado
+## 32 — O que permanece aberto (produto / conteúdo)
 
-As seguintes decisões permanecem deliberadamente abertas:
+As escalas técnicas V1 (tipografia EGP, breakpoints, container, spacing, radius, motion) estão **fechadas no código**. Não reabrir essas decisões sem autorização.
 
-- escala tipográfica definitiva;
-- breakpoints exatos;
-- container definitivo;
-- composição final do Hero;
-- tratamento final de gradientes;
-- componentes definitivos;
-- iconografia;
-- microinterações;
-- imagens finais;
-- possíveis variações do CTA.
+Ainda abertos no âmbito de produto / conteúdo (não inventar fechamento):
 
-Esses itens devem ser fechados após a primeira exploração visual.
+- composição e tratamento finais de gradientes além do uso atual;
+- iconografia definitiva;
+- imagens finais / substituição do asset temporário do Hero;
+- microinterações além dos tokens de duration já definidos;
+- possíveis variações futuras de CTA;
+- componentes definitivos de produto ainda não especificados.
 
 ---
 
 ## 33 — Critérios de aceitação do Design System V1
 
-O sistema poderá ser considerado pronto para implementação quando:
+Estado em relação ao código HEAD (pós A–E):
 
-- [ ] paleta estiver validada;
-- [ ] tipografia estiver validada;
-- [ ] tokens principais estiverem definidos;
-- [ ] grid e container estiverem definidos;
-- [ ] escala de espaçamento estiver consistente;
-- [ ] radius estiver consistente;
-- [ ] botões estiverem definidos;
-- [ ] CTA principal estiver definido;
-- [ ] estados básicos estiverem previstos;
-- [ ] regras mobile-first estiverem claras;
-- [ ] requisitos básicos de acessibilidade estiverem definidos;
-- [ ] primeira composição da Home tiver sido revisada;
-- [ ] decisões refinadas estiverem refletidas neste documento.
+- [x] paleta base validada no código (brand + neutros + semânticos + CTA yellow);
+- [x] tipografia Segoe + escala EGP + display stepped;
+- [x] tokens principais definidos em `_tokens.scss`;
+- [x] grid/container (`1280px`, paddings 20/32/32, `.site-shell`);
+- [x] escala de espaçamento `--space-*`;
+- [x] radius + utilities `.radius-*`;
+- [x] breakpoints Sass + `bp-up` + sync `BP_NAV`;
+- [x] motion tokens + reduced-motion global;
+- [x] regras mobile-first e foco visível definidos;
+- [ ] botões como componente reutilizável formal (orientação + padrões na Home; sem component library isolada);
+- [ ] iconografia definitiva;
+- [ ] imagens finais / Hero asset definitivo;
+- [ ] decisões refinadas de produto refletidas após validação comercial.
 
 ---
 
@@ -1014,7 +1071,7 @@ O sistema poderá ser considerado pronto para implementação quando:
 Este documento depende diretamente de:
 
 ```text
-docs/visual-identity.md
+docs/visual-identity-flow-energies.md
 ```
 
 E deve orientar:
@@ -1029,7 +1086,7 @@ componentes Angular
 páginas
 ```
 
-O `visual-identity.md` responde principalmente:
+O documento de identidade responde principalmente:
 
 > **"Como a Flow deve parecer?"**
 
@@ -1041,8 +1098,51 @@ Este documento responde:
 
 ## 35 — Status
 
-**Status atual:** Foundation V1
+**Status atual:** V1 — Escalas consolidadas (Fases A, B, C0, C, D, E concluídas no código).
 
-O sistema está suficientemente definido para iniciar a exploração visual da Home, mas ainda não deve ser tratado como um Design System definitivo da marca.
+A tipografia, os breakpoints, o container, o spacing, o radius e o motion da V1 estão implementados em HEAD. Evoluções posteriores exigem autorização e não devem contradizer este contrato sem atualização explícita dos docs e do código.
 
-A próxima etapa é validar visualmente a primeira composição da Home e atualizar este documento com as decisões que forem confirmadas.
+---
+
+## 36 — Exceções intencionais (pós-D, preservadas)
+
+A Fase D migrou spacing/radius para tokens **sem** forçar literais que preservam geometria aprovada. Estado validado no código:
+
+| Local | Literal preservado |
+|---|---|
+| `.solution-card` | `border-radius: 12px` |
+| `.solution-card--featured` | `padding: 28px` |
+| Contato CTAs (`.contact__cta`, `.contact__email`) | `border-radius: 8px`; padding vertical `14px` |
+| Header CTA | padding horizontal `1.125rem` (parcial; vertical usa `var(--space-3)`) |
+| Nav desktop | `gap: 28px` |
+| Mark (header/footer) | `gap: 1px` |
+| Alturas de controle | literais `48px` / `2.75rem` em vários pontos — tokens `--control-height` / `--touch-target` existem, mas o consumo `var()` não é universal |
+
+Não criar `--space-7` / token de `28px` só para eliminar essas exceções. Hover do CTA de contato ainda usa literal `#e3c33a` (fora da escala de tokens CTA do Hero).
+
+---
+
+## 37 — Convenções de evolução
+
+1. Preferir tokens existentes (`var(--*)`) e `bp-up` para novos estilos.
+2. Novos valores de token só com autorização explícita do responsável.
+3. Não expandir `_utilities.scss` além de `.radius-*` sem escopo aprovado.
+4. Não introduzir Tailwind, Cascade Layers ou framework utilitário amplo nesta base.
+5. Não reabrir decisões das Fases A–E (família, EGP, breakpoints, spacing/radius, motion) sem plano aprovado.
+6. Manter sync `$bp-nav` ↔ `BP_NAV`.
+7. Documentar exceções literais quando forem intencionais; não “corrigir” silenciosamente geometria aprovada.
+
+---
+
+## 38 — Histórico das Fases A–E
+
+| Fase | Conteúdo | Commit (quando houver) |
+|---|---|---|
+| **A** | Auditoria Tokens V1 (planejamento; sem commit de código dedicado) | — |
+| **B** | Tokens additive + utilities `.radius-*` | `4607d9e` |
+| **C0** | Infraestrutura Sass de breakpoints + sync nav | `4c2efde` |
+| **Família** | Segoe UI global (remoção de Inter) | `a810f92` |
+| **C** | Escala tipográfica EGP + display stepped | `f4be935` |
+| **D** | Spacing/radius → tokens (+ exceções preservadas) | `466b4b8` |
+| **E** | Motion → tokens | `af89d7c` |
+| **F** | Redação documental deste contrato (docs) | esta etapa |

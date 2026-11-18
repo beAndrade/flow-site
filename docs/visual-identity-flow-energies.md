@@ -306,7 +306,7 @@ A interface deve utilizar uma fonte independente, otimizada para:
 
 ### 6.2 --- Fonte principal
 
-**Inter**
+**Segoe UI**
 
 Uso:
 

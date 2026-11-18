@@ -83,14 +83,16 @@ src/
 │   ├── icons/
 │   └── fonts/
 ├── styles/
-│   ├── _variables.scss
-│   ├── _mixins.scss
-│   └── _globals.scss
+│   ├── _tokens.scss
+│   ├── _typography.scss
+│   ├── _breakpoints.scss
+│   ├── _globals.scss
+│   └── _utilities.scss
 ├── main.ts
 └── styles.scss
 ```
 
-> **Nota sobre o estado atual:** o projeto Angular foi gerado com `public/` para assets estáticos e um único arquivo `src/styles.scss`. A migração para `src/assets/` e `src/styles/` com partials SCSS será feita nas fases de Design System e implementação, sem alteração prematura nesta fundação.
+> **Nota sobre estilos:** a árvore `src/styles/` acima é a real (Design System V1). O entry `src/styles.scss` faz `@use` de `tokens` → `typography` → `globals` → `utilities`. `_breakpoints.scss` é consumido via `@use "breakpoints"` nos SCSS que precisam de `bp-up` (`stylePreprocessorOptions.includePaths: ["src/styles"]` em `angular.json`). Assets estáticos continuam em `public/` (não em `src/assets/`).
 
 ## 6. V1 x evolução
 

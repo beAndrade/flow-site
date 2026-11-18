@@ -30,18 +30,35 @@ Itens que dependem de levantamento com o proprietário. O Incremento 2 não ence
 
 ## Fase 2 — Design System
 
-- identidade visual
-- cores
-- tipografia
-- espaçamento
-- grid
-- breakpoints
-- botões
-- cards
-- formulários
-- ícones
-- estados
-- componentes reutilizáveis
+- [x] identidade visual (direção digital em `docs/visual-identity-flow-energies.md`)
+- [x] cores (tokens brand / neutros / semânticos / CTA)
+- [x] tipografia (Segoe UI + escala EGP + display stepped)
+- [x] espaçamento (`--space-*`)
+- [x] grid / container (`1280px`, `.site-shell`)
+- [x] breakpoints (Sass `$bp-*` + `bp-up`, sync `BP_NAV`)
+- [ ] botões como biblioteca de componentes formal
+- [ ] cards como biblioteca formal
+- [ ] formulários
+- [ ] ícones definitivos
+- [ ] estados de produto além do foco/hover atuais
+- [ ] componentes reutilizáveis além do shell atual
+
+### Design System V1 — escalas (A–E) concluídas no código
+
+Registro técnico (não reabre Incrementos comerciais 2–9):
+
+| Fase | Resultado | Commit |
+|---|---|---|
+| A | Auditoria Tokens V1 (planejamento) | — |
+| B | Tokens additive + utilities `.radius-*` | `4607d9e` |
+| C0 | Infraestrutura Sass de breakpoints + sync nav | `4c2efde` |
+| Família | Segoe UI global | `a810f92` |
+| C | Escala tipográfica EGP + display stepped | `f4be935` |
+| D | Spacing/radius → tokens (exceções literais preservadas) | `466b4b8` |
+| E | Motion → tokens | `af89d7c` |
+| F | Redação documental do contrato V1 (`docs/design-system.md` e alinhamentos) | esta etapa |
+
+Contrato vigente: `docs/design-system.md`. Fonte de verdade: `src/styles/`.
 
 ## Fase 3 — Estrutura do site
 
