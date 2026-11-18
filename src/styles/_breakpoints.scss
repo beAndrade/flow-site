@@ -1,0 +1,21 @@
+@use "sass:map";
+
+// Official DS V1 breakpoint scale (rem). Do not use CSS var() inside @media.
+// Sync: $bp-nav must stay aligned with Header matchMedia (header.component.ts → BP_NAV).
+$bp-sm: 40rem;
+$bp-md: 48rem;
+$bp-nav: 56rem;
+$bp-lg: 64rem;
+
+$breakpoints: (
+  sm: $bp-sm,
+  md: $bp-md,
+  nav: $bp-nav,
+  lg: $bp-lg,
+);
+
+@mixin bp-up($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}

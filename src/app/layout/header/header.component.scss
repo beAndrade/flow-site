@@ -1,3 +1,5 @@
+@use "breakpoints" as *;
+
 :host {
   display: block;
   position: fixed;
@@ -224,14 +226,14 @@
   justify-self: start;
 }
 
-@media (min-width: 48rem) {
+@include bp-up(md) {
   .site-header__bar,
   .site-nav--mobile {
     padding-inline: var(--container-padding-tablet);
   }
 }
 
-@media (min-width: 56rem) {
+@include bp-up(nav) {
   .site-nav--desktop {
     display: block;
   }
@@ -269,7 +271,7 @@
   }
 }
 
-@media (min-width: 64rem) {
+@include bp-up(lg) {
   .site-header__bar {
     min-height: 5rem;
     padding-inline: var(--container-padding-desktop);

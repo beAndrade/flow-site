@@ -10,7 +10,9 @@ import {
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-const desktopNavQuery = '(min-width: 56rem)';
+/** Sync with Sass `$bp-nav` in `src/styles/_breakpoints.scss` (56rem). */
+const BP_NAV = '56rem';
+const desktopNavQuery = `(min-width: ${BP_NAV})`;
 
 @Component({
   selector: 'app-header',
