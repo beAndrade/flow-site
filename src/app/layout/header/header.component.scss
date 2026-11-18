@@ -16,10 +16,10 @@
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   transition:
-    background-color 0.4s ease,
-    box-shadow 0.4s ease,
-    backdrop-filter 0.4s ease,
-    -webkit-backdrop-filter 0.4s ease;
+    background-color var(--duration-header) var(--easing-standard),
+    box-shadow var(--duration-header) var(--easing-standard),
+    backdrop-filter var(--duration-header) var(--easing-standard),
+    -webkit-backdrop-filter var(--duration-header) var(--easing-standard);
 }
 
 /* Scroll: fundo bem claro para contraste com o conteúdo atrás. */
@@ -102,7 +102,7 @@
   justify-self: start;
   color: var(--color-white);
   text-decoration: none;
-  transition: color 0.4s ease;
+  transition: color var(--duration-header) var(--easing-standard);
 }
 
 .mark__flow,
@@ -122,7 +122,7 @@
   font-size: 0.5rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.16em;
-  transition: color 0.4s ease;
+  transition: color var(--duration-header) var(--easing-standard);
 }
 
 .site-header.is-scrolled .mark {
@@ -196,7 +196,7 @@
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   cursor: pointer;
-  transition: color 0.4s ease;
+  transition: color var(--duration-header) var(--easing-standard);
 }
 
 .site-header.is-scrolled .menu-button {
@@ -247,7 +247,7 @@
     color: rgb(255 255 255 / 92%);
     font-weight: var(--font-weight-medium);
     letter-spacing: 0.01em;
-    transition: color 0.4s ease;
+    transition: color var(--duration-header) var(--easing-standard);
   }
 
   .site-nav--desktop a:hover {

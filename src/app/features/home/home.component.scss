@@ -50,7 +50,7 @@
 .hero__poster {
   z-index: 0;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transition: opacity var(--duration-slow) var(--easing-standard);
 }
 
 .hero__poster.is-visible {
@@ -60,7 +60,7 @@
 .hero__video {
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transition: opacity var(--duration-slow) var(--easing-standard);
 }
 
 .hero__video.is-ready {
@@ -148,9 +148,9 @@
   text-decoration: none;
   cursor: pointer;
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+    transform var(--duration-fast) var(--easing-standard),
+    box-shadow var(--duration-fast) var(--easing-standard),
+    background-color var(--duration-fast) var(--easing-standard);
 }
 
 .hero__cta:hover {
@@ -176,8 +176,8 @@
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
   transition:
-    border-color 0.2s ease,
-    background-color 0.2s ease;
+    border-color var(--duration-fast) var(--easing-standard),
+    background-color var(--duration-fast) var(--easing-standard);
 }
 
 .hero__secondary:hover {
@@ -317,7 +317,7 @@
   border: 1px solid rgb(15 23 42 / 8%);
   border-radius: 12px;
   background: var(--color-white);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: transform var(--duration-mid) var(--easing-standard), box-shadow var(--duration-mid) var(--easing-standard);
 }
 
 .solution-card:hover {
