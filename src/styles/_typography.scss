@@ -1,8 +1,10 @@
+@use "breakpoints" as *;
+
 body {
   font-family: var(--font-family);
   font-size: var(--text-body);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--leading-body);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--leading-base);
   color: var(--color-text-primary);
 }
 
@@ -16,11 +18,26 @@ h3 {
 
 h1 {
   font-size: var(--text-display);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-black);
   line-height: var(--leading-display);
   color: var(--color-brand-navy);
 }
 
 p {
   text-wrap: pretty;
+}
+
+/* Hero / display stepped contract: 4xl → 6xl@sm → 7xl@lg (geometry stays md/lg). */
+@include bp-up(sm) {
+  :root {
+    --text-display: var(--text-6xl);
+    --leading-display: var(--leading-6xl);
+  }
+}
+
+@include bp-up(lg) {
+  :root {
+    --text-display: var(--text-7xl);
+    --leading-display: var(--leading-7xl);
+  }
 }

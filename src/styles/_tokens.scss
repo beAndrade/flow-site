@@ -24,24 +24,57 @@
   --color-action-dark: var(--color-brand-navy);
 
   --font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-weight-regular: 400;
+
+  /* EGP weights. Segoe UI has no native 500 face — medium falls back ~400 (approved). */
+  --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  --font-weight-regular: var(--font-weight-normal);
+  --font-weight-extrabold: var(--font-weight-black);
 
-  --text-display: clamp(2.5rem, 6vw, 4.5rem);
-  --text-h2: 1.75rem;
-  --text-h3: 1.25rem;
-  --text-eyebrow: 0.6875rem;
-  --text-body: 1.0625rem;
-  --text-body-sm: 0.9375rem;
-  --text-small: 0.875rem;
-  --text-label: 0.75rem;
+  /* EGP size primitives (immutable scale). */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
 
-  --leading-display: 1.08;
-  --leading-body: 1.55;
-  --leading-small: 1.45;
+  /* EGP leading primitives (paired with sizes). */
+  --leading-xs: calc(1 / 0.75);
+  --leading-sm: calc(1.25 / 0.875);
+  --leading-base: 1.5;
+  --leading-lg: calc(1.75 / 1.125);
+  --leading-xl: calc(1.75 / 1.25);
+  --leading-2xl: calc(2 / 1.5);
+  --leading-3xl: 1.2;
+  --leading-4xl: calc(2.5 / 2.25);
+  --leading-5xl: 1;
+  --leading-6xl: 1;
+  --leading-7xl: 1;
+
+  /* Flow semantic aliases → single EGP scale. */
+  --text-body: var(--text-base);
+  --text-body-sm: var(--text-sm);
+  --text-small: var(--text-sm);
+  --text-body-lg: var(--text-lg);
+  --text-label: var(--text-xs);
+  --text-eyebrow: var(--text-xs);
+  --text-h3: var(--text-xl);
+  --text-h2: var(--text-3xl);
+  --text-cta: var(--text-sm);
+  --text-nav: var(--text-sm);
+
+  /* Display / Hero: stepped at sm/lg in _typography.scss — no clamp. */
+  --text-display: var(--text-4xl);
+  --leading-display: var(--leading-4xl);
 
   --space-1: 4px;
   --space-2: 8px;

@@ -91,17 +91,17 @@ body {
 .trust-bar__title {
   margin: 0 0 var(--space-2);
   color: var(--color-brand-yellow);
-  font-size: 1.0625rem;
+  font-size: var(--text-base);
   font-weight: var(--font-weight-bold);
   letter-spacing: -0.02em;
-  line-height: 1.25;
+  line-height: var(--leading-base);
 }
 
 .trust-bar__desc {
   margin: 0;
   color: rgb(255 255 255 / 78%);
-  font-size: 0.9375rem;
-  line-height: 1.45;
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-sm);
 }
 
 @include bp-up(md) {
@@ -143,10 +143,10 @@ body {
 .contact__eyebrow {
   margin: 0;
   color: var(--color-brand-yellow);
-  font-size: 0.6875rem;
+  font-size: var(--text-eyebrow);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
-  line-height: 1.4;
+  line-height: var(--leading-xs);
   text-transform: uppercase;
 }
 
@@ -154,18 +154,18 @@ body {
   margin: 0;
   max-width: none;
   color: var(--color-white);
-  font-size: 1.75rem;
-  font-weight: var(--font-weight-extrabold);
+  font-size: var(--text-h2);
+  font-weight: var(--font-weight-black);
   letter-spacing: -0.02em;
-  line-height: 1.15;
+  line-height: var(--leading-3xl);
 }
 
 .contact__support {
   margin: 0;
   max-width: 36rem;
   color: rgb(255 255 255 / 80%);
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
 }
 
 .contact__actions {
@@ -186,7 +186,7 @@ body {
   background: var(--color-brand-yellow);
   color: var(--color-brand-navy);
   font: inherit;
-  font-size: 0.8125rem;
+  font-size: var(--text-cta);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
   cursor: pointer;
@@ -206,7 +206,7 @@ body {
   background: transparent;
   color: var(--color-white);
   font: inherit;
-  font-size: 0.8125rem;
+  font-size: var(--text-cta);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
   cursor: pointer;
@@ -237,10 +237,10 @@ body {
   margin: 0 0 var(--space-2);
   max-width: none;
   color: var(--color-brand-navy);
-  font-size: 0.75rem;
+  font-size: var(--text-label);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.06em;
-  line-height: 1.35;
+  line-height: var(--leading-xs);
   text-transform: uppercase;
 }
 
@@ -248,8 +248,8 @@ body {
   margin: 0;
   max-width: none;
   color: var(--color-brand-navy);
-  font-size: 1rem;
-  line-height: 1.45;
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
 }
 
 .contact-card__value a {
@@ -274,7 +274,8 @@ body {
   }
 
   .contact__panel h2 {
-    font-size: 2rem;
+    font-size: var(--text-4xl);
+    line-height: var(--leading-4xl);
   }
 
   .contact__cards {
