@@ -2,22 +2,22 @@
   <div class="hero__media" aria-hidden="true">
     <img
       class="hero__poster"
+      [class.is-visible]="heroUsePoster()"
       src="/images/Solar%20Farm%20at%20Sunset.png"
       alt=""
       width="1920"
       height="1080"
       decoding="async"
-      fetchpriority="high"
     />
     <video
       #heroVideo
       class="hero__video"
+      [class.is-ready]="heroVideoReady()"
       autoplay
       muted
       loop
       playsinline
-      preload="metadata"
-      poster="/images/Solar%20Farm%20at%20Sunset.png"
+      preload="auto"
     >
       <source src="/videos/hero-flow.mp4" type="video/mp4" />
     </video>
