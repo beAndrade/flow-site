@@ -25,16 +25,44 @@
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="hero__shell site-shell">
     <div class="hero__copy">
-      <p class="hero__eyebrow">Energia solar para empresas</p>
+      <p class="hero__eyebrow">ENGENHARIA ELÉTRICA &amp; ENERGIA SOLAR | EMPRESAS E RESIDÊNCIAS</p>
       <h1 id="home-title">Engenharia e soluções energéticas para um desempenho confiável.</h1>
       <p class="hero__support">
-        Soluções energéticas pensadas para atender às necessidades de cada operação.
+        Do projeto elétrico e regularização à geração solar fotovoltaica: soluções sob medida com rigor técnico para reduzir custos e garantir segurança operacional.
       </p>
       <div class="hero__actions">
-        <a class="hero__cta" href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar com a Flow</a>
-        <a class="hero__secondary" href="#contato">Entre em contato</a>
+        <a
+          class="hero__cta"
+          href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar."
+          target="_blank"
+          rel="noopener noreferrer"
+        >Solicitar Análise no WhatsApp</a>
+        <a class="hero__secondary" href="#solucoes">Simular Economia / Soluções</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="trust-bar" aria-label="Por que a Flow Energies">
+  <div class="trust-bar__inner site-shell">
+    <ul class="trust-bar__grid">
+      <li class="trust-bar__item">
+        <p class="trust-bar__title">+40 Anos de Bagagem</p>
+        <p class="trust-bar__desc">Experiência sólida no setor elétrico (ex-CERJ/Enel RJ)</p>
+      </li>
+      <li class="trust-bar__item">
+        <p class="trust-bar__title">100% Conformidade</p>
+        <p class="trust-bar__desc">Projetos alinhados à ANEEL, PRODIST, ABNT e NR-10</p>
+      </li>
+      <li class="trust-bar__item">
+        <p class="trust-bar__title">Ponta a Ponta</p>
+        <p class="trust-bar__desc">Do projeto, laudo e ART no CREA-RJ à operação e pós-venda</p>
+      </li>
+      <li class="trust-bar__item">
+        <p class="trust-bar__title">Atuação Regional</p>
+        <p class="trust-bar__desc">Atendimento ágil no Rio de Janeiro e Região dos Lagos</p>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -99,42 +127,51 @@
   </ul>
 </section>
 
-<section id="solucoes" class="home-section" aria-labelledby="solucoes-title">
+<section id="solucoes" class="home-section home-section--solutions" aria-labelledby="solucoes-title">
   <h2 id="solucoes-title">Soluções</h2>
 
-  <div class="solution-groups">
-    <div class="solution-group">
-      <h3>Energia Solar Fotovoltaica</h3>
-      <p>Projetos e dimensionamento de sistemas fotovoltaicos on-grid, off-grid e híbridos, incluindo instalação, estudos de viabilidade, expansão, adequação, diagnóstico e manutenção.</p>
+  <div class="solutions-bento">
+    <div class="solutions-bento__featured">
+      @for (item of featuredSolutions; track item.title) {
+        <article class="solution-card solution-card--featured">
+          @if (item.badge) {
+            <p class="solution-card__badge">{{ item.badge }}</p>
+          }
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <a
+            class="solution-card__link"
+            [href]="buildServiceWhatsAppUrl(item.title)"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Consultar especialista →</a>
+        </article>
+      }
     </div>
-    <div class="solution-group">
-      <h3>Projetos Elétricos</h3>
-      <p>Projetos envolvendo subestações, aumento de carga, quadros de distribuição, condutores, proteções, aterramento e SPDA.</p>
-    </div>
-    <div class="solution-group">
-      <h3>Regularização e Conformidade</h3>
-      <p>Apoio à regularização de instalações, documentação técnica, ART, laudos de conformidade e exigências aplicáveis das concessionárias.</p>
-    </div>
-    <div class="solution-group">
-      <h3>Perícia e Assistência Técnica</h3>
-      <p>Vistorias, análise técnica de instalações e ocorrências elétricas, laudos periciais e pareceres.</p>
-    </div>
-    <div class="solution-group">
-      <h3>Consultoria Energética</h3>
-      <p>Análise de faturamento, fator de potência, enquadramento tarifário e oportunidades de eficiência energética.</p>
-    </div>
-    <div class="solution-group">
-      <h3>Recarga de Veículos Elétricos</h3>
-      <p>Projetos de pontos de recarga e planos de negócios para investidores.</p>
-    </div>
-    <div class="solution-group">
-      <h3>Documentação Técnica</h3>
-      <p>Memoriais, relatórios, pareceres técnicos e suporte documental para defesas jurídicas relacionadas a questões técnicas.</p>
+
+    <div class="solutions-bento__grid">
+      @for (item of standardSolutions; track item.title) {
+        <article class="solution-card">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <a
+            class="solution-card__link"
+            [href]="buildServiceWhatsAppUrl(item.title)"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Consultar especialista →</a>
+        </article>
+      }
     </div>
   </div>
 
   <div class="solutions-cta">
-    <a class="hero__cta" href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar no WhatsApp</a>
+    <a
+      class="hero__cta"
+      href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar."
+      target="_blank"
+      rel="noopener noreferrer"
+    >Falar no WhatsApp</a>
     <a class="solutions-cta__secondary" href="#contato">Entre em contato</a>
   </div>
 </section>
