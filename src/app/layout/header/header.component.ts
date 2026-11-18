@@ -28,6 +28,8 @@ export class HeaderComponent {
   private focusInDesktopControls = false;
 
   protected readonly menuOpen = signal(false);
+  protected readonly scrolled = signal(false);
+  protected readonly scrollProgress = signal(0);
 
   protected readonly sections = [
     { label: 'A Flow', href: '#a-flow' },
@@ -46,7 +48,32 @@ export class HeaderComponent {
       };
 
       query.addEventListener('change', onChange);
-      this.destroyRef.onDestroy(() => query.removeEventListener('change', onChange));
+
+      // Estado do fundo + barra de progresso (leitura do scroll, sem excesso de updates).
+      const scrollThresholdPx = 8;
+      const syncScrollChrome = () => {
+        const nextScrolled = window.scrollY > scrollThresholdPx;
+        if (this.scrolled() !== nextScrolled) {
+          this.scrolled.set(nextScrolled);
+        }
+
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const raw = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+        const nextProgress = Math.min(100, Math.max(0, Math.round(raw * 10) / 10));
+        if (this.scrollProgress() !== nextProgress) {
+          this.scrollProgress.set(nextProgress);
+        }
+      };
+
+      syncScrollChrome();
+      window.addEventListener('scroll', syncScrollChrome, { passive: true });
+      window.addEventListener('resize', syncScrollChrome, { passive: true });
+
+      this.destroyRef.onDestroy(() => {
+        query.removeEventListener('change', onChange);
+        window.removeEventListener('scroll', syncScrollChrome);
+        window.removeEventListener('resize', syncScrollChrome);
+      });
     });
   }
 
@@ -157,7 +184,6 @@ export class HeaderComponent {
 
   private desktopControlsContain(target: Node): boolean {
     const desktopNav = this.host.nativeElement.querySelector('.site-nav--desktop');
-    const desktopCta = this.host.nativeElement.querySelector('.header-cta--bar');
-    return desktopNav?.contains(target) === true || desktopCta === target;
+    return desktopNav?.contains(target) === true;
   }
 }

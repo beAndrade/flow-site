@@ -6,7 +6,7 @@
   --color-brand-yellow: #dab419;
 
   --color-white: #ffffff;
-  --color-background: #f7f9fa;
+  --color-background: #f4fcfc;
   --color-border: #e5e7eb;
   --color-text: #17212b;
   --color-text-muted: #667085;
@@ -50,10 +50,16 @@
   --space-20: 80px;
   --space-24: 96px;
 
-  --container-max-width: 1200px;
+  /*
+   * Shell do site (padrão tipo max-w-7xl + px fixo):
+   * - padding-inline fixo em cada faixa
+   * - margin-inline: auto só aparece quando a viewport > --container-max-width
+   * - acima de 1280px o conteúdo deixa de ser empurrado além desse teto
+   */
+  --container-max-width: 1280px;
   --container-padding-mobile: 20px;
   --container-padding-tablet: 32px;
-  --container-padding-desktop: 40px;
+  --container-padding-desktop: 32px;
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -72,5 +78,5 @@
   --focus-ring: 2px solid var(--color-white);
   --focus-ring-offset: 3px;
   --focus-ring-halo: 0 0 0 5px var(--color-brand-navy);
-  --header-height: 4.75rem;
+  --header-height: 5rem;
 }

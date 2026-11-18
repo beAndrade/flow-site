@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header" [class.is-scrolled]="scrolled()">
   <div class="site-header__bar">
     <a class="mark" routerLink="/" aria-label="Flow Energies, início" (click)="closeMenu()">
       <span class="mark__flow">Flow</span>
@@ -12,8 +12,6 @@
         }
       </ul>
     </nav>
-
-    <a class="header-cta header-cta--bar" href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar no WhatsApp</a>
 
     <button
       #menuButton
@@ -40,4 +38,8 @@
     </ul>
     <a class="header-cta" href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar no WhatsApp</a>
   </nav>
+
+  <div class="site-header__progress" aria-hidden="true">
+    <div class="site-header__progress-bar" [style.width.%]="scrollProgress()"></div>
+  </div>
 </header>
