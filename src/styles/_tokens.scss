@@ -4,6 +4,8 @@
   --color-brand-blue: #406db3;
   --color-brand-blue-light: #4296ce;
   --color-brand-yellow: #dab419;
+  --color-cta-yellow: #eab308;
+  --color-cta-yellow-hover: #f0bc1a;
 
   --color-white: #ffffff;
   --color-background: #f4fcfc;
@@ -21,7 +23,7 @@
   --color-action-accent: var(--color-brand-yellow);
   --color-action-dark: var(--color-brand-navy);
 
-  --font-family: "Inter", "Segoe UI", sans-serif;
+  --font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -29,7 +31,11 @@
   --font-weight-extrabold: 800;
 
   --text-display: clamp(2.5rem, 6vw, 4.5rem);
+  --text-h2: 1.75rem;
+  --text-h3: 1.25rem;
+  --text-eyebrow: 0.6875rem;
   --text-body: 1.0625rem;
+  --text-body-sm: 0.9375rem;
   --text-small: 0.875rem;
   --text-label: 0.75rem;
 
@@ -49,6 +55,7 @@
   --space-16: 64px;
   --space-20: 80px;
   --space-24: 96px;
+  --space-30: 120px;
 
   /*
    * Shell do site (padrão tipo max-w-7xl + px fixo):
@@ -65,14 +72,28 @@
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-xl: 24px;
+  --radius-full: 999px;
   --radius-pill: 999px;
 
   --shadow-sm: 0 1px 2px rgba(16, 47, 74, 0.06);
   --shadow-md: 0 8px 24px rgba(16, 47, 74, 0.08);
   --shadow-lg: 0 16px 40px rgba(16, 47, 74, 0.1);
 
+  /* CSS mirrors for docs/JS consumption — never use var(--bp-*) inside @media.
+   * Sass source of truth: src/styles/_breakpoints.scss ($bp-sm/md/nav/lg). */
+  --bp-sm: 40rem;
+  --bp-nav: 56rem;
   --bp-tablet: 48rem;
   --bp-desktop: 64rem;
+
+  --duration-fast: 200ms;
+  --duration-mid: 220ms;
+  --duration-slow: 350ms;
+  --duration-header: 400ms;
+  --easing-standard: ease;
+
+  --touch-target: 2.75rem;
+  --control-height: 48px;
 
   /* Dual ring: white outline for dark surfaces, navy halo for light (≥3:1 both). */
   --focus-ring: 2px solid var(--color-white);
