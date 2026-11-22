@@ -10,7 +10,7 @@
   --color-white: #ffffff;
   --color-background: #f4fcfc;
   --color-border: #e5e7eb;
-  --color-text: #17212b;
+  --color-text: #0f172a;
   --color-text-muted: #667085;
 
   --color-bg: var(--color-white);
@@ -23,7 +23,8 @@
   --color-action-accent: var(--color-brand-yellow);
   --color-action-dark: var(--color-brand-navy);
 
-  --font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Preview: Satoshi (Fontshare). Segoe permanece como fallback até decisão formal. */
+  --font-family: "Satoshi", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* EGP weights. Segoe UI has no native 500 face — medium falls back ~400 (approved). */
   --font-weight-normal: 400;
@@ -115,7 +116,7 @@
   /* CSS mirrors for docs/JS consumption — never use var(--bp-*) inside @media.
    * Sass source of truth: src/styles/_breakpoints.scss ($bp-sm/md/nav/lg). */
   --bp-sm: 40rem;
-  --bp-nav: 56rem;
+  --bp-nav: 64rem;
   --bp-tablet: 48rem;
   --bp-desktop: 64rem;
 

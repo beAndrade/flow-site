@@ -7,6 +7,7 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
+import { SimulacaoComponent } from '../simulacao/simulacao.component';
 
 const heroPlaybackRate = 0.9;
 const heroEndEarlySeconds = 1.5;
@@ -21,6 +22,7 @@ export interface SolutionCard {
 
 @Component({
   selector: 'app-home',
+  imports: [SimulacaoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

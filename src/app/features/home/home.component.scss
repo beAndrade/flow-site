@@ -91,11 +91,11 @@
   width: fit-content;
   max-width: 100%;
   margin: 0;
-  padding: var(--space-2) var(--space-4);
-  border: 1px solid #fafdfb;
-  border-radius: var(--radius-sm);
-  color: var(--color-brand-yellow);
-  font-size: var(--text-eyebrow);
+  padding: 8px 16px;
+  border: 1px solid rgb(250 253 251 / 35%);
+  border-radius: var(--radius-md);
+  color: #fafdfbd9;
+  font-size: 14px;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   line-height: var(--leading-xs);
@@ -106,19 +106,19 @@
   margin: 0;
   max-width: 18ch;
   color: var(--color-white);
-  font-size: var(--text-display);
+  font-size: 60px;
   font-weight: var(--font-weight-black);
   letter-spacing: -0.035em;
-  line-height: var(--leading-display);
+  line-height: 1.05;
   text-wrap: balance;
 }
 
 .hero__support {
   margin: 0;
-  max-width: 42ch;
+  max-width: 52ch;
   color: rgb(255 255 255 / 84%);
-  font-size: var(--text-base);
-  line-height: var(--leading-base);
+  font-size: 20px;
+  line-height: var(--leading-lg);
 }
 
 .hero__actions {
@@ -138,11 +138,11 @@
   min-height: 48px;
   padding: 0 var(--space-6);
   border: 0;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   background: #eab308;
   color: var(--color-brand-navy);
   font: inherit;
-  font-size: var(--text-cta);
+  font-size: 14px;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.01em;
   text-decoration: none;
@@ -168,11 +168,11 @@
   min-height: 48px;
   margin: 0;
   padding: 0 var(--space-6);
-  border: 1px solid #fafdfb;
-  border-radius: var(--radius-sm);
+  border: 1px solid rgb(250 253 251 / 35%);
+  border-radius: var(--radius-md);
   background: transparent;
   color: var(--color-white);
-  font-size: var(--text-cta);
+  font-size: 14px;
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
   transition:
@@ -184,13 +184,6 @@
   border-color: #fafdfb;
   background: rgb(250 253 251 / 8%);
   color: var(--color-white);
-}
-
-@include bp-up(sm) {
-  .hero__support {
-    font-size: var(--text-lg);
-    line-height: var(--leading-lg);
-  }
 }
 
 @include bp-up(md) {
@@ -217,7 +210,7 @@
   }
 
   .hero__copy {
-    width: min(44rem, 100%);
+    width: min(52rem, 100%);
   }
 
   .hero__eyebrow {
@@ -225,7 +218,9 @@
   }
 
   .hero h1 {
-    max-width: 16ch;
+    max-width: 24ch;
+    font-size: 72px;
+    line-height: 1.05;
   }
 }
 
@@ -293,8 +288,47 @@
   }
 }
 
+/* Full-bleed bands; inline padding keeps content on the container grid. */
+.home-section--solutions,
+#simulacao.home-section {
+  --bleed-pad: var(--container-padding-mobile);
+
+  width: 100%;
+  max-width: none;
+  padding-inline: max(
+    var(--bleed-pad),
+    calc((100% - var(--container-max-width)) / 2 + var(--bleed-pad))
+  );
+}
+
+@include bp-up(md) {
+  .home-section--solutions,
+  #simulacao.home-section {
+    --bleed-pad: var(--container-padding-tablet);
+  }
+}
+
+@include bp-up(lg) {
+  .home-section--solutions,
+  #simulacao.home-section {
+    --bleed-pad: var(--container-padding-desktop);
+  }
+}
+
 .home-section--solutions {
   background: var(--color-white);
+}
+
+#simulacao.home-section {
+  background: #f8fafc;
+}
+
+#simulacao.home-section app-simulacao {
+  display: block;
+}
+
+#simulacao.home-section p {
+  max-width: none;
 }
 
 .solutions-bento {
