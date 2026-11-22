@@ -1,0 +1,32 @@
+<span class="digit-odometer" [class.digit-odometer--animated]="animated()">
+  @if (value() === null) {
+    <span class="digit-odometer__fallback">{{ displayText() }}</span>
+  } @else {
+    <span class="digit-odometer__sr-only">{{ displayText() }}</span>
+    <span class="digit-odometer__visual" aria-hidden="true">
+      @for (slot of slots(); track slot.key) {
+        @if (slot.kind === 'static') {
+          <span
+            class="digit-odometer__static"
+            [class.digit-odometer__static--tight]="slot.tight"
+            >{{ slot.char }}</span
+          >
+        } @else {
+          <span
+            class="digit-odometer__digit"
+            [style.--odometer-duration]="digitDurationMs(slot.fromRight) + 'ms'"
+          >
+            <span
+              class="digit-odometer__strip"
+              [style.transform]="'translate3d(0, ' + -slot.digit * 10 + '%, 0)'"
+            >
+              @for (digit of digits; track digit) {
+                <span class="digit-odometer__num">{{ digit }}</span>
+              }
+            </span>
+          </span>
+        }
+      }
+    </span>
+  }
+</span>
