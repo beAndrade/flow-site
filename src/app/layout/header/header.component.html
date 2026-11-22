@@ -1,4 +1,8 @@
-<header class="site-header" [class.is-scrolled]="scrolled()">
+<header
+  class="site-header"
+  [class.is-scrolled]="scrolled()"
+  [class.is-menu-open]="menuOpen()"
+>
   <div class="site-header__bar">
     <a class="mark" routerLink="/" aria-label="Flow Energies, início" (click)="closeMenu()">
       <img
@@ -24,25 +28,55 @@
       class="menu-button"
       type="button"
       [attr.aria-expanded]="menuOpen()"
+      [attr.aria-label]="menuOpen() ? 'Fechar menu' : 'Abrir menu'"
       aria-controls="site-menu"
       (click)="toggleMenu()"
     >
-      {{ menuOpen() ? 'Fechar' : 'MENU ·' }}
+      <div class="menu-button__shell" aria-hidden="true">
+        <span class="menu-button__bars" [class.is-open]="menuOpen()">
+          <span class="menu-button__bar"></span>
+          <span class="menu-button__bar"></span>
+          <span class="menu-button__bar"></span>
+        </span>
+      </div>
     </button>
   </div>
+
+  <div
+    class="site-header__scrim"
+    [class.is-visible]="menuOpen()"
+    (click)="closeMenuFromScrim()"
+    aria-hidden="true"
+  ></div>
 
   <nav
     id="site-menu"
     class="site-nav site-nav--mobile"
     [class.is-open]="menuOpen()"
+    [attr.aria-hidden]="menuOpen() ? null : 'true'"
+    [attr.role]="menuOpen() ? 'dialog' : null"
+    [attr.aria-modal]="menuOpen() ? 'true' : null"
+    [attr.inert]="menuOpen() ? null : ''"
     aria-label="Seções"
   >
-    <ul>
-      @for (section of sections; track section.href) {
-        <li><a [href]="section.href" (click)="closeMenu()">{{ section.label }}</a></li>
-      }
-    </ul>
-    <a class="header-cta" href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.">Falar no WhatsApp</a>
+    <div class="site-nav--mobile__panel">
+      <div class="site-nav--mobile__inner">
+        <ul>
+          @for (section of sections; track section.href) {
+            <li>
+              <a [href]="section.href" (click)="closeMenuForHashNav()">{{ section.label }}</a>
+            </li>
+          }
+        </ul>
+        <a
+          class="header-cta"
+          href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar."
+          (click)="closeMenu()"
+        >
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
   </nav>
 
   <div class="site-header__progress" aria-hidden="true">

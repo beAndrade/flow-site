@@ -4,8 +4,9 @@
 // Sync: $bp-nav must stay aligned with Header matchMedia (header.component.ts → BP_NAV).
 $bp-sm: 40rem;
 $bp-md: 48rem;
-$bp-nav: 56rem;
 $bp-lg: 64rem;
+/** Desktop horizontal nav / burger cutoff — same as `$bp-lg` (1024px). */
+$bp-nav: $bp-lg;
 
 $breakpoints: (
   sm: $bp-sm,
