@@ -6,7 +6,7 @@
 
 .site-footer {
   padding-block: var(--space-8);
-  border-top: 1px solid var(--color-border-default);
+  border-top: 2px solid var(--color-brand-yellow);
   background: var(--color-white);
 }
 
@@ -41,7 +41,7 @@
 }
 
 .mark__energies {
-  color: rgb(16 47 74 / 72%);
+  color: rgb(16 47 74 / 80%);
   font-size: 0.5rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.16em;

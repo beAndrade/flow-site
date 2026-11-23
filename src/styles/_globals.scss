@@ -233,6 +233,15 @@ body {
   background: var(--color-surface);
 }
 
+.contact-card--whatsapp {
+  border-left: 2px solid var(--color-brand-yellow);
+  padding-left: calc(var(--space-5) - 1px);
+}
+
+.contact-card--whatsapp .contact-card__value a {
+  font-weight: var(--font-weight-semibold);
+}
+
 .contact-card h3.contact-card__label {
   margin: 0 0 var(--space-2);
   max-width: none;
