@@ -637,3 +637,25 @@
 .timeline > li > p:not(.timeline__year) {
   grid-column: 2;
 }
+
+[data-reveal].is-revealed {
+  animation: home-reveal-in var(--duration-slow) var(--easing-standard) both;
+}
+
+@keyframes home-reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal].is-revealed {
+    animation: none;
+  }
+}
