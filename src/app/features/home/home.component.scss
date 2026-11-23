@@ -45,26 +45,21 @@
   height: 100%;
   object-fit: cover;
   object-position: var(--hero-focus-x) center;
-}
-
-.hero__poster {
-  z-index: 0;
   opacity: 0;
   transition: opacity var(--duration-slow) var(--easing-standard);
 }
 
-.hero__poster.is-visible {
+.hero__poster {
+  z-index: 0;
+}
+
+.hero__poster.is-visible,
+.hero__video.is-ready {
   opacity: 1;
 }
 
 .hero__video {
   z-index: 1;
-  opacity: 0;
-  transition: opacity var(--duration-slow) var(--easing-standard);
-}
-
-.hero__video.is-ready {
-  opacity: 1;
 }
 
 .hero__scrim {
@@ -129,7 +124,8 @@
   margin-top: var(--space-1);
 }
 
-.hero__cta {
+.hero__cta,
+.hero__secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -137,15 +133,19 @@
   height: 48px;
   min-height: 48px;
   padding: 0 var(--space-6);
-  border: 0;
   border-radius: var(--radius-md);
-  background: #eab308;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.hero__cta {
+  border: 0;
+  background: var(--color-cta-yellow);
   color: var(--color-brand-navy);
   font: inherit;
   font-size: 14px;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.01em;
-  text-decoration: none;
   cursor: pointer;
   transition:
     transform var(--duration-fast) var(--easing-standard),
@@ -154,33 +154,29 @@
 }
 
 .hero__cta:hover {
-  background: #f0bc1a;
+  background: var(--color-cta-yellow-hover);
   box-shadow: 0 8px 20px rgb(0 0 0 / 22%);
   transform: translateY(-2px);
 }
 
+.hero__cta:focus-visible,
+.hero__secondary:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+  box-shadow: var(--focus-ring-halo);
+}
+
 .hero__secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  height: 48px;
-  min-height: 48px;
   margin: 0;
-  padding: 0 var(--space-6);
   border: 1px solid rgb(250 253 251 / 35%);
-  border-radius: var(--radius-md);
   background: transparent;
   color: var(--color-white);
-  font-size: 14px;
   font-weight: var(--font-weight-semibold);
-  text-decoration: none;
   transition: background-color var(--duration-fast) var(--easing-standard);
 }
 
 .hero__secondary:hover {
   background: rgb(250 253 251 / 8%);
-  color: var(--color-white);
 }
 
 @include bp-up(md) {
@@ -217,7 +213,6 @@
   .hero h1 {
     max-width: 24ch;
     font-size: 72px;
-    line-height: 1.05;
   }
 }
 
