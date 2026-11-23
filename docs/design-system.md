@@ -610,8 +610,8 @@ Arquivo: `src/styles/_breakpoints.scss`.
 |---|---|---|---|
 | `sm` | `$bp-sm` | `40rem` | Tipografia display stepped |
 | `md` | `$bp-md` | `48rem` | Layout tablet / grids 2 col |
-| `nav` | `$bp-nav` | `56rem` | Corte do menu desktop |
-| `lg` | `$bp-lg` | `64rem` | Desktop (padding, display, grids) |
+| `nav` | `$bp-nav` | `64rem` | Corte do menu desktop / Brand Overlay Sheet (`$bp-nav: $bp-lg`) |
+| `lg` | `$bp-lg` | `64rem` | Desktop (padding, display, grids); mesmo valor que `$bp-nav` |
 
 Mixin:
 
@@ -624,7 +624,7 @@ Regras:
 1. Mobile-first (`min-width` via `bp-up`).
 2. Um propósito por corte.
 3. **Proibido** usar `var(--bp-*)` dentro de `@media`.
-4. `$bp-nav` deve permanecer alinhado a `BP_NAV = '56rem'` em `header.component.ts` (`matchMedia`).
+4. `$bp-nav` deve permanecer alinhado a `BP_NAV = '64rem'` em `header.component.ts` (`matchMedia`). Abaixo desse corte: Brand Overlay Sheet (painel navy + scrim + burger→X).
 5. Espelhos CSS em `_tokens.scss` (`--bp-sm`, `--bp-nav`, `--bp-tablet`, `--bp-desktop`) existem para docs/JS — não para `@media`.
 
 `angular.json` define `stylePreprocessorOptions.includePaths: ["src/styles"]`, permitindo `@use "breakpoints" as *` nos SCSS de componentes.

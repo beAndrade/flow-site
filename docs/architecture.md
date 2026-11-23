@@ -48,7 +48,7 @@ Elementos estruturais globais que compõem o esqueleto do site: Header, Footer e
 
 ### Features
 
-Funcionalidades e páginas organizadas por domínio ou objetivo de negócio. Cada feature agrupa seus componentes, serviços e rotas relacionados. Exemplo na V1: `home`. Futuras features (ex.: simulação, área do cliente) serão adicionadas aqui quando confirmadas.
+Funcionalidades e páginas organizadas por domínio ou objetivo de negócio. Cada feature agrupa seus componentes, serviços e rotas relacionados. Features presentes na Home implementada: `home` e `simulacao` (estimativa solar embutida em `#simulacao`). Futuras features (ex.: área do cliente, captura estruturada de leads) serão adicionadas aqui quando confirmadas.
 
 ### Assets
 
@@ -74,7 +74,8 @@ src/
 │   │   ├── footer/
 │   │   └── navigation/
 │   ├── features/
-│   │   └── home/
+│   │   ├── home/
+│   │   └── simulacao/
 │   ├── app.component.*
 │   ├── app.config.ts
 │   └── app.routes.ts
@@ -96,26 +97,33 @@ src/
 
 ## 6. V1 x evolução
 
-### V1 (escopo atual)
+### Distinção de estados
 
-- Site institucional
-- Conteúdo comercial (sobre, serviços, diferenciais)
-- Prova social e elementos de confiança
-- CTAs (Call to Action) estratégicos
+Neste documento, **implementado** descreve o que está no código da Home. Isso **não** equivale a Discovery comercial encerrada. Publicado no site ≠ validado comercialmente, salvo itens explicitamente validados pelos proprietários (ex.: claims da Trust Bar e apoio do Hero na HR-V2-01B — ver Discovery).
+
+### V1 (estado implementado na Home)
+
+- Site institucional (single-page Home)
+- Conteúdo comercial (sobre, serviços, diferenciais, trajetória, contato)
+- Trust Bar (faixa de confiança sem âncora de menu; claims da UI atual **validados pelos proprietários** na HR-V2-01B — ver Discovery §10). A Trust Bar atual **não** é a solução definitiva de credibilidade; evolução futura = portfólio / materiais reais dos proprietários
+- CTAs estratégicos (WhatsApp + âncoras internas)
 - Integração com WhatsApp como principal conversão
-- SEO e performance otimizados
+- Simulador Solar embutido na Home (`features/simulacao`, âncora `#simulacao`) — estimativa com disclaimer; **não** é proposta comercial nem orçamento fechado
+- SEO e performance otimizados (metadados no repositório; go-live externo)
 
 ### Evolução (futuro — não implementar agora)
 
 Funcionalidades possíveis, ainda **não definidas** e que não devem ser implementadas prematuramente:
 
-- Simulação / orçamento de energia solar
+- Orçamento comercial fechado / proposta técnica vinculante (além da estimativa já publicada)
 - Captura estruturada de leads (formulários, CRM)
 - Backend e API
 - Checkout e fluxo de compra
 - Pagamentos
 - Área do cliente (se necessário)
 - Integrações externas
+
+> **Nota (HR-V2-01A):** o simulador de estimativa **já está implementado** na Home. Permanecer em “Evolução” apenas o que ainda não existe (orçamento fechado, CRM, checkout etc.). Implementado ≠ Discovery do simulador/orçamento comercial encerrada.
 
 A arquitetura em camadas (Core, Shared, Layout, Features) permite adicionar essas capacidades sem reestruturar o projeto — cada nova funcionalidade vira uma feature ou extensão do Core, conforme a necessidade real surgir.
 

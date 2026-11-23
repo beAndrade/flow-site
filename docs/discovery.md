@@ -2,7 +2,9 @@
 
 Documento central de Discovery da Flow Energies. Serve como fonte de verdade para conteúdo, posicionamento, UX e decisões futuras do site.
 
-> **Status:** em andamento. O Incremento 2 publicou a estrutura da Home V1 com textos de fonte já autorizados. O Incremento 3 publicou no Hero e na meta description a hipótese da seção 6; os responsáveis da Flow Energies validaram comercialmente essas frases, sem alteração de texto. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. O Incremento 5 atualizou o CTA secundário (“Entre em contato” → `#contato`), a seção Contato (duas colunas) e o rodapé compacto com linha legal. O Incremento 6 reordenou a Home/menu (Hero → A Flow → Diferenciais → Soluções → Como trabalhamos → Trajetória → Contato → rodapé), removeu o bloco “Nossa atuação” de A Flow, acrescentou micro-CTA pós-Soluções e clarificou o lead de Como trabalhamos (exclusivo a instalação fotovoltaica) e o marco 1982. O Incremento 7 publicou o catálogo oficial das sete áreas na Home; a união do Incremento 2 é histórico. O Incremento 8 atualizou o corpo do marco 2023 na Trajetória (sem pretensão de “referência”); Como trabalhamos e Diferenciais permaneceram intactos. O Incremento 9 publicou SEO no repositório para `https://flowenergiesbr.com.br/` (canonical, OG/Twitter, `Flow og.png`, sitemap, robots); DNS/SSL/deploy continuam externos. A Discovery foi enriquecida com a apresentação comercial da Flow Energies (PDF de 8 páginas) e com a imagem da lista de sete áreas de serviços. PDF e imagem continuam fontes distintas e **não equivalentes** às sete áreas publicadas. A revisão editorial final fica para o encerramento do projeto, junto ao proprietário. Isso não encerra a Discovery. O que continua sem resposta permanece pendente. O refinamento da redação fica para o final do projeto.
+> **Status:** em andamento. Distinguir sempre: (1) aprovado para desenvolvimento, (2) **implementado** no código, (3) **pendente** de validação pelos proprietários. Publicado no site ≠ validado comercialmente — exceto itens explicitamente validados (ex.: Trust Bar e apoio do Hero na HR-V2-01B).
+>
+> Histórico dos Incrementos 2–9 permanece válido como registro. **Estado implementado atual da Home** (sync HR-V2-01A + HR-V2-01B): Hero → Trust Bar (sem âncora; claims **validados pelos proprietários**) → A Flow → Diferenciais → Soluções → Simulador Solar (`#simulacao`) → Como trabalhamos → Trajetória → Contato → rodapé. Menu com 7 itens (inclui “Simule sua economia”). CTAs Hero: “Falar com um especialista” (`wa.me`) e “Simule sua economia” (`#simulacao`); micro-CTA pós-Soluções ainda tem “Entre em contato” → `#contato`. Apoio do Hero = conteúdo comercial aprovado (HR-V2-01B; já estava correto no HTML). Simulador implementado com disclaimer de estimativa — isso **não** encerra a Discovery comercial do simulador/orçamento. A Trust Bar atual **não** é a solução definitiva de credibilidade; evolução futura = portfólio / materiais reais. A Discovery foi enriquecida com a apresentação comercial (PDF de 8 páginas) e a imagem das sete áreas; PDF e imagem continuam **não equivalentes** às sete áreas publicadas. A revisão editorial final fica para o encerramento do projeto. Isso **não** encerra a Discovery.
 
 ---
 
@@ -94,14 +96,22 @@ A apresentação comercial divulga três pilares, publicados na Home: Projeto ad
 - **O que a empresa não quer transmitir:** Pendente de definição
 - **Principais mensagens:** Pendente de definição. A assinatura da apresentação (“Flow Energies. A energia que te move.”) está registrada na seção 1; não fecha as mensagens principais.
 
-Hipótese de trabalho registrada pelo proprietário do projeto e **validada comercialmente pelos responsáveis da Flow Energies**. Os textos abaixo permanecem exatamente os publicados. Essa validação não encerra a Discovery nem fecha percepção, representação, o que a empresa não quer transmitir, nem as demais mensagens principais além dessas frases.
+Hipótese de trabalho registrada pelo proprietário do projeto e **validada comercialmente pelos responsáveis da Flow Energies** no Incremento 3 (título e meta description abaixo; apoio Inc. 3 histórico). Essa validação não encerra a Discovery nem fecha percepção, representação, o que a empresa não quer transmitir, nem as demais mensagens principais além das frases aprovadas.
 
 - Posicionamento: “Empresa de engenharia e soluções energéticas com foco em confiabilidade e desempenho.”
 - Hero, título: “Engenharia e soluções energéticas para um desempenho confiável.”
-- Hero, apoio: “Soluções energéticas pensadas para atender às necessidades de cada operação.”
+- Hero, apoio (**histórico Inc. 3** — hipótese validada naquele incremento; substituído comercialmente na HR-V2-01B): “Soluções energéticas pensadas para atender às necessidades de cada operação.”
 - Meta description: “Conheça a Flow Energies, empresa de engenharia e soluções energéticas com foco em confiabilidade e desempenho.”
 
-O Incremento 3 publicou o título do Hero, o apoio e a meta description acima. O QA independente foi `PASS`. A validação comercial posterior confirmou essas frases sem reescrevê-las.
+O Incremento 3 publicou o título do Hero, o apoio e a meta description acima. O QA independente foi `PASS`. A validação comercial posterior confirmou essas frases sem reescrevê-las naquele momento.
+
+**Estado comercial atual (HR-V2-01B — conteúdo aprovado pelos proprietários):**
+
+- Título (`h1#home-title`): permanece “Engenharia e soluções energéticas para um desempenho confiável.” (Inc. 3)
+- Apoio (`.hero__support`) — **conteúdo comercial aprovado** (HR-V2-01B): “Do projeto elétrico e regularização à geração solar fotovoltaica: soluções sob medida com rigor técnico para reduzir custos e garantir segurança operacional.” No código **já estava idêntico**; HTML não alterado nesta etapa (“já estava correto”).
+- Meta description: permanece a do Inc. 3.
+
+A frase de apoio Inc. 3 permanece como registro histórico. O apoio canônico publicado e aprovado é o da HR-V2-01B.
 
 ---
 
@@ -141,6 +151,21 @@ Pendente de definição.
 - **Números relevantes:** Obter material posteriormente. O material não informa métricas de desempenho. Não marcado como não aplicável.
 - **Outros elementos de prova:** Obter material posteriormente. Não marcado como não aplicável.
 
+### Trust Bar (estado implementado — claims validados pelos proprietários)
+
+A Trust Bar está **implementada** na Home (após o Hero; sem `id` de âncora; `aria-label="Por que a Flow Energies"`). Não entra no menu. Textos, números, layout, cores, tipografia, animações e posicionamento da UI **preservados** (HR-V2-01B não altera a apresentação).
+
+**Validação comercial (HR-V2-01B):** os proprietários validaram os claims publicados, cobrindo: +40 Anos de Bagagem; Experiência CERJ / Enel RJ; 100% Conformidade; ANEEL, PRODIST, ABNT, NR-10; ART no CREA-RJ; Atuação regional.
+
+| Título (UI) | Descrição (UI) | Estado comercial |
+|---|---|---|
+| +40 Anos de Bagagem | Experiência sólida no setor elétrico (ex-CERJ/Enel RJ) | Validado pelos proprietários (HR-V2-01B) |
+| 100% Conformidade | Projetos alinhados à ANEEL, PRODIST, ABNT e NR-10 | Validado pelos proprietários (HR-V2-01B) |
+| Ponta a Ponta | Do projeto, laudo e ART no CREA-RJ à operação e pós-venda | Validado pelos proprietários (HR-V2-01B) |
+| Atuação Regional | Atendimento ágil no Rio de Janeiro e Região dos Lagos | Validado pelos proprietários (HR-V2-01B) |
+
+**Distinção importante:** a Trust Bar atual **não** é a solução definitiva de credibilidade. Evolução futura prevista = portfólio / materiais reais dos proprietários (fotos, projetos, provas). Não inventar métricas nem substituir a faixa atual sem escopo aprovado.
+
 ---
 
 ## 11. Conteúdo disponível
@@ -156,17 +181,20 @@ Pendente de definição.
 
 ## 12. Conversão e CTAs
 
-Informações confirmadas no escopo do projeto (V1):
+Informações do escopo / estado implementado:
 
 - **Principal objetivo do site:** Site institucional e geração de leads; transmitir confiança; apresentar a empresa e seus serviços.
-- **CTA principal:** Direcionar o visitante para o WhatsApp da empresa. O botão “Falar com a Flow” permanece nesse destino.
-- **CTA secundário:** Decisão comercial atualizada no Incremento 5. Texto: “Entre em contato”. Destino: seção Contato da própria Home (`#contato`). O CTA principal “Falar com a Flow” permanece no WhatsApp. Essa decisão está registrada na Discovery e no PRODUCT; a Home publica esse CTA como link para `#contato`.
-- **Canal de contato:** Número oficial de WhatsApp: (22) 99844-9702. Mensagem padrão: “Olá! Conheci a Flow Energies pelo site e gostaria de conhecer melhor a empresa e entender como vocês podem me ajudar.” E-mail: `mailto:washington@flowenergies.com`, sem assunto nem corpo. Instagram: `https://www.instagram.com/flow_energies/`. O destino de WhatsApp é `https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.` A seção Contato publica telefone, e-mail e @flow_energies como esses links, em composição de duas colunas (painel navy + cartões). Os botões “Falar no WhatsApp” (header e Contato) e “Falar com a Flow” (Hero) apontam para o mesmo `wa.me`. Horário não é exibido. O rodapé não duplica canais; publica a linha legal “© 2026 Flow Energies. Todos os direitos reservados. Soluções de infraestrutura elétrica.” e o link “Voltar ao topo”.
+- **CTA principal (Hero — implementado):** texto “Falar com um especialista” → mesmo `wa.me` da mensagem padrão (não alterar a mensagem neste sync). Canal de conversão permanece WhatsApp.
+- **CTA secundário (Hero — implementado):** texto “Simule sua economia” → `#simulacao`.
+- **Micro-CTA pós-Soluções (implementado):** “Falar no WhatsApp” (`wa.me`) e “Entre em contato” → `#contato` (preservar; não confundir com o secundário atual do Hero).
+- **Histórico Incremento 5:** o CTA secundário do Hero foi “Entre em contato” → `#contato`. Esse destino permanece no micro-CTA pós-Soluções; o Hero passou a apontar o secundário para o simulador.
+- **Simulador Solar (implementado na Home):** seção `#simulacao` / `app-simulacao`; item de menu “Simule sua economia”; CTA interno WhatsApp (“Quero minha avaliação solar gratuita”, mesmo `wa.me`); disclaimer de que os resultados são estimativas iniciais e não proposta comercial. **Implementado ≠ Discovery comercial encerrada.** Não reescrever motor/coeficientes neste documento.
+- **Canal de contato:** Número oficial de WhatsApp: (22) 99844-9702. Mensagem padrão: “Olá! Conheci a Flow Energies pelo site e gostaria de conhecer melhor a empresa e entender como vocês podem me ajudar.” E-mail: `mailto:washington@flowenergies.com`, sem assunto nem corpo. Instagram: `https://www.instagram.com/flow_energies/`. O destino de WhatsApp é `https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar.` A seção Contato publica telefone, e-mail e @flow_energies como esses links, em composição de duas colunas (painel navy + cartões). Header (“Falar no WhatsApp”), Hero (“Falar com um especialista”), Contato e CTA do simulador apontam para o mesmo `wa.me`. Horário não é exibido. O rodapé não duplica canais; publica a linha legal “© 2026 Flow Energies. Todos os direitos reservados. Soluções de infraestrutura elétrica.” e o link “Voltar ao topo”.
 - **Processo após o contato:** Pendente de definição
 
-**Fora do escopo da V1** (não implementar sem validação com o proprietário):
+**Ainda fora do escopo implementado / pendente de validação** (não tratar como Discovery encerrada):
 
-- Simulação / orçamento online
+- Orçamento comercial fechado / proposta técnica vinculante (além da estimativa `#simulacao` já publicada)
 - Captura estruturada de leads (formulários, CRM)
 - Checkout e pagamentos
 - Analytics (quando definido)
@@ -191,7 +219,8 @@ Checklist objetiva do que ainda precisa ser levantado com o proprietário:
 - [ ] História e informações institucionais da Flow — a trajetória da apresentação comercial está registrada e publicada na Home; a validação factual independente e o perfil institucional completo continuam pendentes
 - [ ] Localização e região atendida — “Rio de Janeiro • Região dos Lagos” confirmado para a V1 atual; rua, cidade específica e CEP continuam pendentes e não são necessários para a V1 atual
 - [ ] Perfil da empresa — o texto institucional e o lema da apresentação estão registrados; o perfil completo continua pendente
-- [x] Frases do Hero, apoio e meta description (seção 6) — validadas comercialmente pelos responsáveis da Flow Energies, com os textos exatos já publicados. Percepção, representação, o que a empresa não quer transmitir e mensagens principais além dessas frases continuam pendentes nesta seção.
+- [x] Frases do Hero, apoio e meta description (seção 6) — título e meta: hipótese Inc. 3 validada. **Apoio do Hero:** conteúdo comercial aprovado na HR-V2-01B (“Do projeto elétrico e regularização…”); no HTML já estava correto. Percepção, representação, o que a empresa não quer transmitir e mensagens principais além dessas frases continuam pendentes.
+- [x] Trust Bar — **implementada** na Home; claims da UI atual **validados pelos proprietários** (HR-V2-01B). Apresentação intacta. **Não** é solução definitiva de credibilidade; evolução futura = portfólio / materiais reais.
 - [ ] Público-alvo (cliente principal, perfil, segmentos, necessidades, dores, motivações) — não deduzir só a partir da lista de serviços
 - [x] Catálogo de serviços — organização oficial da Home: sete áreas (Incremento 7). União do Incremento 2 = histórico. Imagem e PDF permanecem registradas e distintas; PDF ≠ sete áreas. A revisão editorial final fica para o encerramento do projeto, junto ao proprietário. A ficha individual de cada serviço continua pendente.
 - [ ] Problemas que a Flow resolve
@@ -203,13 +232,14 @@ Checklist objetiva do que ainda precisa ser levantado com o proprietário:
 - [ ] Garantias e certificações — obter material posteriormente; não marcado como não aplicável
 - [ ] Processo comercial e processo após o contato
 - [ ] Contato e WhatsApp — número oficial, mensagem padrão, `mailto:` e URL do Instagram estão publicados no Incremento 4 e mantidos no Incremento 5. Horário não é exibido. Linha legal do rodapé publicada no Incremento 5. Processo após o contato continua pendente. Endereço completo além da região continua pendente.
-- [x] CTA secundário — decisão comercial atualizada no Incremento 5: texto “Entre em contato”, destino `#contato`. CTA principal “Falar com a Flow” permanece no WhatsApp. A Home publica esse CTA secundário.
+- [x] CTAs Hero / micro-CTA — **estado implementado:** Hero principal “Falar com um especialista” → `wa.me`; Hero secundário “Simule sua economia” → `#simulacao`; micro-CTA pós-Soluções “Entre em contato” → `#contato` (legado Inc. 5). Mensagem WhatsApp padrão inalterada neste sync.
 - [ ] Materiais de marca e conteúdo — apresentação PDF (8 páginas) e imagem da lista de sete áreas recebidas; fotos, vídeos, logos e demais materiais comerciais continuam pendentes
 - [ ] Tom de voz e personalidade da marca
 - [ ] Analytics (definir se e quando aplicável)
 - [x] URL pública definitiva do site — `https://flowenergiesbr.com.br/` (Incremento 9). Publicada em canonical, `og:url`, `sitemap.xml` e `Sitemap:` em `robots.txt`. DNS, SSL e deploy no host permanecem pendências de infraestrutura.
 - [x] Imagem de compartilhamento (`og:image` / Twitter) — `public/images/Flow og.png` (aprovada pelo responsável; Incremento 9); URL absoluta `https://flowenergiesbr.com.br/images/Flow%20og.png`; `twitter:card=summary_large_image`.
-- [ ] Requisitos futuros — simulador/orçamento, checkout, captura estruturada de leads (validar ou marcar como não aplicável)
+- [ ] Simulador / orçamento (Discovery comercial) — a estimativa `#simulacao` **já está implementada** (menu, CTA Hero, disclaimer, CTA WhatsApp interno). Validação comercial do produto, claims auxiliares e orçamento fechado continuam pendentes; não marcar N/A só porque a UI existe
+- [ ] Requisitos futuros — checkout, captura estruturada de leads (validar ou marcar como não aplicável)
 
 ---
 
@@ -228,6 +258,6 @@ A Discovery só será considerada concluída quando as informações essenciais 
 | Conversão | WhatsApp (número e mensagem), processo após contato, CTAs |
 | Conteúdo | Materiais disponíveis (fotos, logos, textos) ou plano para obtê-los |
 | Marca | Tom de voz e diretrizes mínimas de percepção |
-| Estrutura do site | A Home V1 publicada (Incrementos 6–7) é Hero, A Flow `#a-flow`, Diferenciais `#diferenciais`, Soluções `#solucoes` (sete áreas + micro-CTA), Como trabalhamos `#como-trabalhamos`, Trajetória `#trajetoria`, Contato `#contato` e rodapé. Projetos, prova social e FAQ não entram nesse esqueleto |
+| Estrutura do site | Home **implementada** (HR-V2-01A/01B): Hero, Trust Bar (sem âncora; claims validados), A Flow `#a-flow`, Diferenciais `#diferenciais`, Soluções `#solucoes` (sete áreas + micro-CTA), Simulador `#simulacao`, Como trabalhamos `#como-trabalhamos`, Trajetória `#trajetoria`, Contato `#contato` e rodapé. Menu: 7 itens. Projetos, prova social e FAQ não entram nesse esqueleto |
 
-A Discovery não está concluída. Itens ainda abertos não devem ser tratados como decididos. O Incremento 2 foi autorizado à parte e publicou só o que já tinha fonte (incluindo a união histórica do catálogo). O Incremento 3 publicou a hipótese da seção 6 no Hero e na meta description; os responsáveis da Flow Energies validaram comercialmente essas frases, sem reescrevê-las. O Incremento 4 publicou os links de WhatsApp, e-mail e Instagram. O Incremento 5 atualizou o CTA secundário (“Entre em contato” → `#contato`), a composição de Contato e o rodapé com linha legal; horário não é exibido. O Incremento 6 reordenou a Home/menu, encerrou “Nossa atuação” na Home, clarificou Como trabalhamos (FV) e o marco 1982, e acrescentou micro-CTA pós-Soluções. O Incremento 7 publicou o catálogo oficial das sete áreas; a união do Incremento 2 é histórico; PDF ≠ sete áreas. O Incremento 8 atualizou o corpo do marco 2023 na Trajetória publicado na Home; a validação factual da Trajetória continua pendente. O Incremento 9 publicou SEO técnico no repo (canonical, OG/Twitter, `Flow og.png`, sitemap, robots) para `https://flowenergiesbr.com.br/`; go-live (DNS/SSL/host) permanece externo. Provas sociais e credenciais serão obtidas posteriormente, sem marcar N/A. O refinamento dos textos publicados fica para o final do projeto.
+A Discovery **não** está concluída. Itens ainda abertos não devem ser tratados como decididos. Publicado no site ≠ validado comercialmente, salvo itens explicitamente fechados (ex.: claims da Trust Bar e apoio do Hero na HR-V2-01B). O histórico dos Incrementos 2–9 permanece; HR-V2-01A alinhou a documentação ao estado **implementado**; HR-V2-01B encerra a pendência comercial específica da Trust Bar e do apoio do Hero, sem encerrar a Discovery. Discovery comercial do simulador/orçamento permanece pendente. Provas sociais, portfólio e materiais reais (evolução da Trust Bar) serão obtidos posteriormente, sem marcar N/A. O refinamento dos textos publicados fica para o final do projeto.

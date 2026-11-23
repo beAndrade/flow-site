@@ -25,7 +25,7 @@ Itens que dependem de levantamento com o proprietário. O Incremento 2 não ence
 - processo comercial
 - informações de contato — telefone, e-mail e @flow_energies estão publicados como links na seção Contato (Incrementos 4–5). Horário não é exibido. Linha legal do rodapé publicada no Incremento 5. Endereço completo continua aberto.
 - WhatsApp — número e mensagem padrão estão publicados nessa especificação.
-- possíveis simuladores/orçamentos
+- possíveis simuladores/orçamentos — a estimativa solar (`#simulacao` / `app-simulacao`) **já está implementada** na Home (âncora, menu, CTA Hero secundário, CTA WhatsApp interno, disclaimer de estimativa). Isso **não** encerra a Discovery comercial do simulador/orçamento nem valida coeficientes, claims auxiliares ou proposta comercial
 - requisitos futuros de checkout
 
 ## Fase 2 — Design System
@@ -74,7 +74,23 @@ Contrato vigente: `docs/design-system.md`. Fonte de verdade: `src/styles/`.
 - CTA
 - Footer
 
-A lista acima é o mapa antigo da fase. A Home V1 do Incremento 2 usava: Header, Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé. O Incremento 6 reordenou para: Header, Hero, A Flow, Diferenciais, Soluções, Como trabalhamos, Trajetória, Contato e rodapé. Projetos, prova social e FAQ não fazem parte desse esqueleto.
+A lista acima é o mapa antigo da fase. Histórico: a Home V1 do Incremento 2 usava Header, Hero, A Flow, Soluções, Como trabalhamos, Trajetória, Diferenciais, Contato e rodapé; o Incremento 6 reordenou para Header, Hero, A Flow, Diferenciais, Soluções, Como trabalhamos, Trajetória, Contato e rodapé.
+
+**Estado implementado atual da Home** (sincronização documental HR-V2-01A — ordem DOM em `home.component.html`):
+
+1. Header (shell)
+2. Hero
+3. Trust Bar (sem `id` de âncora; `aria-label="Por que a Flow Energies"`)
+4. A Flow (`#a-flow`)
+5. Diferenciais (`#diferenciais`)
+6. Soluções (`#solucoes`)
+7. Simulador Solar (`#simulacao` / `app-simulacao`)
+8. Como Trabalhamos (`#como-trabalhamos`)
+9. Trajetória (`#trajetoria`)
+10. Contato (`#contato`)
+11. Footer (shell)
+
+Menu (`header.component.ts` `sections[]`, 7 itens): A Flow, Diferenciais, Soluções, Simule sua economia (`#simulacao`), Como trabalhamos, Trajetória, Contato. Projetos, prova social e FAQ não fazem parte desse esqueleto.
 
 ## Fase 4 — Implementação V1
 
@@ -105,8 +121,8 @@ O acabamento visual da Home V1 já implementada foi fechado. Não é o Increment
 
 - A imagem do Hero ocupa a largura útil da viewport. A coluna de leitura permanece limitada e alinhada às seções. A foto continua o asset atual (`/images/Solar Farm at Sunset.png`).
 - O header permanece absoluto sobre o Hero, não fixo. `--header-height` não aumentou (`4.75rem`). O contraste do título branco, do eyebrow amarelo e do apoio branco sobre o scrim escuro foi visto nas capturas. Não houve auditoria formal da razão de contraste.
-- O menu compacto usa o literal medido `56rem`. A navegação horizontal aparece a partir desse corte. Não se usa `var()` dentro de `@media`. `64rem` continua o patamar de padding e tipo desktop, não o corte do menu.
-- O painel mobile aberto tem fundo branco opaco e links navy.
+- *(Histórico do Incremento 2 / refinamento visual.)* O corte do menu compacto foi registrado então como literal `56rem`. **Estado atual (código):** `$bp-nav: $bp-lg` → `64rem` em `src/styles/_breakpoints.scss`; `BP_NAV = '64rem'` em `header.component.ts`. Navegação horizontal desktop a partir de `min-width: 64rem` (≥ 1024px). Não se usa `var()` dentro de `@media`.
+- *(Histórico.)* O painel mobile aberto foi registrado com fundo branco opaco e links navy. **Estado atual:** Brand Overlay Sheet — painel navy com scrim, burger→X, abaixo de `64rem` / `BP_NAV`.
 - Foram verificados Tab, um passo de Shift+Tab, Escape, o skip link visível e acionável em 390 e 1440, e a gestão de foco ao alargar e encolher a viewport. Ao alargar, o foco vai para o link visível “A Flow”. Ao encolher, o painel permanece fechado e o foco volta ao botão MENU visível. A volta completa com Shift+Tab não foi feita.
 - Os grupos de Soluções estão em invólucros próprios (`.solution-group` dentro de `.solution-groups`). Duas colunas a partir de `48rem`, quando há espaço. Na validação, 768 e larguras maiores ficaram em duas colunas sem estouro de título; 390 e 430 em uma coluna.
 - A hierarquia de h2 é local à Home (`.home-section h2`, `1.75rem`). Não é token global. `_typography.scss` não mudou.
@@ -119,7 +135,7 @@ Não fazem parte do Incremento 2:
 - **Incremento 3.** Implementado e com QA independente `PASS`. Não faz parte do Incremento 2. O registro está na seção abaixo.
 - **Incremento 4.** Implementado. Não faz parte do Incremento 2. O registro está na seção abaixo. A verificação desta etapa não substitui o QA independente.
 - **Incremento 5.** Implementado nesta etapa. Não faz parte do Incremento 2. O registro está na seção abaixo. O QA independente permanece pendente.
-- A referência `docs/visual-identity.md` em `docs/design-system.md` continua fora deste fechamento. O arquivo existente é `docs/visual-identity-flow-energies.md`.
+- A referência correta de identidade é `docs/visual-identity-flow-energies.md` (não existe `docs/visual-identity.md`).
 
 O Incremento 2 está em commit. O refinamento visual está commitado em `08fca3f`. A alteração de `tsconfig.json` está separada em `03fff82`.
 
@@ -267,15 +283,41 @@ Fora deste incremento: conteúdo da Home; identidade/tokens; elevar budgets; nov
 
 A verificação desta etapa (`ng test`, `npm run build`, presença dos artefatos no dist) não substitui o QA independente nem o go-live.
 
+### Sincronização documental HR-V2-01A — estado real da Home
+
+Somente documentação. Não é incremento de implementação. Registro histórico do estado **implementado** confirmado no código naquela etapa (sem novas decisões comerciais então). A HR-V2-01B (abaixo) atualiza a validação comercial da Trust Bar e do apoio do Hero.
+
+| Tema | Estado no código | Discovery / validação comercial (pós HR-V2-01B) |
+|---|---|---|
+| Ordem das seções | Ver Fase 3 (Trust Bar + `#simulacao` entre Soluções e Como trabalhamos) | Estrutura publicada ≠ Discovery encerrada |
+| Trust Bar | Implementada; sem âncora de menu; claims “+40 Anos…”, “100% Conformidade”, “Ponta a Ponta”, “Atuação Regional” | Claims **validados pelos proprietários** (HR-V2-01B). UI intacta. Não é solução definitiva de credibilidade; evolução futura = portfólio / materiais reais |
+| Simulador Solar | Em `#simulacao` (`app-simulacao`); CTA Hero “Simule sua economia”; item de menu; CTA interno WhatsApp; disclaimer de estimativa | Implementado ≠ Discovery comercial do simulador/orçamento encerrada. Não reescrever motor/coeficientes |
+| CTAs Hero | Principal: “Falar com um especialista” → `wa.me` existente; Secundário: “Simule sua economia” → `#simulacao` | Micro-CTA pós-Soluções preserva “Entre em contato” → `#contato` |
+| Hero apoio | `.hero__support` = texto aprovado na HR-V2-01B (já estava correto no HTML) | Conteúdo comercial aprovado; frase Inc. 3 do apoio permanece histórico — ver Discovery §6 |
+| Navegação | 7 itens; Brand Overlay Sheet &lt; 64rem; desktop nav ≥ 64rem (`$bp-nav` / `BP_NAV`) | — |
+
+### HR-V2-01B — Integridade comercial da Home (Trust Bar + apoio Hero)
+
+Somente documentação + verificação do `.hero__support`. **Não** altera a UI da Trust Bar. **Não** autoriza HR-V2-04.
+
+O que foi registrado:
+
+- Claims da Trust Bar (textos exatos da UI) **validados pelos proprietários**: +40 Anos de Bagagem; Experiência CERJ / Enel RJ; 100% Conformidade; ANEEL, PRODIST, ABNT, NR-10; ART no CREA-RJ; Atuação regional. Apresentação (layout, cores, tipografia, animações, posicionamento) **intacta**.
+- Distinção: Trust Bar atual ≠ solução definitiva de credibilidade; evolução futura = portfólio / materiais reais dos proprietários.
+- Apoio do Hero aprovado: “Do projeto elétrico e regularização à geração solar fotovoltaica: soluções sob medida com rigor técnico para reduzir custos e garantir segurança operacional.” Comparado com o código: **já estava correto** — HTML não alterado.
+- Pendências Discovery §14 correspondentes (Trust Bar + apoio Hero) **encerradas**; Discovery geral **permanece em andamento**.
+- Docs atualizados: `PRODUCT.md`, `docs/discovery.md`, `docs/architecture.md`, `docs/roadmap.md`. `docs/design-system.md` sem alteração necessária.
+- Zero Git nesta etapa. Testes/build: opcionais (somente docs).
+
 ## Fase 5 — Deploy
 
 Definir posteriormente a estratégia de hospedagem/deploy. O Incremento 9 prepara metadados e arquivos estáticos para o domínio `https://flowenergiesbr.com.br/`; apontar DNS, emitir SSL e publicar o build no host permanece nesta fase.
 
 ## Fase 6 — Evolução
 
-Possíveis funcionalidades:
+Possíveis funcionalidades (além do que já está na Home):
 
-- orçamento/simulação
+- orçamento comercial / proposta vinculante (a estimativa `#simulacao` já está implementada)
 - captura estruturada de leads
 - backend
 - checkout
@@ -284,4 +326,4 @@ Possíveis funcionalidades:
 
 ---
 
-**Importante:** o roadmap é um documento vivo. Não assumir funcionalidades futuras como requisitos confirmados até que sejam validadas com o proprietário da Flow.
+**Importante:** o roadmap é um documento vivo. Não assumir funcionalidades futuras como requisitos confirmados até que sejam validadas com o proprietário da Flow. Implementado no código ≠ validado comercialmente.
