@@ -4,7 +4,7 @@
   [class.is-menu-open]="menuOpen()"
 >
   <div class="site-header__bar">
-    <a class="mark" routerLink="/" aria-label="Flow Energies, início" (click)="closeMenu()">
+    <a class="mark" routerLink="/" aria-label="Flow Energies, início" (click)="onMarkClick()">
       <img
         class="mark__logo"
         src="/images/Flow%20Energies%20Logo%20Fundo%20Transparente%201.svg"
@@ -71,6 +71,8 @@
         <a
           class="header-cta"
           href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar."
+          target="_blank"
+          rel="noopener noreferrer"
           (click)="closeMenu()"
         >
           Falar no WhatsApp

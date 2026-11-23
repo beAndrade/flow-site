@@ -108,8 +108,9 @@ export class HeaderComponent {
   }
 
   /**
-   * Close overlay. Default restores locked scroll (X, Escape, scrim, WhatsApp, logo).
+   * Close overlay. Default restores locked scroll (X, Escape, scrim, WhatsApp).
    * Hash in-page links must use `closeMenuForHashNav()` so destination scroll is not fought.
+   * Logo uses `onMarkClick()` (close without restore, then scroll to top).
    */
   protected closeMenu(options?: { restoreScroll?: boolean }): void {
     if (!this.menuOpen()) {
@@ -123,6 +124,32 @@ export class HeaderComponent {
   /** Close for in-page hash links: unlock styles without restoring lockedScrollY. */
   protected closeMenuForHashNav(): void {
     this.closeMenu({ restoreScroll: false });
+  }
+
+  /**
+   * Brand mark: return to the top of the Home without a full reload.
+   * Prefer scroll-to-top over refresh — keeps the SPA state and matches “início”.
+   */
+  protected onMarkClick(): void {
+    if (this.menuOpen()) {
+      this.closeMenu({ restoreScroll: false });
+    }
+
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    if (window.location.hash) {
+      const path = `${window.location.pathname}${window.location.search}`;
+      history.replaceState(null, '', path || '/');
+    }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: reduceMotion ? ('instant' as ScrollBehavior) : 'smooth',
+    });
   }
 
   protected closeMenuFromScrim(): void {
