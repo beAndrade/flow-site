@@ -87,9 +87,15 @@
 }
 
 .hero__eyebrow {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
   margin: 0;
-  color: var(--color-brand-yellow);
-  font-size: var(--text-eyebrow);
+  padding: 8px 16px;
+  border: 1px solid rgb(250 253 251 / 22%);
+  border-radius: var(--radius-md);
+  color: rgb(250 253 251 / 85%);
+  font-size: 14px;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   line-height: var(--leading-xs);
@@ -235,7 +241,7 @@
   }
 
   .hero__copy {
-    width: min(40rem, 100%);
+    width: min(52rem, 100%);
   }
 
   .hero__eyebrow {
@@ -243,7 +249,7 @@
   }
 
   .hero h1 {
-    max-width: 24ch;
+    max-width: none;
   }
 }
 
