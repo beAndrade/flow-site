@@ -10,14 +10,14 @@ A profundidade de cada artefato acompanha a complexidade e o risco do incremento
 
 Nenhum incremento começa antes do encerramento formal do anterior.
 
-1. **Product Definition.** Product & Design define problema, escopo, conteúdo autorizado e critérios de aceite. O Project Orchestrator pede a aprovação. A recomendação do orquestrador não é aprovação.
-2. **UX Flow / Design.** Ocorre quando o incremento muda experiência ou interface. Product & Design define fluxo, comportamento e direção visual dentro das fontes já existentes. Se não houver mudança de experiência, a etapa é registrada como não aplicável, com o motivo.
+1. **Product Definition.** Product & Design define problema, escopo, conteúdo autorizado e critérios de aceite de produto. O Project Orchestrator pede a aprovação. A recomendação do orquestrador não é aprovação.
+2. **UX Flow / Design.** Ocorre quando o incremento muda experiência ou interface. Design & UX (`flow-design-ux`) define fluxo, comportamento e direção visual dentro das fontes já existentes e da identidade aprovada, com apoio do skill Impeccable quando aplicável. Product & Design permanece responsável pelo conteúdo autorizado e pelos critérios de produto. Se não houver mudança de experiência, a etapa é registrada como não aplicável, com o motivo.
 3. **Technical Design.** Descreve a abordagem técnica, os arquivos previstos e os riscos, em extensão proporcional ao incremento. Não autoriza implementação.
 4. **Sprint Planning.** O Project Orchestrator ordena o trabalho, as dependências e o que fica de fora. Os critérios de aceite já existem antes da implementação.
 5. **Architecture Review.** Revisão somente leitura de arquitetura, dependências, riscos, escopo e aderência às decisões documentadas. Acontece antes da implementação. Não altera arquivos. O parecer não aprova o escopo nem autoriza a implementação.
 6. **Implementation.** Começa somente depois da aprovação explícita do escopo. O Implementation Agent entrega apenas esse escopo.
 7. **Independent QA.** Obrigatório para todo incremento funcional ou visual. Quem valida não é exclusivamente o agente que implementou. O QA Agent não corrige código. O resultado é aprovado, reprovado ou bloqueado, com evidências.
-8. **Documentation Updated.** A documentação afetada pelo incremento e as evidências de validação são atualizadas antes do encerramento. Essa atualização faz parte do fechamento. Não existe um agente Documenter independente.
+8. **Documentation Updated.** A documentação afetada pelo incremento e as evidências de validação são atualizadas antes do encerramento. Essa atualização faz parte do fechamento. Não existe um agente Documenter independente do Flow Site.
 9. **Commit.** O incremento entra em um commit próprio, ou em um commit que agrupe somente incrementos pequenos e relacionados, com essa relação explícita e o escopo ainda verificável. Implementação, governança e configuração ficam em commits separados sempre que possível.
 10. **Closure.** O Project Orchestrator só encerra o incremento quando os critérios de aceite foram atendidos, a documentação e as evidências estão atualizadas, e as falhas, pendências e desvios estão registrados. O registro formal de encerramento é a condição que permite o início do próximo incremento. A recomendação isolada do Project Orchestrator não o autoriza. Sem esse encerramento, o trabalho não avança.
 
