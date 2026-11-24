@@ -17,11 +17,29 @@
 
     <nav class="site-nav site-nav--desktop" aria-label="Seções">
       <ul>
-        @for (section of sections; track section.href) {
-          <li><a [href]="section.href">{{ section.label }}</a></li>
+        @for (section of sections; track section.id) {
+          <li>
+            @if (section.kind === 'link') {
+              <a [href]="section.href">{{ section.label }}</a>
+            } @else {
+              <span class="site-nav__pending">
+                {{ section.label }}
+                <span class="site-nav__pending-sr">em breve</span>
+              </span>
+            }
+          </li>
         }
       </ul>
     </nav>
+
+    <a
+      class="header-cta header-cta--bar"
+      href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Falar no WhatsApp
+    </a>
 
     <button
       #menuButton
@@ -62,9 +80,16 @@
     <div class="site-nav--mobile__panel">
       <div class="site-nav--mobile__inner">
         <ul>
-          @for (section of sections; track section.href) {
+          @for (section of sections; track section.id) {
             <li>
-              <a [href]="section.href" (click)="closeMenuForHashNav()">{{ section.label }}</a>
+              @if (section.kind === 'link') {
+                <a [href]="section.href" (click)="closeMenuForHashNav()">{{ section.label }}</a>
+              } @else {
+                <span class="site-nav__pending">
+                  {{ section.label }}
+                  <span class="site-nav__pending-sr">em breve</span>
+                </span>
+              }
             </li>
           }
         </ul>

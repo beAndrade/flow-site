@@ -25,7 +25,7 @@ Itens que dependem de levantamento com o proprietário. O Incremento 2 não ence
 - processo comercial
 - informações de contato — telefone, e-mail e @flow_energies estão publicados como links na seção Contato (Incrementos 4–5). Horário não é exibido. Linha legal do rodapé publicada no Incremento 5. Endereço completo continua aberto.
 - WhatsApp — número e mensagem padrão estão publicados nessa especificação.
-- possíveis simuladores/orçamentos — a estimativa solar (`#simulacao` / `app-simulacao`) **já está implementada** na Home (âncora, menu, CTA Hero secundário, CTA WhatsApp interno, disclaimer de estimativa). Isso **não** encerra a Discovery comercial do simulador/orçamento nem valida coeficientes, claims auxiliares ou proposta comercial
+- possíveis simuladores/orçamentos — a estimativa solar (`#simulacao` / `app-simulacao`) **já está implementada** na Home (âncora, CTA Hero secundário, CTA WhatsApp interno, disclaimer de estimativa). Após o N2 Simplificação do Navbar, o simulador **não** figura no menu; permanece acessível por CTAs internos (`#simulacao`). Isso **não** encerra a Discovery comercial do simulador/orçamento nem valida coeficientes, claims auxiliares ou proposta comercial
 - requisitos futuros de checkout
 
 ## Fase 2 — Design System
@@ -90,7 +90,7 @@ A lista acima é o mapa antigo da fase. Histórico: a Home V1 do Incremento 2 us
 10. Contato (`#contato`)
 11. Footer (shell)
 
-Menu (`header.component.ts` `sections[]`, 7 itens): A Flow, Diferenciais, Soluções, Simule sua economia (`#simulacao`), Como trabalhamos, Trajetória, Contato. Projetos, prova social e FAQ não fazem parte desse esqueleto.
+Menu (`header.component.ts` `sections[]`, 4 itens — N2 Simplificação do Navbar): A Flow `#a-flow`, Soluções `#solucoes`, Projetos (provisório, sem destino — `span` muted; “em breve” só SR), Contato `#contato`. Simulador (`#simulacao`) fora do menu; acessível por CTAs internos. Diferenciais, Como trabalhamos e Trajetória permanecem na Home sem item de menu. Prova social e FAQ não fazem parte desse esqueleto.
 
 ## Fase 4 — Implementação V1
 
@@ -291,10 +291,10 @@ Somente documentação. Não é incremento de implementação. Registro históri
 |---|---|---|
 | Ordem das seções | Ver Fase 3 (Trust Bar + `#simulacao` entre Soluções e Como trabalhamos) | Estrutura publicada ≠ Discovery encerrada |
 | Trust Bar | Implementada; sem âncora de menu; claims “+40 Anos…”, “100% Conformidade”, “Ponta a Ponta”, “Atuação Regional” | Claims **validados pelos proprietários** (HR-V2-01B). UI intacta. Não é solução definitiva de credibilidade; evolução futura = portfólio / materiais reais |
-| Simulador Solar | Em `#simulacao` (`app-simulacao`); CTA Hero “Simule sua economia”; item de menu; CTA interno WhatsApp; disclaimer de estimativa | Implementado ≠ Discovery comercial do simulador/orçamento encerrada. Não reescrever motor/coeficientes |
+| Simulador Solar | Em `#simulacao` (`app-simulacao`); CTA Hero “Simule sua economia”; **fora do menu** (N2 Navbar); CTA interno WhatsApp; disclaimer de estimativa | Implementado ≠ Discovery comercial do simulador/orçamento encerrada. Não reescrever motor/coeficientes |
 | CTAs Hero | Principal: “Falar com um especialista” → `wa.me` existente; Secundário: “Simule sua economia” → `#simulacao` | Micro-CTA pós-Soluções preserva “Entre em contato” → `#contato` |
 | Hero apoio | `.hero__support` = texto aprovado na HR-V2-01B (já estava correto no HTML) | Conteúdo comercial aprovado; frase Inc. 3 do apoio permanece histórico — ver Discovery §6 |
-| Navegação | 7 itens; Brand Overlay Sheet &lt; 64rem; desktop nav ≥ 64rem (`$bp-nav` / `BP_NAV`) | — |
+| Navegação | 4 itens (A Flow, Soluções, Projetos provisório, Contato); Brand Overlay Sheet &lt; 64rem; desktop nav ≥ 64rem (`$bp-nav` / `BP_NAV`); CTA WhatsApp azul Soft Steel desktop / amarelo overlay mobile | Ver N2 Simplificação do Navbar abaixo |
 
 ### HR-V2-01B — Integridade comercial da Home (Trust Bar + apoio Hero)
 
@@ -308,6 +308,26 @@ O que foi registrado:
 - Pendências Discovery §14 correspondentes (Trust Bar + apoio Hero) **encerradas**; Discovery geral **permanece em andamento**.
 - Docs atualizados: `PRODUCT.md`, `docs/discovery.md`, `docs/architecture.md`, `docs/roadmap.md`. `docs/design-system.md` sem alteração necessária.
 - Zero Git nesta etapa. Testes/build: opcionais (somente docs).
+
+### N2 — Simplificação do Navbar
+
+Implementado. Nível **N2** (Workflow V2). QA independente: **APPROVED WITH OBSERVATIONS** (sem FAIL bloqueante). Não reabre Incrementos 2–9 nem HR-V2-01A/01B. Este registro não encerra a Discovery nem publica portfólio real.
+
+Estado implementado (`src/app/layout/header/`):
+
+- Menu `sections[]` com 4 itens: A Flow `#a-flow`, Soluções `#solucoes`, Projetos (kind `pending`, sem `href` — `span.site-nav__pending` muted; texto “em breve” apenas em `.site-nav__pending-sr` para leitores de tela), Contato `#contato`.
+- Simulador Solar **fora do menu**; permanece na Home em `#simulacao` / `app-simulacao` e acessível por CTAs internos (ex.: Hero secundário “Simule sua economia”).
+- CTA “Falar no WhatsApp” do header: azul Soft Steel (`--color-brand-blue`) na barra desktop (`.header-cta--bar`); amarelo (`--color-cta-yellow` / hover) no overlay mobile (`.site-nav--mobile .header-cta`). Mensagem `wa.me` padrão inalterada.
+- Brand Overlay Sheet, breakpoint `$bp-nav` / `BP_NAV = '64rem'`, Escape → foco no botão do menu: comportamento de shell preservado.
+
+QA — **APPROVED WITH OBSERVATIONS**:
+
+- Observação registrada (sem remediação neste incremento): retorno do foco ao botão do menu após o CTA WhatsApp do overlay mobile **não** verificado.
+- Sem FAIL bloqueante; Implementation não reaberta.
+
+Documentação no Closure: `PRODUCT.md`, `docs/discovery.md`, `docs/roadmap.md`. `docs/architecture.md` e `docs/design-system.md` sem sync necessário (tokens e shell já cobertos; impacto real só na composição do menu).
+
+Arquivos do incremento: `header.component.html`, `header.component.scss`, `header.component.ts` + os três docs acima. Commit manual via SourceTree; sem push sem autorização.
 
 ## Fase 5 — Deploy
 

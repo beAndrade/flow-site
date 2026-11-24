@@ -14,6 +14,10 @@ import { RouterLink } from '@angular/router';
 const BP_NAV = '64rem';
 const desktopNavQuery = `(min-width: ${BP_NAV})`;
 
+type NavSection =
+  | { id: string; label: string; kind: 'link'; href: string }
+  | { id: string; label: string; kind: 'pending' };
+
 @Component({
   selector: 'app-header',
   imports: [RouterLink],
@@ -35,14 +39,12 @@ export class HeaderComponent {
   protected readonly scrolled = signal(false);
   protected readonly scrollProgress = signal(0);
 
-  protected readonly sections = [
-    { label: 'A Flow', href: '#a-flow' },
-    { label: 'Diferenciais', href: '#diferenciais' },
-    { label: 'Soluções', href: '#solucoes' },
-    { label: 'Simule sua economia', href: '#simulacao' },
-    { label: 'Como trabalhamos', href: '#como-trabalhamos' },
-    { label: 'Trajetória', href: '#trajetoria' },
-    { label: 'Contato', href: '#contato' },
+  /** Nav items: links with hash targets, or pending placeholders (no href). */
+  protected readonly sections: readonly NavSection[] = [
+    { id: 'a-flow', label: 'A Flow', kind: 'link', href: '#a-flow' },
+    { id: 'solucoes', label: 'Soluções', kind: 'link', href: '#solucoes' },
+    { id: 'projetos', label: 'Projetos', kind: 'pending' },
+    { id: 'contato', label: 'Contato', kind: 'link', href: '#contato' },
   ];
 
   constructor() {
@@ -428,6 +430,9 @@ export class HeaderComponent {
 
   private desktopControlsContain(target: Node): boolean {
     const desktopNav = this.host.nativeElement.querySelector('.site-nav--desktop');
-    return desktopNav?.contains(target) === true;
+    const desktopCta = this.host.nativeElement.querySelector('.header-cta--bar');
+    return (
+      desktopNav?.contains(target) === true || desktopCta?.contains(target) === true
+    );
   }
 }
