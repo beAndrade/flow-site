@@ -66,6 +66,11 @@
   z-index: 1;
   background:
     linear-gradient(
+      90deg,
+      rgb(7 29 48 / 42%) 0%,
+      transparent 48%
+    ),
+    linear-gradient(
       180deg,
       rgb(7 29 48 / 30%) 0%,
       transparent 28%,
@@ -77,20 +82,14 @@
 
 .hero__copy {
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-4);
   width: min(34rem, 100%);
 }
 
 .hero__eyebrow {
-  display: inline-block;
-  width: fit-content;
-  max-width: 100%;
   margin: 0;
-  padding: 8px 16px;
-  border: 1px solid rgb(250 253 251 / 35%);
-  border-radius: var(--radius-md);
-  color: #fafdfbd9;
-  font-size: 14px;
+  color: var(--color-brand-yellow);
+  font-size: var(--text-eyebrow);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.08em;
   line-height: var(--leading-xs);
@@ -100,10 +99,11 @@
 .hero h1 {
   margin: 0;
   max-width: 18ch;
-  font-size: 60px;
+  color: var(--color-white);
+  font-size: var(--text-display);
   font-weight: var(--font-weight-black);
   letter-spacing: -0.035em;
-  line-height: 1.05;
+  line-height: var(--leading-display);
   text-wrap: balance;
 }
 
@@ -124,7 +124,7 @@
 
 .hero__actions {
   gap: var(--space-3);
-  margin-top: var(--space-1);
+  margin-top: var(--space-3);
 }
 
 .hero__cta,
@@ -172,16 +172,43 @@
   box-shadow: var(--focus-ring-halo);
 }
 
+.hero__cta:focus-visible {
+  box-shadow: var(--focus-ring-halo);
+}
+
+.hero__cta:active {
+  background: var(--color-cta-yellow-hover);
+  transform: none;
+}
+
 .hero__secondary {
   margin: 0;
-  border: 1px solid rgb(250 253 251 / 35%);
+  border: 1px solid rgb(250 253 251 / 22%);
   background: transparent;
-  font-weight: var(--font-weight-semibold);
-  transition: background-color var(--duration-fast) var(--easing-standard);
+  color: rgb(250 253 251 / 78%);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--easing-standard),
+    border-color var(--duration-fast) var(--easing-standard),
+    color var(--duration-fast) var(--easing-standard);
 }
 
 .hero__secondary:hover {
   background: rgb(250 253 251 / 8%);
+  border-color: rgb(250 253 251 / 32%);
+  color: rgb(250 253 251 / 92%);
+}
+
+.hero__secondary:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+  box-shadow: var(--focus-ring-halo);
+}
+
+.hero__secondary:active {
+  background: rgb(250 253 251 / 12%);
+  color: rgb(250 253 251 / 70%);
 }
 
 @include bp-up(md) {
@@ -193,7 +220,7 @@
   }
 
   .hero__copy {
-    gap: var(--space-4);
+    gap: var(--space-5);
     width: min(40rem, 100%);
   }
 }
@@ -208,7 +235,7 @@
   }
 
   .hero__copy {
-    width: min(52rem, 100%);
+    width: min(40rem, 100%);
   }
 
   .hero__eyebrow {
@@ -217,7 +244,6 @@
 
   .hero h1 {
     max-width: 24ch;
-    font-size: 72px;
   }
 }
 
@@ -464,23 +490,29 @@
   line-height: var(--leading-xl);
 }
 
-.pillar-list {
+#diferenciais h2 {
+  color: var(--color-brand-navy);
+  font-weight: var(--font-weight-black);
+  letter-spacing: -0.02em;
+}
+
+#diferenciais .pillar-list {
   counter-reset: flow-pillar;
   display: grid;
-  gap: var(--space-8);
-  margin: var(--space-8) 0 0;
+  gap: var(--space-10);
+  margin: var(--space-10) 0 0;
   padding: 0;
   list-style: none;
 }
 
-.pillar {
+#diferenciais .pillar {
   counter-increment: flow-pillar;
   min-width: 0;
   border-left: 3px solid var(--color-brand-navy);
   padding: var(--space-4) var(--space-5);
 }
 
-.pillar::before {
+#diferenciais .pillar::before {
   content: counter(flow-pillar, decimal-leading-zero);
   display: block;
   margin-bottom: var(--space-3);
@@ -490,16 +522,17 @@
   line-height: var(--leading-xl);
 }
 
-.pillar h3,
-.pillar p {
+#diferenciais .pillar h3,
+#diferenciais .pillar p {
   max-width: none;
 }
 
-.pillar h3 {
+#diferenciais .pillar h3 {
   margin-top: 0;
+  color: var(--color-brand-navy);
 }
 
-.pillar p {
+#diferenciais .pillar p {
   margin-bottom: 0;
   color: var(--color-text-secondary);
 }
@@ -511,7 +544,7 @@
     align-items: start;
   }
 
-  .pillar-list {
+  #diferenciais .pillar-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
