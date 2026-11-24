@@ -35,6 +35,8 @@ export class HomeComponent {
   protected readonly heroVideoReady = signal(false);
   /** Falha ou reduced-motion — mantém o poster como fallback. */
   protected readonly heroUsePoster = signal(false);
+  /** Evita init duplicada (retry após corrida SSG/hydration). */
+  private heroVideoInitialized = false;
 
   protected readonly solutions: SolutionCard[] = [
     {
@@ -89,71 +91,110 @@ export class HomeComponent {
 
   constructor() {
     afterNextRender(() => {
-      const video = this.heroVideo()?.nativeElement;
-      if (!video) {
-        this.heroUsePoster.set(true);
-        return;
-      }
-
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        this.heroUsePoster.set(true);
-        return;
-      }
-
-      const applyRate = () => {
-        video.playbackRate = heroPlaybackRate;
-      };
-
-      const trimEnd = () => {
-        const duration = video.duration;
-        if (!Number.isFinite(duration) || duration <= heroEndEarlySeconds) {
-          return;
-        }
-
-        if (video.currentTime >= duration - heroEndEarlySeconds) {
-          video.currentTime = 0;
-        }
-      };
-
-      const markReady = () => {
-        applyRate();
-        this.heroVideoReady.set(true);
-        this.heroUsePoster.set(false);
-      };
-
-      const markFailed = () => {
-        this.heroVideoReady.set(false);
-        this.heroUsePoster.set(true);
-      };
-
-      applyRate();
-      video.addEventListener('play', applyRate);
-      video.addEventListener('playing', markReady);
-      video.addEventListener('loadeddata', markReady);
-      video.addEventListener('error', markFailed);
-      video.addEventListener('timeupdate', trimEnd);
-
-      if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
-        markReady();
-      }
-
-      void video.play().catch(() => {
-        if (!this.heroVideoReady()) {
-          markFailed();
-        }
-      });
-
-      this.destroyRef.onDestroy(() => {
-        video.removeEventListener('play', applyRate);
-        video.removeEventListener('playing', markReady);
-        video.removeEventListener('loadeddata', markReady);
-        video.removeEventListener('error', markFailed);
-        video.removeEventListener('timeupdate', trimEnd);
-      });
+      this.scheduleHeroVideoInit(false);
     });
 
     afterNextRender(() => {
       this.initSectionReveal();
+    });
+  }
+
+  private resolveHeroVideoElement(): HTMLVideoElement | null {
+    const fromView = this.heroVideo()?.nativeElement;
+    if (fromView) {
+      return fromView;
+    }
+
+    const fromDom = this.host.nativeElement.querySelector('video.hero__video');
+    return fromDom instanceof HTMLVideoElement ? fromDom : null;
+  }
+
+  /**
+   * Resolve o `<video>` após o paint. Ausência temporária (SSG/hydration)
+   * agenda um único retry; ausência definitiva cai no poster.
+   */
+  private scheduleHeroVideoInit(isRetry: boolean): void {
+    if (this.heroVideoInitialized) {
+      return;
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.heroUsePoster.set(true);
+      return;
+    }
+
+    const video = this.resolveHeroVideoElement();
+    if (!video) {
+      if (!isRetry) {
+        queueMicrotask(() => {
+          requestAnimationFrame(() => this.scheduleHeroVideoInit(true));
+        });
+        return;
+      }
+
+      this.heroVideoReady.set(false);
+      this.heroUsePoster.set(true);
+      return;
+    }
+
+    this.initHeroVideo(video);
+  }
+
+  private initHeroVideo(video: HTMLVideoElement): void {
+    if (this.heroVideoInitialized) {
+      return;
+    }
+    this.heroVideoInitialized = true;
+
+    const applyRate = () => {
+      video.playbackRate = heroPlaybackRate;
+    };
+
+    const trimEnd = () => {
+      const duration = video.duration;
+      if (!Number.isFinite(duration) || duration <= heroEndEarlySeconds) {
+        return;
+      }
+
+      if (video.currentTime >= duration - heroEndEarlySeconds) {
+        video.currentTime = 0;
+      }
+    };
+
+    const markReady = () => {
+      applyRate();
+      this.heroVideoReady.set(true);
+      this.heroUsePoster.set(false);
+    };
+
+    const markFailed = () => {
+      this.heroVideoReady.set(false);
+      this.heroUsePoster.set(true);
+    };
+
+    applyRate();
+    video.addEventListener('play', applyRate);
+    video.addEventListener('playing', markReady);
+    video.addEventListener('loadeddata', markReady);
+    video.addEventListener('error', markFailed);
+    video.addEventListener('timeupdate', trimEnd);
+
+    if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+      markReady();
+    }
+
+    void video.play().catch(() => {
+      if (!this.heroVideoReady()) {
+        markFailed();
+      }
+    });
+
+    this.destroyRef.onDestroy(() => {
+      video.removeEventListener('play', applyRate);
+      video.removeEventListener('playing', markReady);
+      video.removeEventListener('loadeddata', markReady);
+      video.removeEventListener('error', markFailed);
+      video.removeEventListener('timeupdate', trimEnd);
     });
   }
 
