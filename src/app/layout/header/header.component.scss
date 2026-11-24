@@ -32,12 +32,6 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-@supports (color: color-mix(in oklab, red, red)) {
-  .site-header.is-scrolled {
-    background-color: color-mix(in oklab, #f1f5f9 80%, transparent);
-  }
-}
-
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .site-header {
     background: rgb(16 47 74 / 72%);
@@ -48,9 +42,9 @@
   }
 }
 
-/* Menu aberto: barra navy sólida para contraste do logo e do botão fechar. */
-.site-header.is-menu-open,
-.site-header.is-menu-open.is-scrolled {
+/* Menu aberto: barra navy sólida para contraste do logo e do botão fechar.
+   Source-order after .is-scrolled so open wins when both classes are present. */
+.site-header.is-menu-open {
   background: var(--color-brand-navy);
   box-shadow: none;
   backdrop-filter: none;
@@ -80,18 +74,12 @@
 }
 
 @supports (color: color-mix(in oklab, red, red)) {
-  .site-header__progress {
-    background-color: color-mix(in oklab, #e2e8f0 20%, transparent);
+  .site-header.is-scrolled {
+    background-color: color-mix(in oklab, #f1f5f9 80%, transparent);
   }
 
-  .site-header__progress-bar {
-    background: linear-gradient(
-      90deg,
-      color-mix(in oklab, var(--color-brand-navy) 78%, transparent),
-      color-mix(in oklab, var(--color-brand-blue) 68%, transparent) 38%,
-      color-mix(in oklab, var(--color-brand-yellow) 78%, transparent) 72%,
-      color-mix(in oklab, var(--color-brand-yellow) 86%, transparent)
-    );
+  .site-header__progress {
+    background-color: color-mix(in oklab, #e2e8f0 20%, transparent);
   }
 }
 
@@ -161,7 +149,6 @@
   border-radius: var(--radius-sm);
   background: var(--color-brand-blue);
   color: var(--color-white);
-  font: inherit;
   font-size: var(--text-cta);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
@@ -198,8 +185,7 @@
   background: rgb(255 255 255 / 12%);
   transition:
     background-color var(--duration-header) var(--easing-standard),
-    border-color var(--duration-header) var(--easing-standard),
-    color var(--duration-header) var(--easing-standard);
+    border-color var(--duration-header) var(--easing-standard);
 }
 
 .menu-button__bars {
@@ -264,36 +250,38 @@
 }
 
 /* Open navy context: keep close control light on the solid bar. */
-.site-header.is-menu-open .menu-button,
-.site-header.is-menu-open.is-scrolled .menu-button {
+.site-header.is-menu-open .menu-button {
   color: var(--color-white);
 }
 
-.site-header.is-menu-open .menu-button__shell,
-.site-header.is-menu-open.is-scrolled .menu-button__shell {
+.site-header.is-menu-open .menu-button__shell {
   border-color: rgb(250 253 251 / 40%);
   background: rgb(255 255 255 / 14%);
 }
 
-.site-header.is-menu-open .menu-button:hover .menu-button__shell,
-.site-header.is-menu-open.is-scrolled .menu-button:hover .menu-button__shell {
+.site-header.is-menu-open .menu-button:hover .menu-button__shell {
   background: rgb(255 255 255 / 22%);
 }
 
-/* Scrim: under the bar, covers remaining viewport; click dismisses. */
-.site-header__scrim {
+/* Scrim + sheet share fixed overlay geometry under the bar. */
+.site-header__scrim,
+.site-nav--mobile {
   --menu-ease: cubic-bezier(0.22, 1, 0.36, 1);
 
   position: fixed;
   top: var(--site-header-bar-height);
   left: 0;
   right: 0;
-  bottom: 0;
-  z-index: 1;
-  background: rgb(16 47 74 / 45%);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* Scrim: covers remaining viewport; click dismisses. */
+.site-header__scrim {
+  bottom: 0;
+  z-index: 1;
+  background: rgb(16 47 74 / 45%);
   transition:
     opacity 0.42s var(--menu-ease),
     visibility 0.42s var(--menu-ease);
@@ -307,25 +295,16 @@
 
 /* Brand overlay sheet: navy panel under the header bar. */
 .site-nav--mobile {
-  --menu-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --sheet-h: calc(100vh - var(--site-header-bar-height));
 
-  position: fixed;
-  top: var(--site-header-bar-height);
-  left: 0;
-  right: 0;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--site-header-bar-height));
-  height: calc(100dvh - var(--site-header-bar-height));
-  max-height: calc(100vh - var(--site-header-bar-height));
-  max-height: calc(100dvh - var(--site-header-bar-height));
+  height: var(--sheet-h);
+  max-height: var(--sheet-h);
   overflow: hidden;
   border-top: 3px solid var(--color-brand-yellow);
   background: var(--color-brand-navy);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
   transform: translateY(-0.75rem);
   transition:
     opacity 0.42s var(--menu-ease),
@@ -333,11 +312,15 @@
     visibility 0.45s var(--menu-ease);
 }
 
+@supports (height: 100dvh) {
+  .site-nav--mobile {
+    --sheet-h: calc(100dvh - var(--site-header-bar-height));
+  }
+}
+
 .site-nav--mobile.is-open {
   opacity: 1;
   visibility: visible;
-  /* Keep none so empty navy areas pass clicks through to the scrim. */
-  pointer-events: none;
   transform: none;
 }
 
@@ -352,7 +335,6 @@
   display: grid;
   gap: var(--space-5);
   width: 100%;
-  max-width: 100%;
   max-height: 100%;
   padding: var(--space-5) var(--container-padding-mobile) var(--space-6);
   overflow-x: hidden;
@@ -389,17 +371,11 @@
 }
 
 .site-nav--mobile a:not(.header-cta):hover {
-  color: var(--color-white);
   text-decoration-color: var(--color-brand-yellow);
 }
 
 .site-nav--mobile a:not(.header-cta):active {
   opacity: 0.85;
-}
-
-.site-nav--mobile a:not(.header-cta):focus-visible {
-  outline: var(--focus-ring);
-  outline-offset: var(--focus-ring-offset);
 }
 
 .site-nav--mobile.is-open li {
@@ -408,32 +384,10 @@
   animation: site-nav-link-in 0.35s var(--menu-ease) forwards;
 }
 
-.site-nav--mobile.is-open li:nth-child(1) {
-  animation-delay: 40ms;
-}
-
-.site-nav--mobile.is-open li:nth-child(2) {
-  animation-delay: 80ms;
-}
-
-.site-nav--mobile.is-open li:nth-child(3) {
-  animation-delay: 120ms;
-}
-
-.site-nav--mobile.is-open li:nth-child(4) {
-  animation-delay: 160ms;
-}
-
-.site-nav--mobile.is-open li:nth-child(5) {
-  animation-delay: 200ms;
-}
-
-.site-nav--mobile.is-open li:nth-child(6) {
-  animation-delay: 240ms;
-}
-
-.site-nav--mobile.is-open li:nth-child(7) {
-  animation-delay: 280ms;
+@for $i from 1 through 7 {
+  .site-nav--mobile.is-open li:nth-child(#{$i}) {
+    animation-delay: #{$i * 40}ms;
+  }
 }
 
 @keyframes site-nav-link-in {
@@ -445,23 +399,15 @@
 
 .site-nav--mobile .header-cta {
   position: relative;
-  display: inline-flex;
   justify-content: center;
-  align-items: center;
   justify-self: stretch;
   width: 100%;
-  min-height: 2.75rem;
   margin-top: var(--space-3);
   padding-block: var(--space-3);
   padding-inline: var(--space-4);
-  border: 0;
   border-radius: var(--radius-md);
   background: var(--color-cta-yellow);
   color: var(--color-brand-navy);
-  font-size: var(--text-cta);
-  font-weight: var(--font-weight-bold);
-  text-decoration: none;
-  box-shadow: none;
   transition: background-color 0.2s var(--easing-standard);
 }
 
@@ -484,17 +430,8 @@
   text-decoration: none;
 }
 
-.site-nav--mobile .header-cta:hover,
-.site-nav--mobile a.header-cta:hover {
+.site-nav--mobile .header-cta:hover {
   background: var(--color-cta-yellow-hover);
-  color: var(--color-brand-navy);
-  text-decoration: none;
-}
-
-.site-nav--mobile .header-cta:focus-visible {
-  outline: var(--focus-ring);
-  outline-offset: var(--focus-ring-offset);
-  box-shadow: var(--focus-ring-halo);
 }
 
 @include bp-up(md) {
@@ -522,7 +459,6 @@
   .site-nav--desktop a {
     white-space: nowrap;
     color: rgb(255 255 255 / 92%);
-    font-weight: var(--font-weight-medium);
     letter-spacing: 0.01em;
     transition: color var(--duration-header) var(--easing-standard);
   }
@@ -537,7 +473,6 @@
   }
 
   .site-header.is-scrolled .site-nav--desktop a:hover {
-    color: var(--color-brand-navy);
     text-decoration-color: var(--color-brand-blue);
   }
 
@@ -550,7 +485,6 @@
 
 @include bp-up(lg) {
   .site-header__bar {
-    min-height: var(--site-header-bar-height);
     padding-inline: var(--container-padding-desktop);
   }
 
