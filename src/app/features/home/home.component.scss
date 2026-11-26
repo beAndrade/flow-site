@@ -354,12 +354,6 @@
   border: 1px solid rgb(15 23 42 / 8%);
   border-radius: 12px;
   background: var(--color-white);
-  transition: transform var(--duration-mid) var(--easing-standard), box-shadow var(--duration-mid) var(--easing-standard);
-}
-
-.solution-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
 }
 
 .solution-card--featured {
@@ -470,6 +464,7 @@
 
 .a-flow__about h3,
 .a-flow__commitment h3,
+.step-list > li > h3,
 .timeline > li > h3 {
   margin-top: 0;
 }
@@ -496,7 +491,10 @@
   line-height: var(--leading-xl);
 }
 
-#diferenciais h2 {
+#diferenciais h2,
+#solucoes h2,
+#como-trabalhamos h2,
+#trajetoria h2 {
   color: var(--color-brand-navy);
   font-weight: var(--font-weight-black);
   letter-spacing: -0.02em;
@@ -586,24 +584,12 @@
   z-index: 1;
   grid-column: 1;
   grid-row: 1;
-  margin-top: var(--space-10);
   min-width: var(--space-8);
   color: var(--color-brand-blue);
   font-size: var(--text-h3);
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-xl);
   text-align: center;
-}
-
-.step-list > li:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: calc(var(--space-10) + 1.15em);
-  bottom: calc(-1 * var(--space-6));
-  left: calc(var(--space-8) / 2);
-  width: 2px;
-  background: var(--color-border);
-  transform: translateX(-50%);
 }
 
 .step-list > li > * {
@@ -624,10 +610,10 @@
   top: 0.55em;
   left: 0;
   z-index: 1;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: var(--radius-full);
-  background: var(--color-brand-blue);
+  background: var(--color-border);
   transform: translateY(-50%);
 }
 
@@ -636,8 +622,8 @@
   position: absolute;
   top: 0.55em;
   bottom: calc(-1 * var(--space-6));
-  left: 5px;
-  width: 2px;
+  left: 4px;
+  width: 1px;
   background: var(--color-border);
   transform: translateX(-50%);
 }
@@ -646,7 +632,7 @@
   grid-column: 1;
   grid-row: 1;
   margin: 0;
-  padding-left: calc(10px + var(--space-3));
+  padding-left: calc(8px + var(--space-3));
   color: var(--color-brand-blue);
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-xl);
@@ -655,10 +641,12 @@
 .timeline > li > h3 {
   grid-column: 2;
   grid-row: 1;
+  color: var(--color-brand-navy);
 }
 
 .timeline > li > p:not(.timeline__year) {
   grid-column: 2;
+  color: var(--color-text-secondary);
 }
 
 [data-reveal].is-revealed {
@@ -686,7 +674,6 @@
   .hero__video,
   .hero__cta,
   .hero__secondary,
-  .solution-card,
   .solutions-cta__primary {
     transition: none;
   }
@@ -695,11 +682,6 @@
   .solutions-cta__primary:hover {
     transform: none;
     box-shadow: none;
-  }
-
-  .solution-card,
-  .solution-card:hover {
-    transform: none;
   }
 
   .hero__poster {

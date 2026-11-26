@@ -348,6 +348,28 @@ Documentação no Closure: `docs/design-system.md`, `docs/roadmap.md` (Fase 2 it
 
 Arquivos do incremento: somente os dois docs acima. Commit manual via SourceTree; sem push sem autorização.
 
+### N2 — Paridade Visual Mid-Home
+
+Implementado. Nível **N2** (Workflow V2). Aceite atendido (8 critérios PASS). QA independente: **APPROVED WITH OBSERVATIONS** (sem FAIL bloqueante). Implementation **não** reaberta. Architecture Review **não** reaberta. Sem alteração de SCSS/HTML/TS neste Closure; sem remediação das observações.
+
+Estado implementado (`src/app/features/home/` — somente mid-Home `#solucoes`, `#como-trabalhamos`, `#trajetoria`):
+
+- Hierarquia Soft Steel alinhada a Hero/Diferenciais: h2 Soft Steel nas três seções; Trajetória com h3 navy, corpo secondary e anos Soft Steel.
+- Soluções: Bento Grid de sete áreas preservado; hover lift/shadow removidos; superfícies brancas.
+- Como trabalhamos: lead com `.home-section__lead`; trilho contínuo removido; números alinhados aos h3; 1 coluna em todos os breakpoints; superfície mint do body.
+- Trajetória: marcadores discretos (linha 1px + dot) distintos do contador do Como; superfície mint do body; sem bandas novas.
+- Budget Home: CSS emitido **10,94 kB** / limite `anyComponentStyle` **12 kB** (folga ok). Build OK; **24/24** testes.
+
+QA — **APPROVED WITH OBSERVATIONS**:
+
+- Observação 1 (sem remediação neste incremento): Trajetória mantém linha 1px + dot discreto (≠ Como) — intencional / aceito.
+- Observação 2 (sem remediação neste incremento): DevTools resize ~500 vs 390 — chrome mobile/overflow OK visualmente.
+- Sem FAIL bloqueante; Implementation não reaberta.
+
+Documentação no Closure: `docs/roadmap.md` (este registro). `PRODUCT.md` e `docs/discovery.md` sem sync — incremento só visual; ordem DOM, copy, menu e estado comercial da Home inalterados.
+
+Arquivos do incremento: `home.component.html`, `home.component.scss` + `docs/roadmap.md`. Commit manual via SourceTree; sem push sem autorização.
+
 ## Fase 5 — Deploy
 
 Definir posteriormente a estratégia de hospedagem/deploy. O Incremento 9 prepara metadados e arquivos estáticos para o domínio `https://flowenergiesbr.com.br/`; apontar DNS, emitir SSL e publicar o build no host permanece nesta fase.
