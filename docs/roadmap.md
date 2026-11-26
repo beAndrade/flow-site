@@ -36,7 +36,7 @@ Itens que dependem de levantamento com o proprietário. O Incremento 2 não ence
 - [x] espaçamento (`--space-*`)
 - [x] grid / container (`1280px`, `.site-shell`)
 - [x] breakpoints (Sass `$bp-*` + `bp-up`, sync `BP_NAV`)
-- [ ] botões como biblioteca de componentes formal
+- [x] botões/CTAs: padrões V1 formalizados (inventário H1/H2, P1/S1, P2/T1, C1/C2 em `docs/design-system.md` §9) — N2; QA **APPROVED WITH OBSERVATIONS** (drift residual fora do escopo, sem remediação neste incremento). Biblioteca formal Angular (`Button` / `_buttons.scss`) permanece fora deste item
 - [ ] cards como biblioteca formal
 - [ ] formulários
 - [ ] ícones definitivos
@@ -328,6 +328,25 @@ QA — **APPROVED WITH OBSERVATIONS**:
 Documentação no Closure: `PRODUCT.md`, `docs/discovery.md`, `docs/roadmap.md`. `docs/architecture.md` e `docs/design-system.md` sem sync necessário (tokens e shell já cobertos; impacto real só na composição do menu).
 
 Arquivos do incremento: `header.component.html`, `header.component.scss`, `header.component.ts` + os três docs acima. Commit manual via SourceTree; sem push sem autorização.
+
+### N2 — Design System: Botões e CTAs
+
+Documentação. Nível **N2** (Workflow V2). Aceite atendido. QA independente: **APPROVED WITH OBSERVATIONS** (sem FAIL bloqueante). Implementation **não** reaberta. Sem alteração de SCSS/HTML/TS neste Closure; sem remediação de drift do Design System.
+
+Estado entregue (`docs/design-system.md` §9):
+
+- Inventário H1/H2, P1/S1, P2/T1, C1/C2 formalizado como contrato visual V1 dos CTAs já em produção (Header, Hero, Soluções, Contato).
+- Sem Angular `Button`, sem `_buttons.scss`, sem tokens novos, sem redesign.
+- Critério §33 correspondente marcado: padrões V1 formalizados em §9.
+
+QA — **APPROVED WITH OBSERVATIONS**:
+
+- Observação registrada (sem remediação neste incremento): drift residual do Design System **fora do escopo** deste N2.
+- Sem FAIL bloqueante; Implementation não reaberta.
+
+Documentação no Closure: `docs/design-system.md`, `docs/roadmap.md` (Fase 2 item botões/CTAs + este registro).
+
+Arquivos do incremento: somente os dois docs acima. Commit manual via SourceTree; sem push sem autorização.
 
 ## Fase 5 — Deploy
 

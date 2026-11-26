@@ -93,13 +93,15 @@ Valores fundamentais ficam em `src/styles/_tokens.scss` (`:root`), consumidos vi
 | `--color-brand-blue-dark` | `#3e59a5` | Azul de marca |
 | `--color-brand-blue` | `#406db3` | Azul principal |
 | `--color-brand-blue-light` | `#4296ce` | Destaques e variações |
-| `--color-brand-yellow` | `#dab419` | Accent, energia e CTAs estratégicos |
-| `--color-cta-yellow` | `#eab308` | Amarelo de CTA (Hero / ações) |
-| `--color-cta-yellow-hover` | `#f0bc1a` | Hover do amarelo de CTA |
+| `--color-brand-yellow` | `#dab419` | Accent, energia e **CTA do Contato** (`.contact__cta`) |
+| `--color-cta-yellow` | `#eab308` | Amarelo de CTA (Hero, Soluções, overlay mobile) |
+| `--color-cta-yellow-hover` | `#f0bc1a` | Hover do amarelo de CTA (`--color-cta-yellow`) |
 
 > Os valores de azul e amarelo são referências digitais derivadas do logo atual. Devem ser refinados caso sejam disponibilizados valores oficiais da marca.
 >
-> Nota de consumo: o Hero ainda aplica literais `#eab308` / `#f0bc1a` alinhados a esses tokens CTA (migração de cor literal → `var()` não fez parte das Fases C–E).
+> **Dois amarelos intencionais:** `--color-cta-yellow` (`#eab308`) e `--color-brand-yellow` (`#dab419`) **não** são intercambiáveis. Hover do Contato usa literal `#e3c33a` (≠ `--color-cta-yellow-hover`). Contrato completo: §9 e §36.
+>
+> Soft Steel azul de chrome: `--color-brand-blue` (`.header-cta--bar`). Consumo Hero/Soluções/overlay: `var(--color-cta-yellow*)`.
 
 ### 3.2 — Neutral Colors
 
@@ -350,59 +352,132 @@ Evitar:
 
 ---
 
-## 09 — Botões
+## 09 — Botões e CTAs (padrões implementados)
 
-Os botões devem possuir hierarquia clara.
+Contrato visual V1 dos botões/CTAs **já em produção** (Header, Hero, Soluções, Contato). Sem redesign; inventário = fonte de verdade. Sem Angular `Button`, sem `_buttons.scss`, sem tokens novos.
 
-### 9.1 — Primary
+Princípios:
 
-Representa a ação principal.
+- hierarquia clara por superfície (não um único “botão primário” global);
+- WhatsApp é o canal de conversão; CTAs não devem dominar toda a interface (§02 princípio 07);
+- **dois amarelos** e Soft Steel azul são famílias distintas — não unificar;
+- `.solutions-cta__secondary` é **link textual**, não botão;
+- navy em Contato = **superfície do painel** (`.contact__panel`), **não** botão fill;
+- exceções literais preservadas — ver §36.
 
-Exemplo:
+Tokens de apoio: `--touch-target: 2.75rem`, `--control-height: 48px` (existem em `_tokens.scss`; consumo via `var()` ainda não é universal — ver §36).
 
-**Falar com a Flow**
+### 9.1 — Famílias e inventário (H1/H2, P1/S1, P2/T1, C1/C2)
 
-Características:
+| ID | Família | Classe(s) | Fill / look | Superfície |
+|---|---|---|---|---|
+| **H1** | Header chrome (desktop) | `a.header-cta.header-cta--bar` | Soft Steel `--color-brand-blue`; texto branco | Barra ≥ `$bp-nav` / 64rem (oculto abaixo) |
+| **H2** | Header chrome (overlay) | `a.header-cta` em `.site-nav--mobile` | `--color-cta-yellow`; texto navy; full-width | Overlay mobile |
+| **P1** | Primary CTA (amarelo CTA) | `a.hero__cta` | `--color-cta-yellow`; texto navy; altura 48px; `radius-md` | Hero full-bleed |
+| **S1** | Secondary outline (hero) | `a.hero__secondary` | Outline clara / fundo transparente | `.hero__actions` |
+| **P2** | Primary CTA (amarelo CTA) | `a.solutions-cta__primary` | **Mesmo look/regras de P1** (seletores SCSS compartilhados) | Micro-CTA pós-Soluções |
+| **T1** | Text secondary | `a.solutions-cta__secondary` | Texto sublinhado; **não é botão** | Ao lado de P2 |
+| **C1** | Primary Contato (amarelo brand) | `a.contact__cta` | `--color-brand-yellow` (`#dab419`); texto navy; `radius`/`padding` literais §36 | Painel navy `#contato` |
+| **C2** | Secondary outline (contato) | `a.contact__email` | Outline branco; fundo transparente; texto branco | Mesmo painel |
 
-- alto contraste;
-- destaque visual;
-- tamanho adequado para toque;
-- texto orientado à ação;
-- estado hover/focus/active definido.
+**Soft Steel** = `--color-brand-blue` no chrome desktop (H1). Não confundir com navy do painel de Contato.
 
-A cor pode variar entre azul e amarelo conforme o fundo e o contexto.
+### 9.2 — Hierarquia conceitual (Primary / Secondary / Tertiary)
 
-Tokens de apoio: `--touch-target: 2.75rem`, `--control-height: 48px` (existem em `_tokens.scss`; o consumo via `var()` ainda não é universal — ver §36).
+Mantém-se a orientação de produto:
 
-### 9.2 — Secondary
+| Nível | Papel | Implementação V1 |
+|---|---|---|
+| **Primary** | Ação principal; alto contraste; toque adequado; hover/focus/active definidos | P1/P2 (amarelo CTA); C1 (amarelo brand); H1/H2 como chrome persistente (azul Soft Steel desktop / amarelo overlay) |
+| **Secondary** | Complementar; menor peso; não rivalizar com o amarelo | S1 (outline no hero); C2 (outline no painel navy) |
+| **Tertiary** | Baixa prioridade; preferência por texto / underline | T1 (`.solutions-cta__secondary`) |
 
-Para ações complementares.
+A cor do primário **varia por contexto** (azul Soft Steel no header desktop; amarelo CTA no conteúdo/overlay; amarelo brand no Contato) — isso é intencional, não inconsistência a “corrigir”.
 
-Características:
+### 9.3 — Estados por família (somente os existentes)
 
-- menor peso visual;
-- borda ou superfície neutra;
-- não competir com o CTA principal.
+| ID | Default | Hover | Focus | Active / motion |
+|---|---|---|---|---|
+| **H1** | Fill Soft Steel; texto branco; `min-height: 2.75rem`; padding `var(--space-3) 1.125rem`; `radius-sm` | Texto branco travado; **sem** mudança de background dedicada (preservar; não inventar feedback) | `:focus-visible` global (`--focus-ring` + halo) | — |
+| **H2** | Fill `--color-cta-yellow`; texto navy; `radius-md`; divisor `::before` | `--color-cta-yellow-hover`; texto navy | Global `:focus-visible` | Transition 0.2s; reduced-motion zera transition |
+| **P1 / P2** | Fill `--color-cta-yellow`; navy; 48px; 14px bold; letter-spacing 0.01em | `--color-cta-yellow-hover` + `translateY(-2px)` + sombra `0 8px 20px / 22%` | Outline + `--focus-ring-halo` (explícito no SCSS da Home) | `:active` (P1): hover yellow, `transform: none`. Reduced-motion: sem transition/lift/sombra |
+| **S1** | Outline `rgb(250 253 251 / 22%)`; texto `/78%`; mesma caixa 48px | Fundo `/8%`; borda `/32%`; texto `/92%` | Mesmo anel de focus | `:active` → fundo `/12%`, texto `/70%`. Reduced-motion: sem transition |
+| **T1** | `--color-text-secondary`; `--text-body-sm` / medium; underline | Cor → `--color-brand-navy` | Global `:focus-visible` | — |
+| **C1** | Fill `--color-brand-yellow`; navy; `min-height: 2.75rem`; padding `14px` / `--space-5`; **`border-radius: 8px`** | Literal **`#e3c33a`** (≠ `--color-cta-yellow-hover`) | Global `:focus-visible` | — |
+| **C2** | Outline branco `/70%`; texto branco; mesma geometria de C1 | Borda branca sólida; fundo branco `/8%` | Global `:focus-visible` | — |
 
-### 9.3 — Tertiary
+Não inventar estados ausentes (ex.: hover de fundo em H1, disabled, loading).
 
-Para links e ações de baixa prioridade.
+### 9.4 — Hierarquia de conversão (por superfície)
 
-Preferência por:
+```text
+1. Primário de página (amarelo CTA)
+   → .hero__cta | .solutions-cta__primary
+   → Token: --color-cta-yellow (+ --color-cta-yellow-hover)
 
-- texto;
-- ícone opcional;
-- underline ou mudança de contraste quando necessário.
+2. Primário de fechamento (Contato)
+   → .contact__cta
+   → --color-brand-yellow + hover literal #e3c33a
+   → Parente visual do Hero, não idêntico (geometria + amarelo distintos)
+
+3. Secundário de botão (outline)
+   → .hero__secondary | .contact__email
+
+4. Secundário / terciário de texto
+   → .solutions-cta__secondary (underline; não tratar como botão)
+
+5. Chrome de header
+   → .header-cta--bar (Soft Steel, desktop)
+   → .site-nav--mobile .header-cta (amarelo CTA, mobile)
+   → Persistente; não redefine a hierarquia das seções
+```
+
+**Regra de uso:** um primário amarelo por agrupamento de ações; secundário outline ou texto conforme a superfície; header azul no desktop para não duplicar o amarelo do Hero no primeiro viewport.
+
+### 9.5 — Montagem e destinos (referência)
+
+Rótulos e destinos são contrato de produto (`docs/discovery.md` §12); não alterar copy aqui.
+
+| ID | Rótulo (implementado) | Destino |
+|---|---|---|
+| H1 / H2 | Falar no WhatsApp | `wa.me` padrão |
+| P1 | Falar com um especialista | `wa.me` padrão |
+| S1 | Simule sua economia | `#simulacao` |
+| P2 | Falar no WhatsApp | `wa.me` padrão |
+| T1 | Entre em contato | `#contato` |
+| C1 | Falar no WhatsApp | `wa.me` padrão |
+| C2 | Enviar e-mail | `mailto:washington@flowenergies.com` |
+
+### 9.6 — Exceções literais e normalização
+
+Ver §36. Em especial para botões/CTAs:
+
+- Contato: `border-radius: 8px`; padding vertical `14px`; hover `#e3c33a`;
+- Header CTA: padding horizontal `1.125rem`;
+- **Não** migrar C1 para `--color-cta-yellow` / `--color-cta-yellow-hover` (mudaria o look);
+- **Não** inventar hover de fundo em `.header-cta--bar`;
+- Literais de contraste do `.hero__secondary` (RGBA no hero escuro) permanecem fora do par Soft Steel / amarelo CTA.
+
+Normalização SCSS só é válida quando o literal já equivale a um token existente **sem** mudança visual. Avaliação N2: fills in-scope já consomem tokens onde há equivalência; nenhuma migração neutra restante neste inventário.
+
+### 9.7 — Fora de escopo / não confundir
+
+Não absorver nestas famílias:
+
+- `.simulacao__cta` (Simulador);
+- `.solution-card__link` (link de card);
+- `.menu-button` (controle de menu);
+- skip-link e demais chrome de navegação não listados acima.
 
 ---
 
 ## 10 — CTA e Conversão
 
-O objetivo comercial principal da V1 é gerar contatos.
+O objetivo comercial principal da V1 é gerar contatos. O WhatsApp é o principal destino de conversão.
 
-O WhatsApp é o principal destino de conversão.
+Esta seção define o **porquê** e o ritmo de conversão. O **como** implementado (classes, tokens, estados) está em §9.
 
-A hierarquia recomendada é:
+Hierarquia editorial recomendada:
 
 ```text
 Contexto
@@ -421,7 +496,11 @@ Evitar:
 - botão de WhatsApp em todas as linhas da página;
 - múltiplos CTAs concorrentes;
 - chamadas genéricas sem benefício;
-- excesso de urgência artificial.
+- excesso de urgência artificial;
+- tratar chrome Soft Steel do header (H1) como o mesmo papel visual do primário amarelo de conteúdo (P1/P2);
+- tratar `.solutions-cta__secondary` como botão.
+
+Alinhamento com o inventário §9: um primário amarelo por agrupamento; outline ou texto como complementar; dualidade header desktop azul / overlay amarelo preservada.
 
 ---
 
@@ -1041,8 +1120,8 @@ Ainda abertos no âmbito de produto / conteúdo (não inventar fechamento):
 - iconografia definitiva;
 - imagens finais / substituição do asset temporário do Hero;
 - microinterações além dos tokens de duration já definidos;
-- possíveis variações futuras de CTA;
-- componentes definitivos de produto ainda não especificados.
+- possíveis variações futuras de CTA além do inventário §9;
+- componentes definitivos de produto ainda não especificados (Angular `Button` / `_buttons.scss` **não** fazem parte do contrato V1 atual).
 
 ---
 
@@ -1059,7 +1138,7 @@ Estado em relação ao código HEAD (pós A–E):
 - [x] breakpoints Sass + `bp-up` + sync `BP_NAV`;
 - [x] motion tokens + reduced-motion global;
 - [x] regras mobile-first e foco visível definidos;
-- [ ] botões como componente reutilizável formal (orientação + padrões na Home; sem component library isolada);
+- [x] botões/CTAs: padrões V1 formalizados em §9 (inventário H1/H2, P1/S1, P2/T1, C1/C2; sem Angular `Button` / `_buttons.scss`);
 - [ ] iconografia definitiva;
 - [ ] imagens finais / Hero asset definitivo;
 - [ ] decisões refinadas de produto refletidas após validação comercial.
@@ -1118,7 +1197,14 @@ A Fase D migrou spacing/radius para tokens **sem** forçar literais que preserva
 | Mark (header/footer) | `gap: 1px` |
 | Alturas de controle | literais `48px` / `2.75rem` em vários pontos — tokens `--control-height` / `--touch-target` existem, mas o consumo `var()` não é universal |
 
-Não criar `--space-7` / token de `28px` só para eliminar essas exceções. Hover do CTA de contato ainda usa literal `#e3c33a` (fora da escala de tokens CTA do Hero).
+Não criar `--space-7` / token de `28px` só para eliminar essas exceções.
+
+**Botões/CTAs (contrato §9):**
+
+- Hover de `.contact__cta` = literal `#e3c33a` — **não** usar `--color-cta-yellow-hover` (`#f0bc1a`); são valores distintos.
+- Fill de `.contact__cta` = `--color-brand-yellow` (`#dab419`) — **não** unificar com `--color-cta-yellow` (`#eab308`).
+- Hover de `.header-cta--bar`: sem feedback de fundo dedicado — preservar; não inventar.
+- Navy em Contato = painel (`.contact__panel`), não botão fill.
 
 ---
 
@@ -1146,3 +1232,4 @@ Não criar `--space-7` / token de `28px` só para eliminar essas exceções. Hov
 | **D** | Spacing/radius → tokens (+ exceções preservadas) | `466b4b8` |
 | **E** | Motion → tokens | `af89d7c` |
 | **F** | Redação documental deste contrato (docs) | esta etapa |
+| **N2 Botões/CTAs** | Formalização documental §9 (inventário H1/H2, P1/S1, P2/T1, C1/C2); sem Angular `Button` / `_buttons.scss` / tokens novos / redesign. QA **APPROVED WITH OBSERVATIONS** (drift residual fora do escopo, sem remediação). Closure: docs only | docs |
