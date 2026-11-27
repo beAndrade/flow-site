@@ -165,7 +165,7 @@
   min-height: 2.75rem;
   padding: var(--space-3) 1.125rem;
   border: 0;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-link);
   background: var(--color-brand-blue);
   color: var(--color-white);
   font-size: var(--text-cta);
@@ -174,22 +174,39 @@
   cursor: pointer;
 }
 
-/* Desktop bar CTA (column 3); hidden below BP_NAV. Soft Steel blue via --color-brand-blue. */
+/* Desktop bar CTA (column 3); hidden below BP_NAV. Trial: WhatsApp green. */
 .header-cta--bar {
   display: none;
   grid-column: 3;
   justify-self: end;
+  background: #25d366;
 }
 
-/* Desktop-era blue CTA text; mobile sheet overrides with navy on yellow. */
+.header-cta--bar:hover {
+  background: #1ebe57;
+}
+
+/* Desktop-era CTA text; mobile sheet overrides with navy on yellow. */
 .site-nav:not(.site-nav--mobile) a.header-cta,
-.site-nav:not(.site-nav--mobile) a.header-cta:hover,
-a.header-cta--bar,
-a.header-cta--bar:hover {
+.site-nav:not(.site-nav--mobile) a.header-cta:hover {
   color: var(--color-white);
   font-size: var(--text-cta);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
+}
+
+/*
+ * Bar CTA label tracks desktop nav.
+ * On WhatsApp green, solid soft gray matches Contato’s perceived
+ * rgb(255 255 255 / 92%) on the dark hero (pure white reads too bright).
+ */
+a.header-cta--bar,
+a.header-cta--bar:hover {
+  color: #e8eaee;
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: color var(--duration-header) var(--easing-standard);
 }
 
 .menu-button {
@@ -441,7 +458,7 @@ a.header-cta--bar:hover {
   margin-top: var(--space-3);
   padding-block: var(--space-3);
   padding-inline: var(--space-4);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-link);
   background: var(--color-cta-yellow);
   color: var(--color-brand-navy);
   transition: background-color 0.2s var(--easing-standard);
@@ -522,6 +539,11 @@ a.header-cta--bar:hover {
 
   .site-header.is-scrolled .site-nav--desktop a:hover {
     text-decoration-color: var(--color-brand-blue);
+  }
+
+  .site-header.is-scrolled a.header-cta--bar,
+  .site-header.is-scrolled a.header-cta--bar:hover {
+    color: var(--color-brand-navy);
   }
 
   .header-cta--bar {

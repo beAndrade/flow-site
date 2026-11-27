@@ -307,12 +307,14 @@ Valores commitados:
 --radius-xl: 24px;
 --radius-full: 999px;
 --radius-pill: 999px;
+--radius-link: var(--radius-md); /* 10px — padrão de CTAs e links de ação */
 ```
 
 Direção:
 
 - componentes pequenos → `sm`;
-- inputs e botões → `md`;
+- **CTAs e links de ação → `link` (`--radius-link` = `md` / 10px)** — referência visual: Hero `.hero__secondary` / `.hero__cta`;
+- inputs e botões → `md` (ou `link` quando forem âncoras/CTAs);
 - cards → `lg`;
 - blocos especiais → `xl`;
 - círculos / controles circulares → `full`;
@@ -373,11 +375,11 @@ Tokens de apoio: `--touch-target: 2.75rem`, `--control-height: 48px` (existem em
 |---|---|---|---|---|
 | **H1** | Header chrome (desktop) | `a.header-cta.header-cta--bar` | Soft Steel `--color-brand-blue`; texto branco | Barra ≥ `$bp-nav` / 64rem (oculto abaixo) |
 | **H2** | Header chrome (overlay) | `a.header-cta` em `.site-nav--mobile` | `--color-cta-yellow`; texto navy; full-width | Overlay mobile |
-| **P1** | Primary CTA (amarelo CTA) | `a.hero__cta` | `--color-cta-yellow`; texto navy; altura 48px; `radius-md` | Hero full-bleed |
+| **P1** | Primary CTA (amarelo CTA) | `a.hero__cta` | `--color-cta-yellow`; texto navy; altura 48px; `radius-link` | Hero full-bleed |
 | **S1** | Secondary outline (hero) | `a.hero__secondary` | Outline clara / fundo transparente | `.hero__actions` |
 | **P2** | Primary CTA (amarelo CTA) | `a.solutions-cta__primary` | **Mesmo look/regras de P1** (seletores SCSS compartilhados) | Micro-CTA pós-Soluções |
 | **T1** | Text secondary | `a.solutions-cta__secondary` | Texto sublinhado; **não é botão** | Ao lado de P2 |
-| **C1** | Primary Contato (amarelo brand) | `a.contact__cta` | `--color-brand-yellow` (`#dab419`); texto navy; `radius`/`padding` literais §36 | Painel navy `#contato` |
+| **C1** | Primary Contato (amarelo brand) | `a.contact__cta` | `--color-brand-yellow` (`#dab419`); texto navy; `radius-link`; padding vertical `14px` | Painel navy `#contato` |
 | **C2** | Secondary outline (contato) | `a.contact__email` | Outline branco; fundo transparente; texto branco | Mesmo painel |
 
 **Soft Steel** = `--color-brand-blue` no chrome desktop (H1). Não confundir com navy do painel de Contato.
@@ -398,8 +400,8 @@ A cor do primário **varia por contexto** (azul Soft Steel no header desktop; am
 
 | ID | Default | Hover | Focus | Active / motion |
 |---|---|---|---|---|
-| **H1** | Fill Soft Steel; texto branco; `min-height: 2.75rem`; padding `var(--space-3) 1.125rem`; `radius-sm` | Texto branco travado; **sem** mudança de background dedicada (preservar; não inventar feedback) | `:focus-visible` global (`--focus-ring` + halo) | — |
-| **H2** | Fill `--color-cta-yellow`; texto navy; `radius-md`; divisor `::before` | `--color-cta-yellow-hover`; texto navy | Global `:focus-visible` | Transition 0.2s; reduced-motion zera transition |
+| **H1** | Fill (trial WhatsApp `#25D366` no bar); texto branco; `min-height: 2.75rem`; padding `var(--space-3) 1.125rem`; **`radius-link` (10px)** | Texto branco; hover bar `#1ebe57` | `:focus-visible` global (`--focus-ring` + halo) | — |
+| **H2** | Fill `--color-cta-yellow`; texto navy; `radius-link`; divisor `::before` | `--color-cta-yellow-hover`; texto navy | Global `:focus-visible` | Transition 0.2s; reduced-motion zera transition |
 | **P1 / P2** | Fill `--color-cta-yellow`; navy; 48px; 14px bold; letter-spacing 0.01em | `--color-cta-yellow-hover` + `translateY(-2px)` + sombra `0 8px 20px / 22%` | Outline + `--focus-ring-halo` (explícito no SCSS da Home) | `:active` (P1): hover yellow, `transform: none`. Reduced-motion: sem transition/lift/sombra |
 | **S1** | Outline `rgb(250 253 251 / 22%)`; texto `/78%`; mesma caixa 48px | Fundo `/8%`; borda `/32%`; texto `/92%` | Mesmo anel de focus | `:active` → fundo `/12%`, texto `/70%`. Reduced-motion: sem transition |
 | **T1** | `--color-text-secondary`; `--text-body-sm` / medium; underline | Cor → `--color-brand-navy` | Global `:focus-visible` | — |
@@ -452,8 +454,8 @@ Rótulos e destinos são contrato de produto (`docs/discovery.md` §12); não al
 
 Ver §36. Em especial para botões/CTAs:
 
-- Contato: `border-radius: 8px`; padding vertical `14px`; hover `#e3c33a`;
-- Header CTA: padding horizontal `1.125rem`;
+- Contato: `border-radius: var(--radius-link)`; padding vertical `14px`; hover `#e3c33a`;
+- Header CTA: `border-radius: var(--radius-link)`; padding horizontal `1.125rem`;
 - **Não** migrar C1 para `--color-cta-yellow` / `--color-cta-yellow-hover` (mudaria o look);
 - **Não** inventar hover de fundo em `.header-cta--bar`;
 - Literais de contraste do `.hero__secondary` (RGBA no hero escuro) permanecem fora do par Soft Steel / amarelo CTA.
@@ -1191,8 +1193,8 @@ A Fase D migrou spacing/radius para tokens **sem** forçar literais que preserva
 |---|---|
 | `.solution-card` | `border-radius: 12px` |
 | `.solution-card--featured` | `padding: 28px` |
-| Contato CTAs (`.contact__cta`, `.contact__email`) | `border-radius: 8px`; padding vertical `14px` |
-| Header CTA | padding horizontal `1.125rem` (parcial; vertical usa `var(--space-3)`) |
+| Contato CTAs (`.contact__cta`, `.contact__email`) | `border-radius: var(--radius-link)`; padding vertical `14px` |
+| Header CTA | `border-radius: var(--radius-link)`; padding horizontal `1.125rem` (parcial; vertical usa `var(--space-3)`) |
 | Nav desktop | `gap: 28px` |
 | Mark (header/footer) | `gap: 1px` |
 | Alturas de controle | literais `48px` / `2.75rem` em vários pontos — tokens `--control-height` / `--touch-target` existem, mas o consumo `var()` não é universal |
