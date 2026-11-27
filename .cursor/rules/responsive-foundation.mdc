@@ -1,0 +1,51 @@
+---
+description: Padrão obrigatório de responsividade para implementação e manutenção de interfaces.
+alwaysApply: true
+---
+
+# Responsive Foundation — Regra de Desenvolvimento
+
+Antes de implementar ou modificar qualquer interface:
+
+1. Consulte `docs/standards/responsive-foundation.md`.
+2. Verifique os padrões de containers, breakpoints, tipografia, espaçamentos e grids já existentes no projeto.
+3. Reutilize a estrutura existente. Não crie padrões concorrentes sem necessidade.
+
+## Regras obrigatórias
+
+- Adotar Mobile First.
+- Construir layouts fluidos e adaptáveis.
+- Manter containers centralizados e limitados por largura máxima.
+- Evitar larguras e alturas fixas desnecessárias.
+- Evitar `100vw` quando puder gerar overflow.
+- Utilizar Grid e Flexbox com comportamento responsivo adequado.
+- Verificar `min-width: 0` em elementos de Grid/Flex quando necessário.
+- Garantir adaptação de imagens, textos, cards e CTAs.
+- Definir mudanças de layout conforme a necessidade do conteúdo.
+- Preservar acessibilidade e ordem semântica.
+- Testar responsividade durante a implementação, não apenas no final.
+
+## Proibições
+
+- Não usar `overflow-x: hidden` globalmente para esconder problemas.
+- Não corrigir apenas o sintoma de um overflow.
+- Não adicionar breakpoints indiscriminadamente.
+- Não criar containers duplicados com comportamentos conflitantes.
+- Não aplicar dimensões fixas sem justificativa.
+- Não declarar testes realizados sem executá-los.
+
+## Validação
+
+Considerar, conforme o escopo, as larguras de 320, 390, 768, 1024, 1440 e 1725px.
+
+Verificar centralização, adaptação dos layouts, conteúdo cortado, sobreposições e overflow horizontal.
+
+Quando encontrar problemas, identificar a causa raiz e corrigir na origem.
+
+Ao finalizar uma implementação de interface, informar resumidamente:
+- Comportamento responsivo implementado.
+- Viewports efetivamente testadas.
+- Problemas encontrados e corrigidos.
+- Limitações ou verificações pendentes.
+
+Preservar os padrões, identidade visual, arquitetura e decisões aprovadas do projeto.
