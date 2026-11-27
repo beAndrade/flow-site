@@ -1,0 +1,29 @@
+.scroll-rail {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 80;
+  width: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--duration-mid) var(--easing-standard);
+}
+
+.scroll-rail.is-visible {
+  opacity: 1;
+}
+
+.scroll-rail__thumb {
+  position: absolute;
+  top: 0;
+  right: 3px;
+  width: 6px;
+  border-radius: var(--radius-full);
+  background: rgb(16 47 74 / 38%);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-rail {
+    transition: none;
+  }
+}
