@@ -370,6 +370,26 @@ Documentação no Closure: `docs/roadmap.md` (este registro). `PRODUCT.md` e `do
 
 Arquivos do incremento: `home.component.html`, `home.component.scss` + `docs/roadmap.md`. Commit manual via SourceTree; sem push sem autorização.
 
+### N1 — HOME-RESP-OVERFLOW-01 (overflow / dual-rail)
+
+Implementado. Nível **N1** (Workflow V2; critérios estritos N1 confirmados). Aceite atendido. Architecture Review **dispensada** (N1). Soft Steel / copy / Simulador **intactos**. Implementation **não** reaberta. Sem remediação das observações de QA neste Closure.
+
+Estado implementado (`src/app/features/home/home.component.scss` somente):
+
+- Dual-rail: `--hs-pad` unificado (pads simétricos; ex.: 390 → 20/20; antes assimetria 32 vs 20).
+- Flagships fluidos (ajuste responsivo local sem mudança de HTML/TS, rotas, tokens globais ou shell).
+- Parent revalidou browser em 390 / 768 / 1024 / 1440 / 1725: `overflow: false`, `railDelta: 0` em todos.
+
+QA independente — **APPROVED WITH OBSERVATIONS** (`PASS WITH ISSUES`):
+
+- Observação 1 (sem remediação neste incremento): budget Home CSS ~**11,98 / 12 kB** (folga residual mínima; limite `anyComponentStyle` não estourado).
+- Observação 2 (sem remediação neste incremento): QA **não** reexecutou browser nesta sessão; aceitou evidência do parent. Parent revalidou overflow/railDelta (acima).
+- Sem FAIL bloqueante; Implementation não reaberta. Observações aceitas pelo responsável no Closure.
+
+Documentação no Closure: `docs/roadmap.md` (este registro). `PRODUCT.md`, `docs/discovery.md`, `docs/architecture.md` e `docs/design-system.md` sem sync — incremento só SCSS local; ordem DOM, copy, menu e estado comercial da Home inalterados.
+
+Arquivos do incremento (implementação N1): `home.component.scss`. Registro de Closure: `docs/roadmap.md` (commit de governança separado, se desejado). Commit manual via SourceTree; sem push sem autorização.
+
 ## Fase 5 — Deploy
 
 Definir posteriormente a estratégia de hospedagem/deploy. O Incremento 9 prepara metadados e arquivos estáticos para o domínio `https://flowenergiesbr.com.br/`; apontar DNS, emitir SSL e publicar o build no host permanece nesta fase.

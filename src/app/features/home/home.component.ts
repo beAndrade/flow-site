@@ -84,6 +84,13 @@ export class HomeComponent {
   protected readonly featuredSolutions = this.solutions.filter((item) => item.featured);
   protected readonly standardSolutions = this.solutions.filter((item) => !item.featured);
 
+  /** Flagship tiles — short labels for A Flow panel density (copy TBD). */
+  protected readonly flagships = [
+    { title: 'Solar', label: 'Carro-chefe' },
+    { title: 'Elétrica', label: 'Alta demanda' },
+    { title: 'ART', label: 'Conformidade' },
+  ] as const;
+
   protected buildServiceWhatsAppUrl(serviceName: string): string {
     const text = `Olá! Acessei o site da Flow Energies e gostaria de conversar sobre ${serviceName}. Poderiam me orientar?`;
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;

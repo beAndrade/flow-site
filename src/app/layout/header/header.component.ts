@@ -41,7 +41,8 @@ export class HeaderComponent {
 
   /** Nav items: links with hash targets, or pending placeholders (no href). */
   protected readonly sections: readonly NavSection[] = [
-    { id: 'a-flow', label: 'A Flow', kind: 'link', href: '#a-flow' },
+    { id: 'home', label: 'Home', kind: 'link', href: '#home' },
+    { id: 'a-flow', label: 'Sobre', kind: 'link', href: '#a-flow' },
     { id: 'solucoes', label: 'Soluções', kind: 'link', href: '#solucoes' },
     { id: 'projetos', label: 'Projetos', kind: 'pending' },
     { id: 'contato', label: 'Contato', kind: 'link', href: '#contato' },

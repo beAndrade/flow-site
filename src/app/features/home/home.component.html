@@ -1,4 +1,4 @@
-<section class="hero" aria-labelledby="home-title">
+<section id="home" class="hero" aria-labelledby="home-title">
   <div class="hero__media" aria-hidden="true">
     <img
       class="hero__poster"
@@ -31,76 +31,54 @@
         Do projeto elétrico e regularização à geração solar fotovoltaica: soluções sob medida com rigor técnico para reduzir custos e garantir segurança operacional.
       </p>
       <div class="hero__actions">
-        <a
-          class="hero__cta"
-          href="https://wa.me/5522998449702?text=Ol%C3%A1!%20Conheci%20a%20Flow%20Energies%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20empresa%20e%20entender%20como%20voc%C3%AAs%20podem%20me%20ajudar."
-          target="_blank"
-          rel="noopener noreferrer"
-        >Falar com um especialista</a>
+        <a class="hero__cta" href="#a-flow">Saiba Mais Sobre Nós</a>
         <a class="hero__secondary" href="#simulacao">Simule sua economia</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="trust-bar" data-reveal aria-label="Por que a Flow Energies">
-  <div class="trust-bar__inner site-shell">
-    <ul class="trust-bar__grid">
-      <li class="trust-bar__item">
-        <p class="trust-bar__title">+40 Anos de Bagagem</p>
-        <p class="trust-bar__desc">Experiência sólida no setor elétrico (ex-CERJ/Enel RJ)</p>
-      </li>
-      <li class="trust-bar__item">
-        <p class="trust-bar__title">100% Conformidade</p>
-        <p class="trust-bar__desc">Projetos alinhados à ANEEL, PRODIST, ABNT e NR-10</p>
-      </li>
-      <li class="trust-bar__item">
-        <p class="trust-bar__title">Ponta a Ponta</p>
-        <p class="trust-bar__desc">Do projeto, laudo e ART no CREA-RJ à operação e pós-venda</p>
-      </li>
-      <li class="trust-bar__item">
-        <p class="trust-bar__title">Atuação Regional</p>
-        <p class="trust-bar__desc">Atendimento ágil no Rio de Janeiro e Região dos Lagos</p>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section id="a-flow" class="home-section" data-reveal aria-labelledby="a-flow-title">
-  <div class="a-flow__intro">
-    <h2 id="a-flow-title">A Flow</h2>
-    <p class="home-section__lead">Energia solar pensada para gerar resultado.</p>
-  </div>
-
-  <div class="a-flow__layout">
-    <div class="a-flow__about">
-      <h3>Sobre a Flow</h3>
-      <p>
-        A Flow Energies é uma empresa com experiência no setor elétrico brasileiro,
-        dedicada a agregar valor aos negócios de seus clientes por meio de soluções
-        alinhadas às suas necessidades.
-      </p>
-      <p>
-        Buscamos compreender cada desafio apresentado e propor soluções que
-        integrem os aspectos técnicos e regulatórios do setor, contribuindo para a
-        sustentabilidade e a continuidade dos negócios.
-      </p>
-      <p>
-        Nossa atuação vai além da entrega: valorizamos parcerias sólidas em todas as
-        etapas, da venda à execução e ao pós-venda, acompanhando nossos clientes e
-        buscando efetividade em cada demanda.
-      </p>
+<section id="a-flow" class="home-section home-section--a-flow" data-reveal aria-labelledby="a-flow-title">
+  <div class="a-flow__panel">
+    <div class="a-flow__emphasis">
+      <p class="a-flow__label">Quem somos nós</p>
+      <h2 id="a-flow-title">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </h2>
     </div>
 
-    <div class="a-flow__commitment">
-      <h3>Compromisso técnico e regulatório</h3>
-      <p>
-        Atuação alinhada ao marco regulatório vigente, considerando as diretrizes da ANEEL, do PRODIST e as normas da ABNT, com uma abordagem técnica clara e objetiva.
-      </p>
+    <div class="a-flow__body">
+      <div class="a-flow__copy">
+        <p>
+          Desde as origens no setor elétrico — com base construída na
+          <strong>CERJ/Enel RJ</strong> — a trajetória da Flow Energies se apoia em
+          mais de <strong>40 anos de experiência</strong> técnica. Esse percurso
+          sustenta a confiança de quem busca projetos sólidos, do eletrotécnico à
+          engenharia, com critério e responsabilidade.
+        </p>
+        <p>
+          Hoje a empresa atua em <strong>energia solar fotovoltaica</strong> e
+          <strong>infraestrutura elétrica</strong> para empresas e residências,
+          com soluções alinhadas a ANEEL, PRODIST, ABNT e NR-10. Do projeto, laudo e
+          ART no CREA-RJ à operação e ao pós-venda, o acompanhamento é contínuo —
+          com atendimento próximo no Rio de Janeiro e na Região dos Lagos.
+        </p>
+      </div>
+
+      <ul class="a-flow__flagships">
+        @for (item of flagships; track item.title) {
+          <li class="a-flow__flagship">
+            <p class="a-flow__flagship-title">{{ item.title }}</p>
+            <p class="a-flow__flagship-label">{{ item.label }}</p>
+          </li>
+        }
+      </ul>
+
+      <div class="a-flow__actions">
+        <a class="hero__cta" href="#solucoes">Saiba mais ›</a>
+      </div>
     </div>
   </div>
-
-  <p class="home-section__motto a-flow__motto">Flow Energies. A energia que te move.</p>
 </section>
 
 <section id="diferenciais" class="home-section" data-reveal aria-labelledby="diferenciais-title">
